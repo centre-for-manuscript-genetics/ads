@@ -1,0 +1,155 @@
+<!--=====================================================================-->
+<!-- LibraryExtns.dtd:  TEI.extensions.dtd file for Library DTD version  -->
+<!-- 1.0, which can be referred to using the formal public               -->
+<!-- identifier -//UA//DTD Library 1.0 (based on TEI)//NL                -->
+<!--=====================================================================-->
+
+<!ELEMENT %n.gi;     %om.RO; (#PCDATA)                             >
+<!ATTLIST %n.gi;             %a.global;
+          TEI                (yes | no)          'yes'
+          TEIform            CDATA               'gi'              >
+
+<!ELEMENT %n.eg;     %om.RR; (#PCDATA)                             >
+<!ATTLIST %n.eg;             %a.global;
+          TEIform            CDATA               'eg'              >
+
+<!-- seg and children-->
+
+<!ELEMENT seg %om.RO;
+	(#PCDATA | abbr | address | date | dateRange | expan | measure 
+	| name | num | rs | time | timeRange | add | app | corr 
+	| damage | del | orig | reg | restore | sic | space | supplied 
+	| unclear | formula | handShift | distinct | emph | foreign 
+	| gloss | hi | mentioned | soCalled | term | title | ptr 
+	| ref | xptr | xref | c | cl | m | phr | s | seg | w | bibl 
+	| biblFull | biblStruct | cit | q | quote | label | list 
+	| listBibl | note | witDetail | stage | table | text | anchor 
+	| addSpan | delSpan | gap | figure | alt | altGrp | index 
+	| interp | interpGrp | join | joinGrp | link | linkGrp | 
+	span | spanGrp | timeline | cb | fw | lb | milestone | pb)* >
+
+<!ATTLIST seg
+          %a.global;
+	  %a.seg;
+          subtype CDATA #IMPLIED    
+	  layer CDATA #IMPLIED
+	  base CDATA #IMPLIED
+	  TEIform CDATA "seg">
+	  
+<!ELEMENT add %om.RO;
+	(#PCDATA | abbr | address | date | dateRange | expan | measure 
+	| name | num | rs | time | timeRange | add | app | corr 
+	| damage | del | orig | reg | restore | sic | space | supplied 
+	| unclear | formula | handShift | distinct | emph | foreign 
+	| gloss | hi | mentioned | soCalled | term | title | ptr 
+	| ref | xptr | xref | c | cl | m | phr | s | seg | w | bibl 
+	| biblFull | biblStruct | cit | q | quote | label | list 
+	| listBibl | note | witDetail | stage | table | text | ab 
+	| l | lg | p | sp | witList | anchor | addSpan | delSpan 
+	| gap | figure | alt | altGrp | index | interp | interpGrp 
+	| join | joinGrp | link | linkGrp | span | spanGrp | timeline 
+	| cb | fw | lb | milestone | pb)* >
+
+<!ATTLIST add
+          %a.global;
+	  place CDATA #IMPLIED
+	  resp IDREF %INHERITED;
+	  cert CDATA #IMPLIED
+	  hand IDREF %INHERITED;
+	  layer CDATA #IMPLIED
+	  TEIform CDATA "add">
+			     
+<!ELEMENT del %om.RO;
+	(#PCDATA | abbr | address | date | dateRange | expan | measure 
+	| name | num | rs | time | timeRange | add | app | corr 
+	| damage | del | orig | reg | restore | sic | space | supplied 
+	| unclear | formula | handShift | distinct | emph | foreign 
+	| gloss | hi | mentioned | soCalled | term | title | ptr 
+	| ref | xptr | xref | c | cl | m | phr | s | seg | w | anchor 
+	| addSpan | delSpan | gap | note | figure | alt | altGrp | index 
+	| interp | interpGrp | join | joinGrp | link | linkGrp | 
+	span | spanGrp | timeline | cb | fw | lb | milestone | pb)* >
+
+<!ATTLIST del
+          %a.global;
+	  type CDATA #IMPLIED
+	  status CDATA "unremarkable"
+	  resp IDREF %INHERITED;
+	  cert CDATA #IMPLIED
+	  hand IDREF %INHERITED;
+	  layer CDATA #IMPLIED
+	  TEIform CDATA "del">
+	  
+<!ELEMENT note %om.RO;
+	(#PCDATA | abbr | address | date | dateRange | expan | measure 
+	| name | num | rs | time | timeRange | add | app | corr 
+	| damage | del | orig | reg | restore | sic | space | supplied 
+	| unclear | formula | handShift | distinct | emph | foreign 
+	| gloss | hi | mentioned | soCalled | term | title | ptr 
+	| ref | xptr | xref | c | cl | m | phr | s | seg | w | bibl 
+	| biblFull | biblStruct | cit | q | quote | label | list 
+	| listBibl | note | witDetail | stage | table | text | ab 
+	| l | lg | p | sp | witList | anchor | addSpan | delSpan 
+	| gap | figure | alt | altGrp | index | interp | interpGrp 
+	| join | joinGrp | link | linkGrp | span | spanGrp | timeline 
+	| cb | fw | lb | milestone | pb)* >
+
+<!ATTLIST note
+          %a.global;
+	  type CDATA #IMPLIED
+   	  resp CDATA #IMPLIED
+	  place CDATA "'unspecified'"
+	  anchored (yes | no) "yes"
+	  target IDREFS #IMPLIED
+	  targetEnd IDREFS #IMPLIED
+	  layer CDATA #IMPLIED
+	  TEIform CDATA "note">
+	  
+<!ELEMENT hi %om.RO;
+	(#PCDATA | abbr | address | date | dateRange | expan | measure 
+	| name | num | rs | time | timeRange | add | app | corr 
+	| damage | del | orig | reg | restore | sic | space | supplied 
+	| unclear | formula | handShift | distinct | emph | foreign 
+	| gloss | hi | mentioned | soCalled | term | title | ptr 
+	| ref | xptr | xref | c | cl | m | phr | s | seg | w | bibl 
+	| biblFull | biblStruct | cit | q | quote | label | list 
+	| listBibl | note | witDetail | stage | table | text | anchor 
+	| addSpan | delSpan | gap | figure | alt | altGrp | index 
+	| interp | interpGrp | join | joinGrp | link | linkGrp | 
+	span | spanGrp | timeline | cb | fw | lb | milestone | pb)* >
+
+<!ATTLIST hi
+          %a.global;
+	  layer CDATA #IMPLIED
+	  TEIform CDATA "hi">
+
+<!ELEMENT sic %om.RO;
+	(#PCDATA | abbr | address | date | dateRange | expan | measure 
+	| name | num | rs | time | timeRange | add | app | corr 
+	| damage | del | orig | reg | restore | sic | space | supplied 
+	| unclear | formula | handShift | distinct | emph | foreign 
+	| gloss | hi | mentioned | soCalled | term | title | ptr 
+	| ref | xptr | xref | c | cl | m | phr | s | seg | w | gi 
+	| eg | bibl | biblFull | biblStruct | cit | q | quote | 
+	label | list | listBibl | note | witDetail | stage | table 
+	| text | ab | l | lg | p | sp | witList | anchor | addSpan 
+	| delSpan | gap | figure | alt | altGrp | index | interp 
+	| interpGrp | join | joinGrp | link | linkGrp | span | spanGrp 
+	| timeline | cb | fw | lb | milestone | pb)* >
+<!ATTLIST sic
+          %a.global;
+	  corr CDATA #IMPLIED
+	  resp CDATA %INHERITED;
+	  cert CDATA #IMPLIED
+	  layer CDATA #IMPLIED
+	  TEIform CDATA "sic">
+	  
+	  
+<!ELEMENT ptr 
+	EMPTY >
+<!ATTLIST ptr
+          %a.global;
+	  %a.pointer;
+	  target IDREFS #REQUIRED
+	  layer CDATA #IMPLIED
+	  TEIform CDATA "ptr">

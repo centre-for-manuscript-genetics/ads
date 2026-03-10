@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE TEI.2 PUBLIC "-//UA//DTD Ads (based on TEI)//NL" "../dtd/Ads.dtd"
+[
+]>
+
+<TEI.2>
+ <teiHeader creator="Dirk Van Hulle" date.created="2000-06-08">
+ <fileDesc>
+ <titleStmt>
+  <title>Achter de Schermen: a machine readable transcription</title> 
+  <author>Willem Elsschot</author> 
+  <principal>Dirk Van Hulle &amp; Peter De Bruijn</principal> 
+ <funder>
+  <name>Centre for Manuscript Genetics (UA)</name>
+  <name>Huygens Instituut (HI), Koninklijke Nederlandse Akademie van Wetenschappen</name>
+  <name>Centrum voor Teksteditie en Bronnenstudie (CTB), Koninklijke Academie voor Nederlandse Taal- en Letterkunde</name>
+ <address>
+  <addrLine>Universiteit Antwerpen (UA)</addrLine> 
+  <addrLine>Prinsstraat 13</addrLine> 
+  <addrLine>B-2000 Antwerpen</addrLine> 
+  <addrLine>Belgium</addrLine> 
+  <addrLine>tel: +32 (0)3 220 42 46</addrLine> 
+  <addrLine>email: dirk.vanhulle@ua.ac.be</addrLine> 
+  </address>
+  </funder>
+  </titleStmt>
+  <extent /> 
+ <publicationStmt>
+  <authority>Centre for Manuscript Genetics (UA)</authority>
+  <authority>Huygens Instituut (HI), Koninklijke Nederlandse Akademie van Wetenschappen</authority>
+<authority>Centrum voor Teksteditie en Bronnenstudie (CTB), Koninklijke Academie voor Nederlandse Taal- en Letterkunde</authority>
+  <pubPlace>Antwerp</pubPlace> 
+  <date>2007</date> 
+ <availability status="restricted"> 
+ <p></p>
+  </availability>
+  </publicationStmt>
+  <sourceDesc>
+      <bibl>Aangemaakt in elektronische vorm</bibl>
+  </sourceDesc> 
+  </fileDesc>
+ <encodingDesc>
+ <projectDesc>
+  <p /> 
+  </projectDesc>
+ <editorialDecl>
+ <p>
+ <list>
+  <item>Correction:</item> 
+  <item>Normalization:</item> 
+  <item>Quotation:</item> 
+  <item>Hyphenation:</item> 
+  <item>Interpretation:</item> 
+  </list>
+  </p>
+  </editorialDecl>
+  
+  <tagsDecl>
+</tagsDecl>
+
+  </encodingDesc>
+  </teiHeader>
+<text>
+<body>
+<div type="colofon">
+<head>COLOFON</head>
+<lb/>
+<p>Editie: Peter de Bruijn, Vincent Neyt en Dirk Van Hulle</p>
+
+<p>Met dank aan: Letterkundig Museum (Den Haag), AMVC-Letterenhuis (Antwerpen), Willem Elsschot Genootschap (W.E.G.), Wieneke 't Hoen, Jan Maniewski, Walter Mees, Ron Van den Branden, Vic van de Reijt, Edward Vanhoutte, Cyriel Van Tilborgh.</p>
+
+<p>&copy; 2007 Teksten: Erven A. De Ridder (Willem Elsschot)/Athenaeum - Polak &amp; Van Gennep, Amsterdam<lb/>
+&copy; Editie: Center for Manuscript Genetics (Universiteit Antwerpen) en Huygens Instituut (KNAW)<lb/>
+&copy; 2007 Omslagontwerp: Micha G&ouml;tz (MGC&amp;D communicatie | design), illustratie: Anne-Tjerk<lb/><lb/>
+Productie: Centrum voor Teksteditie en Bronnenstudie (KANTL)<lb/>
+ISBN 97 890 7247 4 698<lb/>
+Wettelijk depotnummer D/2007/0228/3</p>
+
+<p>Voor vragen, suggesties en opmerkingen over de editie, mail de editeurs: Peter de Bruijn (<xref type="email" to="peter.de.bruijn@huygensinstituut.knaw.nl">peter.de.bruijn@huygensinstituut.knaw.nl</xref>), Vincent Neyt (<xref type="email" to="vincent.neyt@gmail.com">vincent.neyt@gmail.com</xref>) en Dirk Van Hulle (<xref type="email" to="dirk.vanhulle@ua.ac.be">dirk.vanhulle@ua.ac.be</xref>).</p>
+</div>
+<div type="disclaimer"><p>Het is de gebruiker van deze editie toegelaten voor eigen gebruik een 
+kopie te maken  zoals beschreven in de handleiding. Verder mag niets uit 
+deze uitgave, cd-rom en handleiding worden verveelvoudigd, opgeslagen in 
+een geautomatiseerd gegevensbestand, of openbaar gemaakt op welke wijze 
+ook zonder voorafgaande schriftelijke toestemming van de uitgevers.
+De Universiteit Antwerpen, het Huygens Instituut (KNAW) en het Centrum voor 
+Teksteditie en Bronnenstudie (KANTL) kunnen niet verantwoordelijk worden gesteld 
+voor handelingen van gebruikers.</p></div>
+<div type="colofon">
+<p><lb/></p>
+
+<table id="logos">
+<row><cell><figure id="ua_logo.jpg"/></cell><cell><figure id="HI.jpg"/></cell><cell><figure id="ctb.jpg"/></cell></row></table>
+</div>
+</body>
+</text>
+</TEI.2>

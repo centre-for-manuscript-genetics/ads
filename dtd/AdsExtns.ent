@@ -1,0 +1,22 @@
+<!--=====================================================================-->
+<!-- LibraryExtns.ent: TEI.extensions.ent file for Library DTD, version  -->
+<!-- 1.0, which can be referred to using the formal public               -->
+<!-- identifier -//UA//DTD Library 1.0 (based on TEI)//NL                -->
+<!--=====================================================================-->
+
+<!ENTITY % x.data      'ident | code | kw |'                    >
+<!ENTITY % x.inter     'eg |'                                   >
+<!ENTITY % x.common    'eg |'                                   >
+
+<!NOTATION png PUBLIC
+  '-//TEI//NOTATION IETF RFC2083 Portable Network Graphics//EN' >
+<!NOTATION jpeg PUBLIC
+  'ISO DIS 10918//NOTATION JPEG Graphics Format//EN' >
+<!NOTATION tiff PUBLIC
+   '-//TEI//NOTATION Aldus Tagged Image File Format//EN'>
+<!NOTATION gif PUBLIC
+  '-//TEI//NOTATION Compuserve Graphics Interchange Format//EN' >
+<!NOTATION sgml PUBLIC
+  'ISO 8879:1986//NOTATION Standard Generalized Markup Language//EN' >
+<!NOTATION wsd  PUBLIC
+  '-//TEI P4//DTD Auxiliary Document Type: Writing System Declaration//EN' >

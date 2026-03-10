@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE TEI.2 PUBLIC "-//UA//DTD Ads (based on TEI)//NL" "../dtd/Ads.dtd"
+[
+]>
+
+<TEI.2>
+ <teiHeader creator="Dirk Van Hulle" date.created="2000-06-08">
+ <fileDesc>
+ <titleStmt>
+  <title>Achter de Schermen: a machine readable transcription</title> 
+  <author>Willem Elsschot</author> 
+  <principal id="DVH">Dirk Van Hulle</principal>
+  <principal id="PDB">Peter De Bruijn</principal> 
+ <funder>
+  <name>Centre for Manuscript Genetics (UA)</name>
+  <name>Huygens Instituut (HI)</name>
+  <name>Centrum voor Teksteditie en Bronnenstudie (CTB)</name>
+ <address>
+  <addrLine>Universiteit Antwerpen (UA)</addrLine> 
+  <addrLine>Prinsstraat 13</addrLine> 
+  <addrLine>B-2000 Antwerpen</addrLine> 
+  <addrLine>Belgium</addrLine> 
+  <addrLine>tel: +32 (0)3 220 42 46</addrLine> 
+  <addrLine>email: dirk.vanhulle@ua.ac.be</addrLine> 
+  </address>
+  </funder>
+  </titleStmt>
+  <extent /> 
+ <publicationStmt>
+  <authority>Centre for Manuscript Genetics (UA)</authority> 
+  <authority>Huygens Instituut (HI), Koninklijke Nederlandse Akademie van Wetenschappen</authority>
+<authority>Centrum voor Teksteditie en Bronnenstudie (CTB), Koninklijke Academie voor Nederlandse Taal- en Letterkunde</authority>
+  <pubPlace>Antwerp</pubPlace> 
+  <date>2007</date> 
+ <availability status="restricted"> 
+ <p></p>
+  </availability>
+  </publicationStmt>
+  <sourceDesc>
+      <bibl>Aangemaakt in elektronische vorm</bibl>
+  </sourceDesc>
+  </fileDesc>
+ <encodingDesc>
+ <projectDesc>
+  <p /> 
+  </projectDesc>
+ <editorialDecl>
+ <p>
+ <list>
+  <item>Correction:</item> 
+  <item>Normalization:</item> 
+  <item>Quotation:</item> 
+  <item>Hyphenation:</item> 
+  <item>Interpretation:</item> 
+  </list>
+  </p>
+  </editorialDecl>
+  
+  <tagsDecl>
+</tagsDecl>
+
+  </encodingDesc>
+  </teiHeader>
+<text>
+<body>
+<div type="sectie"><head>Gebruiksaanwijzing</head>
+<p><lb/>
+</p>
+<p>Deze elektronische editie biedt de mogelijkheid om van de "Opdracht" bij <hi rend="i">Tsjip</hi> en "Achter de Schermen" van Willem Elsschot alle bronnen te verkennen en met elkaar te vergelijken vanuit verschillende vertrekpunten, zoals aangegeven in het beginscherm: 
+</p>
+<p><lb/>
+</p>
+<p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<p><lb/>
+</p>
+<p>In deze gebruiksaanwijzing worden de belangrijkste mogelijkheden van de editie beknopt besproken. Het gebruik vergt geen uitzonderlijke technische vaardigheden. Na gebruik dient u de elektronische editie steeds af te sluiten door op de <hi rend="b">Exit</hi>-knop rechtsboven de werkbalk te klikken. Het icoontje onder in de taakbalk van uw computer verdwijnt dan vanzelf.
+</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p><hi rend="b">Bronnen verkennen:</hi></p>
+<p><lb/>
+</p>
+<p>Onder "Tsjip: Opdracht" en "Achter de Schermen" zijn alle bronnen van beide teksten oproepbaar. Hier volgt een overzicht met een korte omschrijving van deze bronnen en van de siglen ("snelcodes") waarmee ze worden aangeduid (in de elektronische editie is achter deze opsomming meer informatie per bron te vinden):</p>
+<p> "Opdracht" bij <hi rend="i">Tsjip</hi>:</p>
+<p><lb/>
+</p>
+<table>
+<row><cell>Typoscript 1</cell><cell><xref type="extra" to="OpdM1">OpdM1</xref></cell><cell>1934: Eerste typoscript "Inleiding"</cell></row>
+<row><cell>Typoscript 2</cell><cell><xref type="extra" to="OpdM2">OpdM2</xref></cell><cell>1934: Tweede typoscript "Inleiding"</cell></row>
+<row><cell>Tijdschriftpublicatie</cell><cell><xref type="extra" to="OpdT1">OpdT1</xref></cell><cell>1934: <hi rend="i">Tsjip</hi>, voorpublicatie in <hi rend="i">Forum</hi></cell></row>
+<row><cell>Druk 1</cell><cell><xref type="extra" to="OpdD1">OpdD1</xref></cell><cell>1934: <hi rend="i">Tsjip</hi>, eerste druk 
+</cell></row> <row><cell>Druk 2</cell><cell><xref type="extra" to="OpdD2">OpdD2</xref></cell><cell>1936: <hi rend="i">Tsjip</hi>, tweede druk  </cell></row>
+<row><cell>Druk 3</cell><cell><xref type="extra" to="OpdD3">OpdD3</xref></cell><cell>1942: <hi rend="i">Tsjip</hi>, derde druk  </cell></row>
+<row><cell>Druk 4</cell><cell><xref type="extra" to="OpdD4">OpdD4</xref></cell><cell>1943: <hi rend="i">Tsjip/De Leeuwentemmer</hi>, eerste druk  </cell></row>
+<row><cell>Druk 5</cell><cell><xref type="extra" to="OpdD5">OpdD5</xref></cell><cell>1944: <hi rend="i">Tsjip/De Leeuwentemmer</hi>, tweede druk  </cell></row>
+<row><cell>Druk 6</cell><cell><xref type="extra" to="OpdD6">OpdD6</xref></cell><cell>1952: <hi rend="i">Tsjip/De Leeuwentemmer</hi>, derde druk  </cell></row>
+<row><cell> Drukproef</cell><cell><xref type="extra" to="OpdP1">OpdP1</xref></cell><cell>1956-57: <hi rend="i">Tsjip/De Leeuwentemmer</hi>, eerste drukproef voor het <hi rend="i">Verzameld Werk</hi>  </cell></row>
+<row><cell> Drukproef</cell><cell><xref type="extra" to="OpdP2">OpdP2</xref></cell><cell>1957: Idem, tweede drukproef</cell></row>
+<row><cell>Druk 7</cell><cell><xref type="extra" to="OpdD7">OpdD7</xref></cell><cell>1957: <hi rend="i">Tsjip/De Leeuwentemmer</hi>, vierde druk, in het <hi rend="i">Verzameld Werk</hi>  </cell></row>
+</table>
+<p><lb/>
+</p>
+<p>"Achter de Schermen":</p>
+<p><lb/>
+</p>
+<table>
+<row><cell>Manuscript</cell><cell><xref type="extra" to="AdsM1">AdsM1</xref> </cell><cell>1934: Manuscript "Achter de Schermen"</cell></row>
+<row><cell>Typoscript</cell><cell><xref type="extra" to="AdsM2">AdsM2</xref></cell><cell>1934: Typoscript "Achter de Schermen"</cell></row>
+<row><cell>Tijdschriftpublicatie</cell><cell><xref type="extra" to="AdsT1">AdsT1</xref></cell><cell>1935: Voorpublicatie "Achter de Schermen" in <hi rend="i">Groot Nederland</hi>  </cell></row>
+<row><cell>Correctie-exemplaar</cell><cell><xref type="extra" to="AdsM3">AdsM3</xref></cell><cell>1935: Correctie-exemplaar <hi rend="i">Groot Nederland</hi>  </cell></row>
+<row><cell>Druk 1</cell><cell><xref type="extra" to="AdsD1">AdsD1</xref></cell><cell>1936: <hi rend="i">Tsjip</hi>, tweede druk  </cell></row>
+<row><cell>Druk 2</cell><cell><xref type="extra" to="AdsD2">AdsD2</xref></cell><cell>1942: <hi rend="i">Tsjip</hi>, derde druk  </cell></row>
+<row><cell>Druk 3</cell><cell><xref type="extra" to="AdsD3">AdsD3</xref></cell><cell>1943: <hi rend="i">Tsjip/De Leeuwentemmer</hi>, eerste druk  </cell></row>
+<row><cell>Druk 4</cell><cell><xref type="extra" to="AdsD4">AdsD4</xref></cell><cell>1944: <hi rend="i">Tsjip/De Leeuwentemmer</hi>, tweede druk  </cell></row>
+<row><cell>Druk 5</cell><cell><xref type="extra" to="AdsD5">AdsD5</xref></cell><cell>1952: <hi rend="i">Tsjip/De Leeuwentemmer</hi>, derde druk  </cell></row>
+<row><cell> Drukproef</cell><cell><xref type="extra" to="AdsP1">AdsP1</xref></cell><cell>1956-57: <hi rend="i">Tsjip/De Leeuwentemmer</hi>, eerste drukproef voor het <hi rend="i">Verzameld Werk</hi></cell></row>
+<row><cell> Drukproef</cell><cell><xref type="extra" to="AdsP2">AdsP2</xref></cell><cell>1956-57: Idem, tweede drukproef</cell></row>
+<row><cell>Druk 6</cell><cell><xref type="extra" to="AdsD6">AdsD6</xref></cell><cell>1957: <hi rend="i">Tsjip/De Leeuwentemmer</hi>, vierde druk, in het <hi rend="i">Verzameld Werk</hi>  </cell></row>
+</table>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p>Van alle versies wordt de tekst integraal weergegeven in een zogenaamde lineaire transcriptie (elektronisch doorzoekbare tekst), met telkens bij het begin van een nieuwe pagina een "thumbnail" (kleine afbeelding) van de corresponderende bladzijde van het document. Om het digitale facsimile (de scan) te zien: klik op de thumbnail.  </p>
+<p><lb/>
+</p>
+<p>Linksboven het digitale facsimile verschijnt een navigatievak met verschillende mogelijkheden om het document te visualiseren:  </p>
+<p><lb/>
+</p>
+<p>- De "Lineaire transcriptie" geeft doorhalingen en toevoegingen op de volgende manier weer:</p>
+<quote><p><del>doorhaling</del> = geschrapte passage</p>
+<p><add>blauw</add> = toegevoegde passage</p>
+<p><add><add>rood</add></add> = toevoeging binnen toevoeging</p>
+<p><add><add><add>groen</add></add></add> = toevoeging binnen toevoeging binnen toevoeging</p>
+<p>| = plaats waar in een andere tekstversie een element is toegevoegd</p>
+<p>[xx] = onleesbaar</p>
+<p>[ ] = onzekere lezing</p>
+<p><lb/>
+</p>
+<p>cijfers tussen haakjes (bv. [5]) duiden het begin van een nieuwe pagina aan en dienen tevens als zogenaamde Quicklink (zie <xref type="intra" to="stappen">3. STAPPEN</xref>).  </p>
+<p>Het icoontje <figure id="note.gif"/> staat voor Noot (te activeren door erop te klikken)</p></quote>
+<p><lb/>
+</p>
+<p>- De "Topografische transcriptie" dient als hulpmiddel bij het "lezen" van het manuscript van "Achter de Schermen" en probeert daartoe de kleur van het schrijfmateriaal, de plaatsing van woorden, doorhalingen en toevoegingen in het origineel zo getrouw mogelijk weer te geven.   </p>
+<p><lb/>
+</p>
+<p>- De optie "Facsimile + Topografisch" combineert de scan met de topografische transcriptie in een bovenliggend venster. Gebruik de bovenste grijze strook om het venster  naar believen te verslepen.</p>
+<p><lb/>
+</p>
+<p>- De optie "Vergrootglas facsimile" kan helpen om in te zoomen op een bepaalde passage.</p>
+<p><lb/>
+</p>
+<p>- De optie "Vergrootglas transcriptie" heeft een soortgelijke functie maar toont in plaats van een vergroting meteen een transcriptie van de geselecteerde passage.</p> <p><lb/>
+</p>
+<p>- De optie "Thumbnails" geeft een overzicht van alle pagina's van het document.  </p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p>Het navigatievak rechtsboven biedt de mogelijkheid  </p>
+<p><lb/>
+</p>
+<p>- door het document te bladeren (met behulp van de verticale pijlen);</p>
+<p><lb/>
+</p>
+<p>- door de opeenvolgende versies te bladeren (met behulp van de horizontale pijlen). De pijlen leiden naar de overeenkomstige pagina in de volgende of vorige versie (de eerste woorden van de openstaande pagina zijn altijd te vinden op de pagina van de volgende of vorige versie).  </p>
+<p>  
+</p>
+<p><lb/>
+</p>
+<p>Andere visualisaties:</p>
+<p><lb/>
+</p>
+<p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<p><lb/>
+</p>
+<p>Klik op: "Manuscript" </p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p>
+<emph>Home | Tsjip: Opdracht  | Achter de Schermen  <hi rend="background">| Visualisatie |</hi> Variantenapparaat | Zoek</emph></p>
+<p><lb/>
+</p>
+<p>De optie "Visualisatie" in het hoofmenu biedt vier opties:</p>
+<p><lb/>
+</p>
+<p>- "Uiteindelijk resultaat": Deze optie biedt de mogelijkheid om het resultaat van al het schrappen en toevoegen te bekijken, de zogenaamde toplaag van het gekozen document.</p>
+<p><lb/>
+</p>
+<p>- "Volledige transcriptie" toont alle doorhalingen en toevoegingen.</p>
+<p><lb/>
+</p>
+<p>- "Printvriendelijke versie": Een venster springt open met een printvriendelijke versie van de huidige pagina. Druk op Control-P om dit venster af te drukken.</p>
+<p><lb/>
+</p>
+<p>- "XML bronbestand": Deze optie biedt de mogelijkheid om de onderliggende codering van de transcriptie te bekijken.</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p><hi rend="b">Bronnen vergelijken: </hi>
+</p>
+<p><lb/>
+</p>
+<p>De editie biedt de mogelijkheid verschillende versies, lagen en stappen in het schrijfproces te analyseren.</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+</div>
+<div id="versies"><p><hi rend="b">1. VERSIES</hi></p>
+<p><lb/>
+</p>
+<p>Het apparaat om varianten tussen verschillende versies te belichten biedt twee opties:</p>
+<p><lb/>
+</p></div>
+<div id="kies2versies"><p><hi rend="b">Optie 1: "Kies 2 versies"</hi></p>
+<p><lb/>
+</p>
+<p>Deze optie is het best te illustreren aan de hand van het manuscript van "Achter de Schermen":</p>
+<p><lb/>
+</p>
+<p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<p><lb/>
+</p>
+<p>Kies onder "Variantenapparaat":</p>
+<p><lb/>
+</p>
+<p>
+<emph>Home | Tsjip: Opdracht  | Achter de Schermen  | Visualisatie <hi rend="background">| Variantenapparaat |</hi> Zoek</emph></p>
+<p><lb/>
+</p>
+<p>de optie "Kies 2 versies" om twee (niet noodzakelijk opeenvolgende) tekstversies te vergelijken.  </p>
+<p><lb/>
+</p>
+<p>Rechtsbovenaan verschijnen twee <hi rend="i">drop down</hi>-menu's.  </p>
+<p><lb/>
+</p>
+<p>Van de typoscripten zijn telkens de getypte grondlaag en de toplaag (de tekst inclusief alle aanpassingen in inkt, potlood of ander schrijfmateriaal) apart te kiezen. Zo kunt u bijvoorbeeld van M2 de getypte grondlaag met de toplaag vergelijken door links "M2 grond" en rechts "M2 top" te kiezen.</p>
+<p><lb/>
+</p>
+<p>Klik op het bolletje rechts om uw keuze te bevestigen en de collatie te activeren. De tekst die verschijnt, is die van de versie die in het linkermenu is gekozen; de varianten ten opzichte van uw tweede keuze zijn gemarkeerd met grijze achtergrond (<hi rend="background">lichtgrijs</hi> = een variant; <hi rend="background2">donkergrijs</hi> = een variant binnen een variant). De varianten binnen varianten zijn in de linkermarge aanklikbaar om het apparaat op te roepen.</p> <p><lb/>
+</p>
+<p>Door te klikken op een variant (met grijze achtergrond) verschijnen de variante lezingen in de twee gekozen versies binnen de context van de volledige zin.  </p>
+<p><lb/>
+</p>
+<p>Daarop volgt een overzicht van alle versies van dezelfde zin. De twee geselecteerde versies zijn groen gemarkeerd.  </p>
+<p><lb/>
+</p>
+<p><lb/>
+</p></div>
+<div id="optie2"><p><hi rend="b">Optie 2: "Varianten aan"</hi></p>
+<p><lb/>
+</p>
+<p>Deze optie is het best te illustreren aan de hand van "Typoscript 1" onder "Tsjip: Opdracht":</p>
+<p><lb/>
+</p>
+<p>
+<emph>Home <hi rend="background">| Tsjip: Opdracht  |</hi> Achter de Schermen  | Visualisatie | Variantenapparaat | Zoek</emph></p>
+<p><lb/>
+</p>
+<p>Kies onder "Variantenapparaat":  </p>
+<p><lb/>
+</p>
+<p>
+<emph>Home | Tsjip: Opdracht  | Achter de Schermen  | Visualisatie <hi rend="background">| Variantenapparaat |</hi> Zoek</emph></p>
+<p><lb/>
+</p>
+<p>de optie "OpdM1 Varianten: aan". In de tekst worden nu de varianten ten opzichte van alle andere versies gemarkeerd met grijze achtergrond. Door te klikken op een variant (met grijze achtergrond) verschijnt een synopsis van de variante lezingen: de versies waarin een bepaalde variant voorkomt, worden gegroepeerd aan de hand van hun siglen. Daarop volgt een overzicht van alle versies van dezelfde zin. De titel van elke versie is aanklikbaar. Via deze weg is het mogelijk meteen naar de plaats van de variant in het relevante document te gaan.</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p></div>
+<div id="lagen">
+<p><hi rend="b">2. LAGEN </hi> </p>
+<p><lb/>
+</p>
+<p>In sommige documenten zijn verschillende lagen te onderscheiden, bijvoorbeeld op basis van het gebruikte schrijfmateriaal. Deze editie biedt de mogelijkheid varianten en correcties binnen &eacute;&eacute;n versie op te roepen. Deze optie is het best te illustreren aan de hand van het "Correctie-exemplaar" (M3) onder "Achter de Schermen":</p> <p><lb/>
+</p>
+<p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<p><lb/>
+</p>
+<p>Op het digitale facsimile is duidelijk te zien dat er slechts &eacute;&eacute;n woord ("onzen") is doorgehaald en vervangen door "haren" in zwarte inkt.  </p>
+<p><lb/>
+</p>
+<p>Onder "Variantenapparaat": </p>
+<p><lb/>
+</p>
+<p>
+<emph>Home | Tsjip: Opdracht  | Achter de Schermen  | Visualisatie <hi rend="background">| Variantenapparaat |</hi> Zoek</emph></p> <p><lb/>
+</p>
+<p>verschijnen nu de opties  </p>
+<p>- "AdsM3a (gedrukte tekst): Varianten aan" en  </p>
+<p>- "AdsM3b (zwarte inkt): Varianten aan"</p> <p><lb/>
+</p>
+<p>- De eerste optie ("AdsM3a (gedrukte tekst): Varianten aan") geeft <hi rend="i">alle</hi> varianten ten opzichte van <hi rend="i">alle </hi>andere versies, bekeken vanuit het correctie-exemplaar.  </p>
+<p>Als u op een variant (met grijze achtergrond) klikt, krijgt u de synopsis met variante lezingen (zie hierboven onder 1. VERSIES, <xref type="intra" to="optie2">Optie 2</xref>).</p>
+<p><lb/>
+</p>
+<p>- De tweede optie ("AdsM3b (zwarte inkt): Varianten aan") geeft alleen de variant die in zwarte inkt is geschreven.  </p>
+<p><lb/>
+</p>
+<p>In dit voorbeeld is er slechts &eacute;&eacute;n extra laag, maar het komt voor dat er meer lagen te onderscheiden zijn aan de hand van het schrijfmateriaal. Bijvoorbeeld in het "Typoscript" van "Achter de Schermen":</p>
+<p><lb/>
+</p>
+<p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<p><lb/>
+</p>
+<p>Klik op: "Typoscript" </p>
+<p><lb/>
+</p>
+<p>Onder "Variantenapparaat": </p>
+<p><lb/>
+</p>
+<p>
+<emph>Home | Tsjip: Opdracht  | Achter de Schermen  | Visualisatie <hi rend="background">| Variantenapparaat |</hi> Zoek</emph></p>
+<p><lb/>
+</p>
+<p>verschijnen nu de opties  </p>
+<p>- "AdsM2a (getypte tekst): Varianten aan"  </p>
+<p>- "AdsM2b (zwarte inkt): Varianten aan"</p>
+<p>- "AdsM2c (zwarte inkt): Varianten aan"</p>
+<p>- "AdsM2d (grijs potlood): Varianten aan"</p>
+<p>- "AdsM2e (rood potlood): Varianten aan"</p>
+<p>- "AdsM2f (blauw potlood): Varianten aan"</p>
+<p><lb/>
+</p>
+<p>Om het variantenapparaat uit te schakelen: klik op de onderste optie, "Varianten uit".</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+</div>
+<div id="stappen"><p><hi rend="b">3. STAPPEN</hi></p>
+<p><lb/>
+</p>
+<p>In deze editie is de werkwijze van Elsschot te volgen aan de hand van de stappen in het schrijfproces, zoals zich dat met name laat aflezen aan het manuscript van "Achter de Schermen".</p>
+<p><lb/>
+</p>
+<p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<p><lb/>
+</p>
+<p>Klik op: "Manuscript" </p>
+<p><lb/>
+</p>
+<p>Rechtsboven de lineaire transcriptie bevindt zich een navigatievakje met de optie "Toon schrijfproces per zin". Door op deze optie te klikken verschijnt er een icoon (een grijs bolletje) net v&oacute;&oacute;r het begin van elke zin in de transcriptie. Met een klik op een icoontje naar keuze komt u in een overzicht van alle stappen die Elsschot gezet heeft om de zin op papier te krijgen, met de bovenste laag als "Resultaat". In principe zou voor elke doorhaling en voor elke toevoeging telkens een afzonderlijke stap gecre&euml;erd moeten worden. Om pragmatische redenen zijn doorhalingen echter zoveel mogelijk in &eacute;&eacute;n stap gegroepeerd. Hetzelfde geldt voor toevoegingen. Enkel wanneer dit systeem een onzinnige lezing zou opleveren (wanneer een doorgehaald woord meteen is vervangen door een ander woord) worden de doorhaling en de vervanging in dezelfde stap weergegeven.
+ 
+</p>
+<p><lb/>
+</p>
+<p>Daaronder volgt dezelfde zin in alle versies van het werk.</p>
+<p><lb/>
+</p>
+<p>Waar er een verschil is met de vorige versie is de variant gemarkeerd (met grijze achtergrond). Een verticale streep staat voor een woord of leesteken dat weggevallen is ten opzichte van de vorige versie. De versie van waaruit u vertrokken bent, verschijnt in het groen.<hi rend="b"> </hi>Nadrukkelijk willen wij erop wijzen dat het stappenonderscheid tot stand is gekomen op grond van disparate (tekstuele en materi&euml;le) gegevens, die lang niet allemaal even ondubbelzinnig te interpreteren zijn (ook doordat het manuscript van "Achter de Schermen" voor het overgrote deel in een en dezelfde schrijfstof &ndash; zwarte inkt &ndash; is geschreven). Vooral in complexe gevallen zal een andere volgorde denkbaar kunnen zijn. Met het facsimile van het manuscript bij de hand en met de topografische transcriptie als hulpmiddel is de gebruiker in staat om het editeurswerk in deze gevallen kritisch te volgen.</p>
+<p><lb/>
+</p>
+</div>
+<div id="zoekfunctie"><p><hi rend="b">Zoekfunctie </hi> </p>
+<p>De zoekfunctie doorzoekt alle teksten naar de ingevoerde woorden. De resultaten verschijnen telkens in de context van een volledige zin. De opdracht kan verfijnd worden door alleen toevoegingen of schrappingen te doorzoeken, in plaats van de hele tekst. De zoekresultaten zijn geordend volgens de bronteksten. Een zoekopdracht naar het woord "Hersens" levert bijvoorbeeld in totaal 14 hits op, drie keer in AdsM1 en telkens &eacute;&eacute;n keer in elk van de overige versies van "Achter de Schermen".<lb/><lb/>  </p>
+<p>Om een beter overzicht te krijgen van de verdeling van de hits over de bronnen, klikt u op "alles dichtklappen". Zo verdwijnen alle hits en blijven alleen de grijze titelbalken staan. Met een klik op "alles openklappen" roept u alle zoekresultaten weer op, maar u kunt ook een brontekst apart open- of dichtklappen door op het plus- of het min-icoontje te klikken, rechts in elke grijze titelbalk. Bij elke hit kunt u klikken op "&gt; naar tekst" om naar de overeenkomstige plaats in de lineaire transcriptie van de betreffende bron te gaan.</p>
+<p>Waar u zich ook in de editie bevindt, overal kunt u een woord met de muis selecteren, en er met de rechtermuisknop op klikken. Een pop-up venster vraagt: Zoeken naar "..."? Klik op "OK" (of druk op enter) om naar het zoekscherm te gaan. Het geselecteerde woord is dan al ingevuld in het zoekvenster en u hoeft alleen maar op enter te drukken om de zoekoperatie te starten.</p>
+<p><lb/>
+</p></div>
+<div id="quicklink"><p><hi rend="b">Quicklink</hi></p>
+<p>In om het even welke versie van de "Opdracht" en van "Achter de Schermen" is het begin van een nieuwe pagina telkens weergegeven aan de hand van het paginanummer tussen vierkante haken, bijvoorbeeld [5]. Deze nummers doen ook dienst als "quicklink" om enkele van de hierboven beschreven opties te activeren:</p>
+<p>- "Varianten: aan / uit"  </p>
+<p>- "Toon schrijfproces per zin: aan / uit"  </p>
+<p>- "Naar boven" (om weer naar het begin van de versie te gaan)</p> 
+<p>- "Zoek"</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p><lb/>
+</p></div>
+<div id="technisch"><p><hi rend="b">Beknopte technische documentatie</hi></p>
+<p><lb/>
+</p>
+<p><lb/>
+</p>
+<p>Om het tekstmateriaal vanuit zoveel mogelijk invalshoeken te kunnen verkennen, vergelijken, doorzoeken en herschikken is het gecodeerd in een zogenaamde "markup" taal. Alle teksten in deze editie zijn gecodeerd in XML (eXtensible Markup Language), conform de suggesties van het TEI (Text Encoding Initiative &ndash; P4). De TEI P4 DTD is uitgebreid met enkele project-specifieke <hi rend="i">attributes</hi>: het "layer-attribute" voor het nummer van de stap in het schrijfproces, en het "base-attribute" voor het nummer van de zin in de gepubliceerde versies.</p>
+<p><lb/>
+</p>
+<p><hi rend="b">Transcripties:</hi></p>
+<p><lb/>
+</p>
+<p><eg rend="tag">&lt;seg&gt;</eg> : De kleinste teksteenheid in de codering van deze editie is de zin;  </p>
+<quote><p>hiervoor is de <hi rend="i">segment</hi>-tag gebruikt, met als <hi rend="i">attributes</hi>:</p>
+<p><lb/>
+</p>
+<p><eg rend="attribute">n</eg> : gevolgd door het nummer van de zin in het respectieve document.</p>
+<p><lb/>
+</p>
+<p><eg rend="attribute">base</eg> : gevolgd door de letter "z" en het nummer van de corresponderende zin in de gepubliceerde versies</p>
+<p><lb/>
+</p>
+<p><eg rend="attribute">type</eg> : gevolgd door het aantal stappen in het schrijfproces van de desbetreffende zin.</p></quote>
+
+<p><eg rend="tag">&lt;del&gt;</eg> : Voor doorhalingen wordt de <hi rend="i">deletion</hi>-tag gebruikt, met als <hi rend="i">attributes</hi>:</p>
+<p><lb/>
+</p>
+<quote><p><eg rend="attribute">rend</eg> : voor het schrijfmateriaal waarmee de doorhaling is uitgevoerd (zwarte inkt, potlood, ...).  </p>
+<p><lb/>
+</p>
+<p><eg rend="attribute">type</eg> : voor het type doorhaling (Deletie; Substitutie; Onmiddellijke variant)</p>
+<p><lb/>
+</p>
+<p><eg rend="attribute">resp</eg> : gevolgd door de initialen van wie de codering heeft gemaakt.</p>
+<p><lb/>
+</p>
+<p><eg rend="attribute">layer</eg> : gevolgd door de letter "l" en het nummer van de stap in het schrijfproces van de desbetreffende zin. In de eerste zin van het manuscript van "Achter de Schermen" bijvoorbeeld is de "nulde" stap de zogenaamde grondlaag: "Mijn dochter is getrouwd en heeft een kind gekregen." De eerste stap is de doorhaling van "heeft een kind gekregen":  </p>
+<p><lb/>
+</p>
+<p><eg rend="tag">&lt;seg n="001" base="z001" type="03"&gt;</eg>Mijn dochter is getrouwd en <eg>&lt;del rend="zwarte inkt" type="S" hand="WE" resp="DVH" layer="l01"&gt;</eg>heeft een kind gekregen.<eg>&lt;/del&gt;&lt;/seg&gt;</eg></p></quote>
+<p><lb/>
+</p>
+<p><eg rend="tag">&lt;add&gt;</eg> : Voor toevoegingen wordt de <hi rend="i">addition</hi>-tag gebruikt, met als <hi rend="i">attributes</hi>:</p>
+<p><lb/>
+</p>
+<quote><p><eg rend="attribute">rend</eg> : voor het schrijfmateriaal waarmee de toevoeging is uitgevoerd (zwarte inkt, potlood, ...).  </p>
+<p><lb/>
+</p>
+<p><eg rend="attribute">place</eg> : om aan te geven waar de toevoeging zich bevindt (boven de regel; onder de regel; op de regel; overschreven; linkermarge; rechtermarge; marge bovenaan; marge onderaan)</p> <p><lb/>
+</p>
+<p><eg rend="attribute">resp</eg> : gevolgd door de initialen van wie de codering heeft gemaakt.</p>
+<p><lb/>
+</p>
+<p><eg rend="attribute">layer</eg> : gevolgd door de letter "l" en het nummer van de stap in het schrijfproces van de desbetreffende zin. In de eerste zin van het manuscript van "Achter de Schermen" bijvoorbeeld is de eerste stap de doorhaling van "heeft een kind gekregen", de tweede stap is de vervanging door "heeft ons verlaten":  </p>
+<p><lb/>
+</p>
+<p><eg rend="tag">&lt;seg n="001" base="z001" type="03"&gt;</eg>Mijn dochter is getrouwd en <eg>&lt;del rend="zwarte inkt" type="S" hand="WE" resp="DVH" layer="l01"&gt;</eg>heeft een kind gekregen.<eg>&lt;/del&gt;&lt;add rend="zwarte inkt" place="supralinear" hand="WE" resp="DVH" layer="l02"&gt;</eg>heeft ons verlaten.<eg>&lt;/add&gt;&lt;/seg&gt;</eg></p></quote>
+<p><lb/>
+</p>
+<p><hi rend="b">Varianten:</hi></p>
+<p><lb/>
+</p>
+<p>De TEI P4 en P5-Guidelines stellen drie methodes voor om varianten te coderen. Voor deze editie is de "parallel segmentation method" gebruikt. Bijvoorbeeld:</p>
+<p><lb/>
+</p>
+<p><eg rend="tag">&lt;seg n="320" base="z320"&gt;</eg> Schei uit  </p>
+<p rend="level1"><eg rend="tag">&lt;app n="zze736"&gt;</eg></p>
+<p rend="level2"><eg rend="tag">&lt;rdg wit="AdsM1 "&gt;</eg>man<eg rend="tag">&lt;/rdg&gt;</eg>  </p>
+<p rend="level2"><eg>&lt;rdg wit="AdsM2a AdsT1 AdsM3a AdsD1 AdsD2 AdsD3 AdsD4 AdsD5 AdsP1a AdsD6 AdsZP1 AdsZM2 AdsZM3 "&gt;</eg>vent<eg>&lt;/rdg&gt;</eg>  </p>
+<p rend="level1"><eg rend="tag">&lt;/app&gt;</eg></p>
+<p><eg rend="tag">&lt;/seg&gt;</eg></p>
+<p><lb/>
+</p>
+<p>Op het einde van de tekst is voor zin 320 de lezing <eg rend="tag">&lt;rdg&gt;</eg> "Schei uit, man" te vinden in het manuscript (<eg rend="tag">wit="AdsM1 "</eg>); alle andere versies vertonen de variante lezing "vent": "Schei uit, vent".   </p>
+</div>
+</body>
+</text>
+</TEI.2>

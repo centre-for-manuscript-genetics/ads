@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CVS $Id: sitemap.xmap,v 1.16 2003/10/22 11:42:05 joerg Exp $ -->
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+
+<!-- =========================== Components ================================ -->
+
+<map:components>
+  <map:generators default="file">
+    <map:generator name="linkstatus" src="org.apache.cocoon.generation.LinkStatusGenerator"/>
+  </map:generators>
+  <map:transformers default="xalan"/>
+  <map:readers default="resource"/>
+  <map:serializers default="html"/>
+  <map:matchers default="wildcard">
+    <map:matcher logger="sitemap.matcher.header" name="filename" src="org.apache.cocoon.matching.modular.CachingRegexpMatcher">
+      <input-module name="request-param">
+        <parameter>filename</parameter>
+      </input-module>
+    </map:matcher>
+  </map:matchers>
+  <map:selectors default="browser"/>
+</map:components>
+
+<!-- =========================== Views =================================== -->
+
+<map:views>
+
+  <map:view from-label="adsXML" name="adsXML">
+    <map:transform src="stylesheets/xml2xml/ads2xml.xsl">
+      <map:parameter name="use-request-parameters" value="true"/>
+    </map:transform>
+    <map:serialize type="xml"/>
+  </map:view>
+
+  <map:view from-label="content" name="content">
+    <map:serialize type="html"/>
+  </map:view>
+
+  <map:view from-label="content" name="pretty-content">
+    <map:transform src="context://stylesheets/system/xml2html.xslt"/>
+    <map:serialize type="html"/>
+  </map:view>
+
+  <map:view from-position="last" name="links">
+   <map:serialize type="links"/>
+  </map:view>
+
+</map:views>
+
+<!-- =========================== Pipelines ================================= -->
+
+<map:pipelines>
+  <map:pipeline>
+
+    <map:match pattern="Ads.htm">
+      <map:generate src="xml/ads.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+	<map:parameter name="text" value="home"/>
+	<map:parameter name="document" value="AdsM1"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+    
+    <map:match pattern="Opd.htm">
+      <map:generate src="xml/opd.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+	<map:parameter name="text" value="home"/>
+	<map:parameter name="document" value="OpdM1"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+    
+    <map:match pattern="zin.htm">
+      <map:generate src="xml/ads.xml" label="adsXML"/>
+      <map:transform src="stylesheets/zin.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+    
+    <map:match pattern="overlevering.htm">
+      <map:generate src="xml/overlevering.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+    
+    <map:match pattern="gebruiksaanwijzing.htm">
+      <map:generate src="xml/gebruiksaanwijzing.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+    
+    <map:match pattern="inleiding.htm">
+      <map:generate src="xml/inleiding.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+    
+    <map:match pattern="colofon.htm">
+      <map:generate src="xml/colofon.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+    
+    <map:match pattern="xml.xml">
+      <map:generate src="xml/ads.xml" label="adsXML"/>
+      <map:transform src="stylesheets/xml.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+      </map:transform>
+      <map:serialize type="xml"/>
+    </map:match>
+    
+    <map:match pattern="xmlOpd.xml">
+      <map:generate src="xml/opd.xml" label="adsXML"/>
+      <map:transform src="stylesheets/xml.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+      </map:transform>
+      <map:serialize type="xml"/>
+    </map:match>
+    
+    <map:match pattern="xmlgebruiksaanwijzing.xml">
+      <map:generate src="xml/gebruiksaanwijzing.xml" label="adsXML"/>
+      <map:transform src="stylesheets/xml.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+      </map:transform>
+      <map:serialize type="xml"/>
+    </map:match>
+    
+    <map:match pattern="xmloverlevering.xml">
+      <map:generate src="xml/overlevering.xml" label="adsXML"/>
+      <map:transform src="stylesheets/xml.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+      </map:transform>
+      <map:serialize type="xml"/>
+    </map:match>
+    
+    <map:match pattern="xmlinleiding.xml">
+      <map:generate src="xml/inleiding.xml" label="adsXML"/>
+      <map:transform src="stylesheets/xml.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+      </map:transform>
+      <map:serialize type="xml"/>
+    </map:match>
+    
+    <map:match pattern="xmlcolofon.xml">
+      <map:generate src="xml/colofon.xml" label="adsXML"/>
+      <map:transform src="stylesheets/xml.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+      </map:transform>
+      <map:serialize type="xml"/>
+    </map:match>
+    
+    <map:match pattern="search.html">
+      <map:generate src="search.html"/>
+      <map:serialize type="xhtml"/>
+    </map:match>
+    
+    <map:match pattern="blank.html">
+      <map:generate src="stylesheets/blank.html"/>
+      <map:serialize type="xhtml"/>
+    </map:match>
+    
+ 
+
+  </map:pipeline>
+
+<!-- ============================================================== -->
+<!-- this one for auxiliary file types                              -->
+<!-- ============================================================== -->
+  <map:pipeline>
+
+    <map:match pattern="**.xml">
+      <map:read mime-type="text/xml" src="xml/{1}.xml"/>
+    </map:match>
+
+    <map:match pattern="**.dtd">
+      <map:read mime-type="text/plain" src="dtd/{1}.dtd"/>
+    </map:match>
+
+    <map:match pattern="styleDoc/*.css">
+      <map:read mime-type="text/css" src="css/{1}.css"/>
+    </map:match>
+
+    <map:match pattern="**.css">
+      <map:read mime-type="text/css" src="{1}.css"/>
+    </map:match>
+
+    <map:match pattern="**.js">
+      <map:read mime-type="text/javascript" src="{1}.js"/>
+    </map:match>
+
+    <map:match pattern="**.gif">
+      <map:read mime-type="text/gif" src="{1}.gif"/>
+    </map:match>
+
+    <map:match pattern="**.swf">
+      <map:read mime-type="text/gif" src="{1}.swf"/>
+    </map:match>
+
+    <map:match pattern="**.JPG">
+      <map:read mime-type="text/css" src="{1}.JPG"/>
+    </map:match>
+
+    <map:match pattern="**.jpg">
+      <map:read mime-type="text/css" src="{1}.jpg"/>
+    </map:match>
+
+    <map:match pattern="**.ent">
+      <map:read mime-type="text/css" src="xml/xmlsnips/{1}.ent"/>
+    </map:match>
+    
+    <map:match pattern="~*">
+      <map:redirect-to uri="ads.htm?ads.htm?text=docfacs&amp;document={0}&amp;page="/>
+    </map:match>
+
+  </map:pipeline>
+
+</map:pipelines>
+</map:sitemap>

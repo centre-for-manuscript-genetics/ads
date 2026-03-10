@@ -1,0 +1,79 @@
+#chromemenu{
+width: 802px;
+}
+
+#chromemenu:after{ /*Add margin between menu and rest of content in Firefox*/
+content: "."; 
+display: inline; 
+height: 0; 
+clear: both; 
+visibility: hidden;
+}
+
+#chromemenu ul{
+/*border: 1px solid #660011;*/
+width: 100%;
+background-color: #BBBBBB; /*url(menu/chromebg.jpg) center center repeat-x; Theme Change here*/
+margin-left: 0;
+padding-left: 0;
+margin: 0;
+float: left;
+border-bottom: 1px solid #660011;
+font: 12px Verdana;
+}
+
+
+#chromemenu ul li{
+display: inline;
+}
+
+
+#chromemenu ul li a{
+float: left;
+color:#660011;
+/*font-weight: bold;*/
+padding: 6px 6px 6px 7px;
+text-decoration: none;
+background: url(../images/menu/divider.jpg) center right no-repeat; /*Theme Change here*/
+}
+
+#chromemenu ul li a:hover{
+color: ##660000;
+}
+
+#chromemenu ul li a[onMouseover]:after{ /*HTML to indicate drop down link*/
+/*content: " v";*/
+/*content: " " url(downimage.gif); /*uncomment this line to use an image instead*/
+}
+
+/* ######### Style for Drop Down Menu ######### */
+
+.dropmenudiv{
+position:absolute;
+top: 0;
+border: 1px solid #660011; /*Theme Change here*/
+border-bottom-width: 0;
+font:normal 12px Verdana;
+line-height:18px;
+z-index:100;
+background-color: #DDDDDD;
+width: 200px;
+visibility: hidden;
+filter: progid:DXImageTransform.Microsoft.Shadow(color=#CACACA,direction=135,strength=4); /*Add Shadow in IE. Remove if desired*/
+}
+
+.dropmenudiv a{
+width: 100%;
+display: block;
+text-align: left;
+text-indent: 3px;
+border-bottom: 1px solid #660011; /*Theme Change here*/
+padding: 0px 0;
+text-decoration: none;
+/*font-weight: bold;*/
+color: #660011;
+}
+
+.dropmenudiv a:hover{ /*Theme Change here*/
+background-color: #F0F0F0;
+}
