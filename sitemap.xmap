@@ -52,6 +52,350 @@
 <map:pipelines>
   <map:pipeline>
 
+  <!-- STATIC CONVERSION 2026-03-10: wildcard pipelines for static URL mapping -->
+  <!-- IMAGE VIEW -->
+  <!-- facsimile -->
+<map:match pattern="Ads*-*-facsimile.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="page" value="{2}"/>
+    <map:parameter name="text" value="docfacs"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<map:match pattern="Opd*-*-facsimile.html">
+  <map:generate src="xml/opd.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Opd{1}"/>
+    <map:parameter name="page" value="{2}"/>
+    <map:parameter name="text" value="docfacs"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- topographic transcription -->
+<map:match pattern="Ads*-*-topo.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="page" value="{2}"/>
+    <map:parameter name="text" value="docfacstopo"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<map:match pattern="Opd*-*-topo.html">
+  <map:generate src="xml/opd.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Opd{1}"/>
+    <map:parameter name="page" value="{2}"/>
+    <map:parameter name="text" value="docfacstopo"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- facsimile + topographic IFRAME -->
+<map:match pattern="Ads*-*-iframe.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="page" value="{2}"/>
+    <map:parameter name="text" value="iframe"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- facsimile + topographic -->
+<map:match pattern="Ads*-*-popup.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="page" value="{2}"/>
+    <map:parameter name="text" value="docfacspop"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<map:match pattern="Opd*-*-popup.html">
+  <map:generate src="xml/opd.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Opd{1}"/>
+    <map:parameter name="page" value="{2}"/>
+    <map:parameter name="text" value="docfacspop"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- APPARATUS VIEW -->
+<map:match pattern="apparaat-Ads*-*-*.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="id" value="{2}"/>
+    <map:parameter name="app" value="{3}"/>
+    <map:parameter name="text" value="doclinapp"/>
+    <map:parameter name="trans" value="yes"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<map:match pattern="apparaat-Opd*-*-*.html">
+  <map:generate src="xml/opd.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Opd{1}"/>
+    <map:parameter name="id" value="{2}"/>
+    <map:parameter name="app" value="{3}"/>
+    <map:parameter name="text" value="doclinapp"/>
+    <map:parameter name="trans" value="yes"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- APPARATUS VIEW 2 WITNESSES -->
+<map:match pattern="apparaat_Ads*_*-*-*.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="comp1" value="Ads{1}"/>
+    <map:parameter name="comp2" value="{2}"/>
+    <map:parameter name="id" value="{3}"/>
+    <map:parameter name="app" value="{4}"/>
+    <map:parameter name="text" value="doclinapp"/>
+    <map:parameter name="trans" value="yes"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<map:match pattern="apparaat_Opd*_*-*-*.html">
+  <map:generate src="xml/opd.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Opd{1}"/>
+    <map:parameter name="comp1" value="Opd{1}"/>
+    <map:parameter name="comp2" value="{2}"/>
+    <map:parameter name="id" value="{3}"/>
+    <map:parameter name="app" value="{4}"/>
+    <map:parameter name="text" value="doclinapp"/>
+    <map:parameter name="trans" value="yes"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- SENTENCE VERSION VIEW -->
+<map:match pattern="zin-*-*-*-*.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/zin.xsl">
+    <map:parameter name="document" value="{1}"/>
+    <map:parameter name="n" value="{2}"/>
+    <map:parameter name="id" value="{3}"/>
+    <map:parameter name="corresp" value="{4}"/>
+    <map:parameter name="text" value="doclinlay"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- TEXT VIEW + SENTENCE LINKS -->
+<map:match pattern="Ads*-zinsvarianten.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="page" value="1"/>
+    <map:parameter name="text" value="doclinlay"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+
+<!-- TEXT VIEW + VARIANTS ON-->
+<map:match pattern="Ads*-varianten.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="page" value="1"/>
+    <map:parameter name="text" value="doclin"/>
+    <map:parameter name="trans" value="yes"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<map:match pattern="Opd*-varianten.html">
+  <map:generate src="xml/opd.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Opd{1}"/>
+    <map:parameter name="page" value="1"/>
+    <map:parameter name="text" value="doclin"/>
+    <map:parameter name="trans" value="yes"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- TEXT VIEW + VARIANTS BETWEEN TWO WITNESSES -->
+<map:match pattern="Ads*-varianten-*.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="comp1" value="Ads{1}"/>
+    <map:parameter name="comp2" value="{2}"/>
+    <map:parameter name="page" value="1"/>
+    <map:parameter name="text" value="doclin"/>
+    <map:parameter name="trans" value="yes"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<map:match pattern="Opd*-varianten-*.html">
+  <map:generate src="xml/opd.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Opd{1}"/>
+    <map:parameter name="comp1" value="Opd{1}"/>
+    <map:parameter name="comp2" value="{2}"/>
+    <map:parameter name="page" value="1"/>
+    <map:parameter name="text" value="doclin"/>
+    <map:parameter name="trans" value="yes"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- TEXT VIEW + CHOOSE TWO -->
+<map:match pattern="Ads*-kies.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="page" value="1"/>
+    <map:parameter name="text" value="doclincomp"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<map:match pattern="Opd*-kies.html">
+  <map:generate src="xml/opd.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Opd{1}"/>
+    <map:parameter name="page" value="1"/>
+    <map:parameter name="text" value="doclincomp"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- TEXT VIEW + TOP LAYER -->
+<map:match pattern="Ads*-bovenlaag.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="page" value="1"/>
+    <map:parameter name="text" value="doclin"/>
+    <map:parameter name="view" value="bovenlaag"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<map:match pattern="Opd*-bovenlaag.html">
+  <map:generate src="xml/opd.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Opd{1}"/>
+    <map:parameter name="page" value="1"/>
+    <map:parameter name="text" value="doclin"/>
+    <map:parameter name="view" value="bovenlaag"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- STANDARD TEXT VIEW -->
+<map:match pattern="Ads*.html">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="page" value="1"/>
+    <map:parameter name="text" value="doclin"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<map:match pattern="Opd*.html">
+  <map:generate src="xml/opd.xml"/>
+  <map:transform src="stylesheets/ads.xsl">
+    <map:parameter name="document" value="Opd{1}"/>
+    <map:parameter name="page" value="1"/>
+    <map:parameter name="text" value="doclin"/>
+  </map:transform>
+  <map:serialize type="html"/>
+</map:match>
+
+<!-- XML VIEW -->
+<map:match pattern="Ads*.xml">
+  <map:generate src="xml/ads.xml"/>
+  <map:transform src="stylesheets/xml.xsl">
+    <map:parameter name="document" value="Ads{1}"/>
+    <map:parameter name="export" value="xml"/>
+    <map:parameter name="text" value="doclin"/>
+  </map:transform>
+  <map:serialize type="xml"/>
+</map:match>
+
+<map:match pattern="Opd*.xml">
+  <map:generate src="xml/opd.xml"/>
+  <map:transform src="stylesheets/xml.xsl">
+    <map:parameter name="document" value="Opd{1}"/>
+    <map:parameter name="export" value="xml"/>
+    <map:parameter name="text" value="doclin"/>
+  </map:transform>
+  <map:serialize type="xml"/>
+</map:match>
+
+<!-- home page -->
+    <map:match pattern="index.html">
+      <map:generate src="xml/ads.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+  <map:parameter name="text" value="home"/>
+  <map:parameter name="document" value="AdsM1"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+
+    <map:match pattern="overlevering.html">
+      <map:generate src="xml/overlevering.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+        <map:parameter name="text" value="overlevering"/>
+        <map:parameter name="document" value="overlevering"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+    
+    <map:match pattern="gebruiksaanwijzing.html">
+      <map:generate src="xml/gebruiksaanwijzing.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+        <map:parameter name="text" value="gebruiksaanwijzing"/>
+        <map:parameter name="document" value="gebruiksaanwijzing"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+    
+    <map:match pattern="inleiding.html">
+      <map:generate src="xml/inleiding.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+        <map:parameter name="text" value="inleiding"/>
+        <map:parameter name="document" value="inleiding"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+    
+    <map:match pattern="colofon.html">
+      <map:generate src="xml/colofon.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+        <map:parameter name="text" value="colofon"/>
+        <map:parameter name="document" value="colofon"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+
+<!-- original pipelines -->
+
     <map:match pattern="Ads.htm">
       <map:generate src="xml/ads.xml" label="adsXML"/>
       <map:transform src="stylesheets/ads.xsl">

@@ -257,10 +257,15 @@
 </xsl:choose>
 </xsl:template>
 
+<!-- STATIC CONVERSION 2026-03-10: added conditionals to check for each attribute if it exists in source and is not empty -->
 <xsl:template match="seg">
 <xsl:param name="wit"/>
 <xsl:param name="ana"/>
-<seg><xsl:attribute name="n"><xsl:value-of select="@n"/></xsl:attribute><xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute><xsl:if test="@type"><xsl:attribute name="type"><xsl:value-of select="@type"/></xsl:attribute></xsl:if>
+<seg>
+<xsl:if test="@n and @n!=''"><xsl:attribute name="n"><xsl:value-of select="@n"/></xsl:attribute></xsl:if>
+<xsl:if test="@id and @id!=''"><xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute></xsl:if>
+<xsl:if test="@type and @type!=''"><xsl:attribute name="type"><xsl:value-of select="@type"/></xsl:attribute></xsl:if>
+<xsl:if test="@base and @base!=''"><xsl:attribute name="base"><xsl:value-of select="@base"/></xsl:attribute></xsl:if>
 <xsl:apply-templates><xsl:with-param name="wit" select="$wit"/><xsl:with-param name="ana" select="$ana"/></xsl:apply-templates>
 </seg>
 </xsl:template>
@@ -340,6 +345,7 @@
 </xsl:choose>
 </xsl:template>
 
+<!-- STATIC CONVERSION 2026-03-10: added conditionals to check for each attribute if it exists in source and is not empty -->
 <xsl:template match="del">
 <xsl:param name="ana"/>
 <xsl:param name="view"/>
@@ -349,43 +355,79 @@
     <!-- <xsl:apply-templates/> -->
  </xsl:if>
    <xsl:if test="not(substring-after(@layer,'l'))">
-   <del><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute><xsl:attribute name="type"><xsl:value-of select="@type"/></xsl:attribute><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute>
+   <del>
+    <xsl:if test="@rend and @rend!=''"><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute></xsl:if>
+    <xsl:if test="@type and @type!=''"><xsl:attribute name="type"><xsl:value-of select="@type"/></xsl:attribute></xsl:if>
+    <xsl:if test="@hand and @hand!=''"><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute></xsl:if>
+    <xsl:if test="@resp and @resp!=''"><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute></xsl:if>
+    <xsl:if test="@layer and @layer!=''"><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute></xsl:if>
     <xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates>
    </del>
  </xsl:if>
   <xsl:if test="substring-after(@layer,'l') = $ana">
-    <del><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute><xsl:attribute name="type"><xsl:value-of select="@type"/></xsl:attribute><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute><xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates></del>
+   <del>
+    <xsl:if test="@rend and @rend!=''"><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute></xsl:if>
+    <xsl:if test="@type and @type!=''"><xsl:attribute name="type"><xsl:value-of select="@type"/></xsl:attribute></xsl:if>
+    <xsl:if test="@hand and @hand!=''"><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute></xsl:if>
+    <xsl:if test="@resp and @resp!=''"><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute></xsl:if>
+    <xsl:if test="@layer and @layer!=''"><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute></xsl:if>
+    <xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates>
+   </del>
  </xsl:if> 
  <xsl:if test="substring-after(@layer,'l') &gt; $ana">
     <xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates>
  </xsl:if>
  </xsl:when>
  <xsl:otherwise>
- <del><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute><xsl:attribute name="type"><xsl:value-of select="@type"/></xsl:attribute><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute>
-    <xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates></del>
+  <del>
+    <xsl:if test="@rend and @rend!=''"><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute></xsl:if>
+    <xsl:if test="@type and @type!=''"><xsl:attribute name="type"><xsl:value-of select="@type"/></xsl:attribute></xsl:if>
+    <xsl:if test="@hand and @hand!=''"><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute></xsl:if>
+    <xsl:if test="@resp and @resp!=''"><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute></xsl:if>
+    <xsl:if test="@layer and @layer!=''"><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute></xsl:if>
+    <xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates>
+  </del>
   </xsl:otherwise>
  </xsl:choose>
 </xsl:template>
 
+<!-- STATIC CONVERSION 2026-03-10: added conditionals to check for each attribute if it exists in source and is not empty -->
 <xsl:template match="add">
 <xsl:param name="ana"/>
 <xsl:param name="view"/>
 <xsl:choose>
  <xsl:when test="$n!=''">
   <xsl:if test="not(substring-after(@layer,'l'))">
-   <add><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute><xsl:attribute name="place"><xsl:value-of select="@place"/></xsl:attribute><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute>
+   <add>
+    <xsl:if test="@rend and @rend!=''"><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute></xsl:if>
+    <xsl:if test="@place and @place!=''"><xsl:attribute name="place"><xsl:value-of select="@place"/></xsl:attribute></xsl:if>
+    <xsl:if test="@hand and @hand!=''"><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute></xsl:if>
+    <xsl:if test="@resp and @resp!=''"><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute></xsl:if>
+    <xsl:if test="@layer and @layer!=''"><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute></xsl:if>
     <xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates>
    </add>
  </xsl:if>
  <xsl:if test="substring-after(@layer,'l') = $ana">
-   <add><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute><xsl:attribute name="place"><xsl:value-of select="@place"/></xsl:attribute><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute><xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates></add>
+   <add>
+    <xsl:if test="@rend and @rend!=''"><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute></xsl:if>
+    <xsl:if test="@place and @place!=''"><xsl:attribute name="place"><xsl:value-of select="@place"/></xsl:attribute></xsl:if>
+    <xsl:if test="@hand and @hand!=''"><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute></xsl:if>
+    <xsl:if test="@resp and @resp!=''"><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute></xsl:if>
+    <xsl:if test="@layer and @layer!=''"><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute></xsl:if>
+    <xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates>
+   </add>
   </xsl:if>
  <xsl:if test="substring-after(@layer,'l') &lt; $ana">
     <xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates>
   </xsl:if>
    </xsl:when>
  <xsl:otherwise>
-   <add><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute><xsl:attribute name="place"><xsl:value-of select="@place"/></xsl:attribute><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute>
+   <add>
+    <xsl:if test="@rend and @rend!=''"><xsl:attribute name="rend"><xsl:value-of select="@rend"/></xsl:attribute></xsl:if>
+    <xsl:if test="@place and @place!=''"><xsl:attribute name="place"><xsl:value-of select="@place"/></xsl:attribute></xsl:if>
+    <xsl:if test="@hand and @hand!=''"><xsl:attribute name="hand"><xsl:value-of select="@hand"/></xsl:attribute></xsl:if>
+    <xsl:if test="@resp and @resp!=''"><xsl:attribute name="resp"><xsl:value-of select="@resp"/></xsl:attribute></xsl:if>
+    <xsl:if test="@layer and @layer!=''"><xsl:attribute name="ana"><xsl:value-of select="@layer"/></xsl:attribute></xsl:if>
     <xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates>
    </add>
   </xsl:otherwise>
