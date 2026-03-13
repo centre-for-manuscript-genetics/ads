@@ -30,7 +30,7 @@
 </xsl:template>
 
 <xsl:template name="colofon">
-<div><center><img src="images/colofon.jpg" usemap="#colofon_Map" border="0"/></center></div>
+<div style="text-align:center;"><img src="images/colofon.jpg" usemap="#colofon_Map" border="0" alt="colofon"/></div>
 
 <br/>
 <br/>

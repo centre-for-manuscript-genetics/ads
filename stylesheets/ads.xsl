@@ -5,7 +5,7 @@
 
 <xsl:import href="adsOuter.xsl"/>
 <xsl:import href="home.xsl"/>
-<xsl:output method="html" version="5.0" encoding="UTF-8" indent="yes"/>
+<xsl:output method="html" version="5.0" encoding="UTF-8" indent="no"/>
 
 <xsl:param name="text" select="''"/>
 <xsl:param name="document" select="''"/>
@@ -56,13 +56,13 @@
  <table align="center" width="100%">
   <tr>
      <!-- boven -->
-   <td align="center" colspan="3"><p class="navigation"><xsl:if test="$pagefirst"><img border="0" src="images/navi/up.jpg"/></xsl:if><xsl:if test="not($pagefirst)"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid - 1]/@id"/>-<xsl:if test="$text='docfacs'">facsimile</xsl:if><xsl:if test="$text='docfacstopo'">topo</xsl:if><xsl:if test="$text='docfacspop'">popup</xsl:if>.html</xsl:attribute><xsl:if test="not(contains(document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid - 1]/@id,'a'))">p. </xsl:if><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid - 1]/@id"/><br/><img border="0" src="images/navi/up.jpg"/></a></xsl:if></p></td></tr>
+   <td align="center" colspan="3"><p class="navigation"><xsl:if test="$pagefirst"><img alt="up" src="images/navi/up.jpg"/></xsl:if><xsl:if test="not($pagefirst)"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid - 1]/@id"/>-<xsl:if test="$text='docfacs'">facsimile</xsl:if><xsl:if test="$text='docfacstopo'">topo</xsl:if><xsl:if test="$text='docfacspop'">popup</xsl:if>.html</xsl:attribute><xsl:if test="not(contains(document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid - 1]/@id,'a'))">p. </xsl:if><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid - 1]/@id"/><br/><img alt="up" src="images/navi/up.jpg"/></a></xsl:if></p></td></tr>
      <!-- links -->
-   <tr><td align="right" width="49%"><p class="navigation"><xsl:if test="$documentn = '1'"><img border="0" src="images/navi/left.jpg"/></xsl:if><xsl:if test="$documentn != '1'"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@id"/>-<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@id=$page]/@prev"/>-facsimile.html</xsl:attribute><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@short"/><xsl:text> </xsl:text><img border="0" src="images/navi/left.jpg"/></a></xsl:if></p></td>
+   <tr><td align="right" width="49%"><p class="navigation"><xsl:if test="$documentn = '1'"><img alt="left" src="images/navi/left.jpg"/></xsl:if><xsl:if test="$documentn != '1'"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@id"/>-<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@id=$page]/@prev"/>-facsimile.html</xsl:attribute><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@short"/><xsl:text> </xsl:text><img alt="left" src="images/navi/left.jpg"/></a></xsl:if></p></td>
      <!-- rechts -->
-   <td width="1%"/><td align="left" width="49%"><p class="navigation"><xsl:if test="$documentn = '24'"><img border="0" src="images/navi/right.jpg"/></xsl:if><xsl:if test="$documentn != '24'"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@id"/>-<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@id=$page]/@next"/>-facsimile.html</xsl:attribute><img border="0" src="images/navi/right.jpg"/><xsl:text> </xsl:text><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@short"/></a></xsl:if></p></td></tr>
+   <td width="1%"/><td align="left" width="49%"><p class="navigation"><xsl:if test="$documentn = '24'"><img alt="right" src="images/navi/right.jpg"/></xsl:if><xsl:if test="$documentn != '24'"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@id"/>-<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@id=$page]/@next"/>-facsimile.html</xsl:attribute><img alt="right" src="images/navi/right.jpg"/><xsl:text> </xsl:text><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@short"/></a></xsl:if></p></td></tr>
      <!-- onder -->
-   <tr><td align="center" colspan="3"><p class="navigation"><xsl:if test="$pagelast"><img border="0" src="images/navi/down.jpg"/></xsl:if><xsl:if test="not($pagelast)"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid + 1]/@id"/>-<xsl:if test="$text='docfacs'">facsimile</xsl:if><xsl:if test="$text='docfacstopo'">topo</xsl:if><xsl:if test="$text='docfacspop'">popup</xsl:if>.html</xsl:attribute><img src="images/navi/down.jpg" border="0"/><br/><xsl:if test="not(contains(document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid + 1]/@id,'a'))">p. </xsl:if><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid + 1]/@id"/></a></xsl:if></p></td></tr>
+   <tr><td align="center" colspan="3"><p class="navigation"><xsl:if test="$pagelast"><img alt="down" src="images/navi/down.jpg"/></xsl:if><xsl:if test="not($pagelast)"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid + 1]/@id"/>-<xsl:if test="$text='docfacs'">facsimile</xsl:if><xsl:if test="$text='docfacstopo'">topo</xsl:if><xsl:if test="$text='docfacspop'">popup</xsl:if>.html</xsl:attribute><img alt="down" src="images/navi/down.jpg"/><br/><xsl:if test="not(contains(document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid + 1]/@id,'a'))">p. </xsl:if><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid + 1]/@id"/></a></xsl:if></p></td></tr>
   </table>
  </div>
  </xsl:if>
@@ -70,26 +70,29 @@
  <!-- Navigation box left -->
  <xsl:if test="$export!='print'">
  <div class="navigationleft">
- <p class="navigation"><img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>.html#<xsl:value-of select="$page"/></xsl:attribute>Lineaire transcriptie</a><br/>
- <xsl:if test="$text='docfacstopo'"><img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/>-facsimile.html</xsl:attribute>Facsimile</a><br/></xsl:if>
- <xsl:if test="$document='AdsM1' and $text='docfacs' or $text='docfacspop'"><img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/>-topo.html</xsl:attribute>Topografische transcriptie</a><br/></xsl:if>
- <xsl:if test="$document='AdsM1' and $text='docfacs' or $text='docfacstopo'"><img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/>-popup.html</xsl:attribute>Facsimile + Topografisch</a><br/></xsl:if>
- <!-- STATIC CONVERSION 2026-03-10: removed Flash-based zoom views (docfacszoom, docfacstopozoom)<xsl:if test="$document='AdsM1'"><img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacszoom&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Vergrootglas facsimile</a><br/></xsl:if>
- <xsl:if test="$document='AdsM1'"><img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacstopozoom&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Vergrootglas topografisch</a><br/></xsl:if> -->
- <img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a href="#thumbs">Thumbnails</a></p>
+ <p class="navigation"><img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>.html#p<xsl:value-of select="$page"/></xsl:attribute>Lineaire transcriptie</a><br/>
+ <xsl:if test="$text='docfacstopo'"><img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/>-facsimile.html</xsl:attribute>Facsimile</a><br/></xsl:if>
+ <xsl:if test="$document='AdsM1' and $text='docfacs' or $text='docfacspop'"><img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/>-topo.html</xsl:attribute>Topografische transcriptie</a><br/></xsl:if>
+ <xsl:if test="$document='AdsM1' and $text='docfacs' or $text='docfacstopo'"><img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/>-popup.html</xsl:attribute>Facsimile + Topografisch</a><br/></xsl:if>
+ <!-- STATIC CONVERSION 2026-03-10: removed Flash-based zoom views (docfacszoom, docfacstopozoom)<xsl:if test="$document='AdsM1'"><img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacszoom&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Vergrootglas facsimile</a><br/></xsl:if>
+ <xsl:if test="$document='AdsM1'"><img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacstopozoom&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Vergrootglas topografisch</a><br/></xsl:if> -->
+ <img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a href="#thumbs">Thumbnails</a></p>
  </div>
  </xsl:if>
  <!-- title -->
  <h1><xsl:if test="starts-with($document,'Ads')">ACHTER DE SCHERMEN</xsl:if><xsl:if test="starts-with($document,'Opd')">Opdracht</xsl:if></h1>
  <h2><xsl:if test="$text='docfacs' or $text='docfacspop'">Facsimile</xsl:if><xsl:if test="$text='docfacstopo'">Topografische transcriptie</xsl:if> van<br/> <xsl:value-of select="$document"/>, <xsl:if test="not(contains(document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid]/@id,'a'))">pagina</xsl:if><xsl:text> </xsl:text><xsl:value-of select="$page"/></h2>
  <!-- image -->
-  <center><img><xsl:attribute name="src">images/<xsl:value-of select="$document"/>/<xsl:value-of select="$document"/>-<xsl:value-of select="$page"/><xsl:if test="$text='docfacstopo'">topo</xsl:if>.jpg</xsl:attribute><xsl:if test="$export='print'"><xsl:attribute name="width">550</xsl:attribute></xsl:if></img></center>
+ <!-- STATIC CONVERSION 2026-03-13: HTML review: all images need alt attributes -->
+  <center><img><xsl:attribute name="src">images/<xsl:value-of select="$document"/>/<xsl:value-of select="$document"/>-<xsl:value-of select="$page"/><xsl:if test="$text='docfacstopo'">topo</xsl:if>.jpg</xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/><xsl:if test="$text='docfacstopo'">topo</xsl:if></xsl:attribute><xsl:if test="$export='print'"><xsl:attribute name="width">550</xsl:attribute></xsl:if></img></center>
   <!-- thumbs -->
   <xsl:if test="$export!='print'"><a name="thumbs"><table align="left" width="100%">
 <xsl:for-each select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs">
 <tr>
 <xsl:for-each select="page">
-<td><p><center><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-<xsl:value-of select="@id"/>-<xsl:if test="$text='docfacs'">facsimile</xsl:if><xsl:if test="$text='docfacstopo'">topo</xsl:if><xsl:if test="$text='docfacspop'">popup</xsl:if>.html</xsl:attribute><img border="0" width="100"><xsl:attribute name="src">images/<xsl:value-of select="$document"/>/thumbs/<xsl:value-of select="$document"/>-<xsl:value-of select="@id"/>.jpg</xsl:attribute></img><br/><xsl:value-of select="@id"/></a></center></p></td>
+  <!-- STATIC CONVERSION 2026-03-10: new url mapping -->
+  <!-- STATIC CONVERSION 2026-03-13: HTML review: all images need alt attributes -->
+<td><p><center><a><xsl:attribute name="href"><xsl:value-of select="$document"/>-<xsl:value-of select="@id"/>-<xsl:if test="$text='docfacs'">facsimile</xsl:if><xsl:if test="$text='docfacstopo'">topo</xsl:if><xsl:if test="$text='docfacspop'">popup</xsl:if>.html</xsl:attribute><img width="100"><xsl:attribute name="src">images/<xsl:value-of select="$document"/>/thumbs/<xsl:value-of select="$document"/>-<xsl:value-of select="@id"/>.jpg</xsl:attribute><xsl:attribute name="alt">Thumbnail: <xsl:value-of select="$document"/>-<xsl:value-of select="@id"/></xsl:attribute></img><br/><xsl:value-of select="@id"/></a></center></p></td>
 </xsl:for-each></tr>
 </xsl:for-each></table></a></xsl:if>
  <!-- draggable image -->
@@ -121,13 +124,13 @@
  <table align="center" width="100%">
   <tr>
      <!-- boven -->
-   <td align="center" colspan="3"><p class="navigation"><xsl:if test="$pagefirst"><img border="0" src="images/navi/up.jpg"/></xsl:if><xsl:if test="not($pagefirst)"><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=<xsl:if test="$text='docfacspop'">docfacs</xsl:if><xsl:if test="$text!='docfacspop'"><xsl:value-of select="$text"/></xsl:if>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid - 1]/@id"/></xsl:attribute>p. <xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid - 1]/@id"/><br/><img border="0" src="images/navi/up.jpg"/></a></xsl:if></p></td></tr>
+   <td align="center" colspan="3"><p class="navigation"><xsl:if test="$pagefirst"><img alt="up" src="images/navi/up.jpg"/></xsl:if><xsl:if test="not($pagefirst)"><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=<xsl:if test="$text='docfacspop'">docfacs</xsl:if><xsl:if test="$text!='docfacspop'"><xsl:value-of select="$text"/></xsl:if>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid - 1]/@id"/></xsl:attribute>p. <xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid - 1]/@id"/><br/><img alt="up" src="images/navi/up.jpg"/></a></xsl:if></p></td></tr>
      <!-- links -->
-   <tr><td align="right" width="49%"><p class="navigation"><xsl:if test="$documentn = '1'"><img border="0" src="images/navi/left.jpg"/></xsl:if><xsl:if test="$documentn != '1'"><a><xsl:attribute name="href"><xsl:if test="starts-with(document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@id,'Ads')">Ads.htm</xsl:if><xsl:if test="starts-with(document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@id,'Opd')">Opd.htm</xsl:if>?text=docfacs&amp;document=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@id"/>&amp;page=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@id=$page]/@prev"/></xsl:attribute><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@short"/><xsl:text> </xsl:text><img border="0" src="images/navi/left.jpg"/></a></xsl:if></p></td>
+   <tr><td align="right" width="49%"><p class="navigation"><xsl:if test="$documentn = '1'"><img alt="left" src="images/navi/left.jpg"/></xsl:if><xsl:if test="$documentn != '1'"><a><xsl:attribute name="href"><xsl:if test="starts-with(document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@id,'Ads')">Ads.htm</xsl:if><xsl:if test="starts-with(document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@id,'Opd')">Opd.htm</xsl:if>?text=docfacs&amp;document=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@id"/>&amp;page=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@id=$page]/@prev"/></xsl:attribute><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn - 1]/@short"/><xsl:text> </xsl:text><img alt="left" src="images/navi/left.jpg"/></a></xsl:if></p></td>
      <!-- rechts -->
-   <td width="1%"/><td align="left" width="49%"><p class="navigation"><xsl:if test="$documentn = '24'"><img border="0" src="images/navi/right.jpg"/></xsl:if><xsl:if test="$documentn != '24'"><a><xsl:attribute name="href"><xsl:if test="starts-with(document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@id,'Ads')">Ads.htm</xsl:if><xsl:if test="starts-with(document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@id,'Opd')">Opd.htm</xsl:if>?text=docfacs&amp;document=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@id"/>&amp;page=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@id=$page]/@next"/></xsl:attribute><img border="0" src="images/navi/right.jpg"/><xsl:text> </xsl:text><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@short"/></a></xsl:if></p></td></tr>
+   <td width="1%"/><td align="left" width="49%"><p class="navigation"><xsl:if test="$documentn = '24'"><img alt="right" src="images/navi/right.jpg"/></xsl:if><xsl:if test="$documentn != '24'"><a><xsl:attribute name="href"><xsl:if test="starts-with(document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@id,'Ads')">Ads.htm</xsl:if><xsl:if test="starts-with(document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@id,'Opd')">Opd.htm</xsl:if>?text=docfacs&amp;document=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@id"/>&amp;page=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@id=$page]/@next"/></xsl:attribute><img alt="right" src="images/navi/right.jpg"/><xsl:text> </xsl:text><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@n=$documentn + 1]/@short"/></a></xsl:if></p></td></tr>
      <!-- onder -->
-   <tr><td align="center" colspan="3"><p class="navigation"><xsl:if test="$pagelast"><img border="0" src="images/navi/down.jpg"/></xsl:if><xsl:if test="not($pagelast)"><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=<xsl:if test="$text='docfacspop'">docfacs</xsl:if><xsl:if test="$text!='docfacspop'"><xsl:value-of select="$text"/></xsl:if>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid + 1]/@id"/></xsl:attribute><img src="images/navi/down.jpg" border="0"/><br/>p. <xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid + 1]/@id"/></a></xsl:if></p></td></tr>
+   <tr><td align="center" colspan="3"><p class="navigation"><xsl:if test="$pagelast"><img alt="down" src="images/navi/down.jpg"/></xsl:if><xsl:if test="not($pagelast)"><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=<xsl:if test="$text='docfacspop'">docfacs</xsl:if><xsl:if test="$text!='docfacspop'"><xsl:value-of select="$text"/></xsl:if>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid + 1]/@id"/></xsl:attribute><img alt="down" src="images/navi/down.jpg"/><br/>p. <xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid + 1]/@id"/></a></xsl:if></p></td></tr>
   </table>
  </div>
  </xsl:if>
@@ -135,13 +138,13 @@
  <!-- Zoom Navigation box left -->
  <xsl:if test="$export!='print'">
  <div class="navigationleft">
- <p class="navigation"><img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=doclin&amp;document=<xsl:value-of select="$document"/>#<xsl:value-of select="$page"/></xsl:attribute>Lineaire transcriptie</a><br/>
- <img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacs&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Facsimile</a><br/>
- <img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacstopo&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Topografische transcriptie</a><br/>
- <xsl:if test="$document='AdsM1'"><img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacspop&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Facsimile + Topografisch</a><br/></xsl:if>
- <xsl:if test="$text!='docfacszoom'"><img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacszoom&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Vergrootglas facsimile</a><br/></xsl:if>
- <xsl:if test="$text!='docfacstopozoom'"><img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacstopozoom&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Vergrootglas topografisch</a><br/></xsl:if>
- <img src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a href="#thumbs">Thumbnails</a></p>
+ <p class="navigation"><img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=doclin&amp;document=<xsl:value-of select="$document"/>#<xsl:value-of select="$page"/></xsl:attribute>Lineaire transcriptie</a><br/>
+ <img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacs&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Facsimile</a><br/>
+ <img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacstopo&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Topografische transcriptie</a><br/>
+ <xsl:if test="$document='AdsM1'"><img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacspop&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Facsimile + Topografisch</a><br/></xsl:if>
+ <xsl:if test="$text!='docfacszoom'"><img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacszoom&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Vergrootglas facsimile</a><br/></xsl:if>
+ <xsl:if test="$text!='docfacstopozoom'"><img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=docfacstopozoom&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/></xsl:attribute>Vergrootglas topografisch</a><br/></xsl:if>
+ <img alt="dot" src="images/navi/dot.jpg"/><xsl:text> </xsl:text><a href="#thumbs">Thumbnails</a></p>
  </div>
  </xsl:if>
  <!-- zoom title -->
@@ -159,7 +162,7 @@
 <xsl:for-each select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs">
 <tr>
 <xsl:for-each select="page">
-<td><p><center><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=<xsl:value-of select="$text"/>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="@id"/></xsl:attribute><img border="0" width="100"><xsl:attribute name="src">images/<xsl:value-of select="$document"/>/thumbs/<xsl:value-of select="$document"/>-<xsl:value-of select="@id"/>.jpg</xsl:attribute></img><br/><xsl:value-of select="@id"/></a></center></p></td>
+<td><p><center><a><xsl:attribute name="href"><xsl:value-of select="substring($document,1,3)"/>.htm?text=<xsl:value-of select="$text"/>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="@id"/></xsl:attribute><img width="100"><xsl:attribute name="src">images/<xsl:value-of select="$document"/>/thumbs/<xsl:value-of select="$document"/>-<xsl:value-of select="@id"/>.jpg</xsl:attribute></img><br/><xsl:value-of select="@id"/></a></center></p></td>
 </xsl:for-each></tr>
 </xsl:for-each></table></a></xsl:if>
 
@@ -222,7 +225,7 @@
   <center><div class="disclaimer"><xsl:apply-templates/></div></center>
  </xsl:when>
  <xsl:when test="@id and @type!='disclaimer' or not(@type)">
-  <a><xsl:attribute name="name"><xsl:value-of select="@id"/></xsl:attribute></a><xsl:apply-templates/>
+  <a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute></a><xsl:apply-templates/>
  </xsl:when>
  <xsl:otherwise>
    <xsl:apply-templates/>
@@ -281,11 +284,11 @@
 <xsl:param name="wit"/>
 <xsl:choose>
  <xsl:when test="@base='z011' and $document='AdsD1'">
- <xsl:if test="$text='doclinlay'"><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a><xsl:attribute name="name"><xsl:value-of select="@base"/></xsl:attribute></a><a><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="@n"/>-<xsl:value-of select="@base"/>-<xsl:value-of select="ancestor::TEI.2//text[@id='AdsM1']//seg[@base=current()/@base]/@type"/>.html</xsl:attribute><img src="images/navi/dot.jpg" border="0"/></a> <xsl:text> </xsl:text></xsl:if>
+ <xsl:if test="$text='doclinlay'"><a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:value-of select="@n"/></xsl:attribute></a><a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:value-of select="@base"/></xsl:attribute></a><a><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="@n"/>-<xsl:value-of select="@base"/>-<xsl:value-of select="ancestor::TEI.2//text[@id='AdsM1']//seg[@base=current()/@base]/@type"/>.html</xsl:attribute><img alt="dot" src="images/navi/dot.jpg"/></a> <xsl:text> </xsl:text></xsl:if>
   <xsl:apply-templates/><br/><br/><br/><br/><br/>
  </xsl:when>
   <xsl:when test="@base='z011' and $document='AdsD2'">
-  <xsl:if test="$text='doclinlay'"><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a><xsl:attribute name="name"><xsl:value-of select="@base"/></xsl:attribute></a><a><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="@n"/>-<xsl:value-of select="@base"/>-<xsl:value-of select="ancestor::TEI.2//text[@id='AdsM1']//seg[@base=current()/@base]/@type"/>.html</xsl:attribute><img src="images/navi/dot.jpg" border="0"/></a> <xsl:text> </xsl:text></xsl:if><xsl:apply-templates/><br/><br/><br/><br/>
+  <xsl:if test="$text='doclinlay'"><a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:value-of select="@n"/></xsl:attribute></a><a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:value-of select="@base"/></xsl:attribute></a><a><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="@n"/>-<xsl:value-of select="@base"/>-<xsl:value-of select="ancestor::TEI.2//text[@id='AdsM1']//seg[@base=current()/@base]/@type"/>.html</xsl:attribute><img alt="dot" src="images/navi/dot.jpg"/></a> <xsl:text> </xsl:text></xsl:if><xsl:apply-templates/><br/><br/><br/><br/>
  </xsl:when>
   <xsl:when test="@base='z102' and $document='AdsM1' and $trans='yes'">
   <xsl:apply-templates/><br/><br/>
@@ -294,17 +297,17 @@
   <xsl:apply-templates/><br/><br/>
  </xsl:when>
  <xsl:when test="$text='doclinlay' and $document='AdsM1'">
-  <a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a><xsl:attribute name="name"><xsl:value-of select="@base"/></xsl:attribute></a><a><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="@n"/>-<xsl:value-of select="@base"/>-<xsl:value-of select="@type"/>.html</xsl:attribute><img src="images/navi/dot.jpg" border="0"/></a> <xsl:text> </xsl:text><xsl:apply-templates/>
+  <a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:value-of select="@n"/></xsl:attribute></a><a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:value-of select="@base"/></xsl:attribute></a><a><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="@n"/>-<xsl:value-of select="@base"/>-<xsl:value-of select="@type"/>.html</xsl:attribute><img alt="dot" src="images/navi/dot.jpg"/></a> <xsl:text> </xsl:text><xsl:apply-templates/>
  </xsl:when>
  <xsl:when test="$text='doclinlay' and substring($document,1,3) = 'Ads' and $document!='AdsM1'">
-  <a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a><xsl:attribute name="name"><xsl:value-of select="@base"/></xsl:attribute></a><a><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="@n"/>-<xsl:value-of select="@base"/>-<xsl:value-of select="ancestor::TEI.2//text[@id='AdsM1']//seg[@base=current()/@base]/@type"/>.html</xsl:attribute><img src="images/navi/dot.jpg" border="0"/></a> <xsl:text> </xsl:text><xsl:apply-templates/>
+  <a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:value-of select="@n"/></xsl:attribute></a><a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:value-of select="@base"/></xsl:attribute></a><a><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="@n"/>-<xsl:value-of select="@base"/>-<xsl:value-of select="ancestor::TEI.2//text[@id='AdsM1']//seg[@base=current()/@base]/@type"/>.html</xsl:attribute><img alt="dot" src="images/navi/dot.jpg"/></a> <xsl:text> </xsl:text><xsl:apply-templates/>
  </xsl:when>
  <xsl:when test="$text='doclinapp' and descendant::app[@n=$app]">
    <xsl:if test="contains($cursief,$wit)"><i><xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates></i></xsl:if>
    <xsl:if test="not(contains($cursief,$wit))"><xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates></xsl:if>
  </xsl:when>
  <xsl:when test="contains($text,'doclin')">
-     <a><xsl:attribute name="name"><xsl:value-of select="@base"/></xsl:attribute></a><xsl:apply-templates/>
+     <a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:value-of select="@base"/></xsl:attribute></a><xsl:apply-templates/>
  </xsl:when>
  <xsl:otherwise>
    <!--<xsl:apply-templates/>-->
@@ -520,73 +523,103 @@
      <strike> is obsolete since HTML4; <del> is the correct inline HTML5 element
      for deleted text, renders with text-decoration: line-through by default,
      and is safe for block-level children such as <details> popups. -->
+<!-- STATIC CONVERSION 2026-03-13: nested <del> replaced with <span class="del"> to avoid invalid nesting -->
 <xsl:template match="del[not(@corresp)]">
-<xsl:choose>
- <xsl:when test="$view='bovenlaag'">
-   <!-- <xsl:value-of select="."/> -->
- </xsl:when>
- <xsl:otherwise>
-   <del>
-    <xsl:apply-templates/>
-   </del>
- </xsl:otherwise>
-</xsl:choose>
+  <xsl:choose>
+    <xsl:when test="$view='bovenlaag'">
+      <!-- <xsl:value-of select="."/> -->
+    </xsl:when>
+    <xsl:when test="ancestor::del">
+      <span class="del">
+        <xsl:apply-templates/>
+      </span>
+    </xsl:when>
+    <xsl:otherwise>
+      <del>
+        <xsl:apply-templates/>
+      </del>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <!-- STATIC CONVERSION 2026-03-12: Replace obsolete <strike> with semantic <del>.
      <strike> is obsolete since HTML4; <del> is the correct inline HTML5 element
      for deleted text, renders with text-decoration: line-through by default,
      and is safe for block-level children such as <details> popups. -->
+<!-- STATIC CONVERSION 2026-03-13: nested <del> replaced with <span class="del"> to avoid invalid nesting -->
 <xsl:template match="add/del">
-<xsl:choose>
- <xsl:when test="$view='bovenlaag'">
-   <!-- <xsl:value-of select="."/> -->
- </xsl:when>
- <xsl:otherwise>
-   <del>
-    <xsl:apply-templates/>
-   </del>
- </xsl:otherwise>
-</xsl:choose>
+  <xsl:choose>
+    <xsl:when test="$view='bovenlaag'">
+      <!-- <xsl:value-of select="."/> -->
+    </xsl:when>
+    <xsl:when test="ancestor::del">
+      <span class="del">
+        <xsl:apply-templates/>
+      </span>
+    </xsl:when>
+    <xsl:otherwise>
+      <del>
+        <xsl:apply-templates/>
+      </del>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template match="add/add">
-<xsl:choose>
- <xsl:when test="$view='bovenlaag'">
-    <xsl:apply-templates/>
- </xsl:when>
- <xsl:otherwise>
-   <font color="red" class="red">
-    <xsl:apply-templates/>
-   </font>
- </xsl:otherwise>
-</xsl:choose>
+  <xsl:choose>
+    <xsl:when test="$view='bovenlaag'">
+      <xsl:apply-templates/>
+    </xsl:when>
+    <!-- STATIC CONVERSION 2026-03-13: <font color="red"> replaced with <span class="red"> or <div class="red"> depending on content -->
+    <xsl:when test="p">
+      <div class="red">
+        <xsl:apply-templates/>
+      </div>
+    </xsl:when>
+    <xsl:otherwise>
+      <span class="red">
+        <xsl:apply-templates/>
+      </span>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template match="add/add/add">
-<xsl:choose>
- <xsl:when test="$view='bovenlaag'">
-    <xsl:apply-templates/>
- </xsl:when>
- <xsl:otherwise>
-    <font color="green" class="green">
+  <xsl:choose>
+    <xsl:when test="$view='bovenlaag'">
       <xsl:apply-templates/>
-    </font>
- </xsl:otherwise>
-</xsl:choose>
+    </xsl:when>
+    <!-- STATIC CONVERSION 2026-03-13: <font color="green"> replaced with <span class="green"> or <div class="green"> depending on content -->
+    <xsl:when test="p">
+      <div class="green">
+        <xsl:apply-templates/>
+      </div>
+    </xsl:when>
+    <xsl:otherwise>
+      <span class="green">
+        <xsl:apply-templates/>
+      </span>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template match="add">
-<xsl:choose>
- <xsl:when test="$view='bovenlaag'">
-    <xsl:apply-templates/>
- </xsl:when>
- <xsl:otherwise>
-   <font color="blue" class="blue">
-    <xsl:apply-templates/>
-   </font>
- </xsl:otherwise>
-</xsl:choose>
+  <xsl:choose>
+    <xsl:when test="$view='bovenlaag'">
+      <xsl:apply-templates/>
+    </xsl:when>
+    <!-- STATIC CONVERSION 2026-03-13: <font color="blue"> replaced with <span class="blue"> or <div class="blue"> depending on content -->
+    <xsl:when test="p">
+      <div class="blue">
+        <xsl:apply-templates/>
+      </div>
+    </xsl:when>
+    <xsl:otherwise>
+      <span class="blue">
+        <xsl:apply-templates/>
+      </span>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template match="del[contains(@n,'zin')]">
@@ -632,12 +665,15 @@
           <xsl:attribute name="href">
             <xsl:if test="substring($document,4,1) !='Z'"><xsl:value-of select="substring($document,1,5)"/></xsl:if>
             <xsl:if test="substring($document,4,1) ='Z'"><xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/></xsl:if>-<xsl:value-of select="@n"/>-facsimile.html</xsl:attribute>
-          <img border="0" style="float:right;margin: 0px 10px 0px 10px; border: 1px solid #666; padding: 2px;">
+          <!-- STATIC CONVERSION 2026-03-13: HTML review: all images need alt attributes -->
+          <img style="float:right;margin: 0px 10px 0px 10px; border: 1px solid #666; padding: 2px;">
             <xsl:if test="substring($document,4,1) !='Z'">
               <xsl:attribute name="src">images/<xsl:value-of select="substring($document,1,5)"/>/thumbs/<xsl:value-of select="substring($document,1,5)"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute>
+              <xsl:attribute name="alt">Thumbnail: <xsl:value-of select="substring($document,1,5)"/>-<xsl:value-of select="@n"/></xsl:attribute>
             </xsl:if>
             <xsl:if test="substring($document,4,1) ='Z'">
               <xsl:attribute name="src">images/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>/thumbs/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute>
+              <xsl:attribute name="alt">Thumbnail: <xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>-<xsl:value-of select="@n"/></xsl:attribute>
             </xsl:if>
           </img>
         </a>
@@ -647,65 +683,71 @@
     <xsl:otherwise>
       <xsl:if test="contains(@ed,substring($document,1,6))">
         <xsl:if test="$export!='print'">
-          <a>
-            <xsl:attribute name="href">
-              <xsl:if test="substring($document,4,1) !='Z'"><xsl:value-of select="substring($document,1,5)"/></xsl:if>
-              <xsl:if test="substring($document,4,1) ='Z'"><xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/></xsl:if>-<xsl:value-of select="@n"/>-facsimile.html</xsl:attribute>
-            <img border="0" style="float:right;margin: 0px 10px 0px 10px; border: 1px solid #666; padding: 2px;">
-              <xsl:if test="substring($document,4,1) !='Z'">
-                <xsl:attribute name="src">images/<xsl:value-of select="substring($document,1,5)"/>/thumbs/<xsl:value-of select="substring($document,1,5)"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute>
-              </xsl:if>
-              <xsl:if test="substring($document,4,1) ='Z'">
-                <xsl:attribute name="src">images/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>/thumbs/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute>
-              </xsl:if>
-            </img>
-          </a>
-          <span class="pb-marker">
-            <a class="pb"><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute>[</a><span class="quicklink-popup"><a class="pb quicklink-trigger"><xsl:attribute name="href">#<xsl:value-of select="@n"/></xsl:attribute><xsl:if test="@rend"><xsl:value-of select="substring(@rend,2)"/></xsl:if><xsl:if test="not(@rend)"><xsl:value-of select="@n"/></xsl:if></a>
-              <span class="quicklink-inline">
-                <span class="quicklink-content">
-                  <span class="quicklink-header">
-                    <span class="quicklink-caption">Quicklink</span>
-                    <a href="#" class="note-close">Sluit</a>
-                  </span>
-                  <span class="quicklink-body">
-                    <a>
-                      <xsl:attribute name="href">
-                        <xsl:choose>
-                          <xsl:when test="$trans!='yes'"><xsl:value-of select="$document"/>-varianten.html</xsl:when>
-                          <xsl:otherwise><xsl:value-of select="$document"/>.html</xsl:otherwise>
-                        </xsl:choose>#<xsl:value-of select="@n"/>
-                      </xsl:attribute>
-                      Varianten: <xsl:choose>
-                        <xsl:when test="$trans!='yes'">aan</xsl:when>
-                        <xsl:otherwise>uit</xsl:otherwise>
-                      </xsl:choose>
-                    </a>
-                    <xsl:if test="contains($document,'Ads')">
-                      <br/>
-                      <a>
-                        <xsl:attribute name="href">
-                          <xsl:choose>
-                            <xsl:when test="$text!='doclinlay'"><xsl:value-of select="$document"/>-zinsvarianten.html</xsl:when>
-                            <xsl:otherwise><xsl:value-of select="$document"/>.html</xsl:otherwise>
-                          </xsl:choose>#<xsl:value-of select="@n"/>
-                        </xsl:attribute>
-                        Toon schrijfproces per zin: <xsl:choose>
-                          <xsl:when test="$text!='doclinlay'">aan</xsl:when>
-                          <xsl:otherwise>uit</xsl:otherwise>
-                        </xsl:choose>
-                      </a>
-                    </xsl:if>
-                    <br/><a href="#top">Naar boven</a>
-                  </span>
-                </span>
-              </span>
-            </span>]
-          </span>
+        <!-- STATIC CONVERSION 2026-03-13: <p> wrapper added for additionfacingleaf exception and for orphaned <pb/> elements not inside a <p> -->
+        <xsl:choose>
+          <xsl:when test="contains(parent::p/@id,'additionfacingleaf') or not(ancestor::p)">
+            <p><xsl:call-template name="pb-quicklink"/></p>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="pb-quicklink"/>
+          </xsl:otherwise>
+        </xsl:choose>
         </xsl:if>
       </xsl:if>
     </xsl:otherwise>
   </xsl:choose>
+</xsl:template>
+
+<!-- STATIC CONVERSION 2026-03-13: extracted pb quicklink output into named template
+     to allow <p> wrapper for additionfacingleaf exception -->
+<xsl:template name="pb-quicklink">
+  <a>
+    <xsl:attribute name="href"><xsl:if test="substring($document,4,1) !='Z'"><xsl:value-of select="substring($document,1,5)"/></xsl:if><xsl:if test="substring($document,4,1) ='Z'"><xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/></xsl:if>-<xsl:value-of select="@n"/>-facsimile.html</xsl:attribute>
+    <!-- STATIC CONVERSION 2026-03-13: HTML review: all images need alt attributes -->
+    <img style="float:right;margin: 0px 10px 0px 10px; border: 1px solid #666; padding: 2px;">
+      <xsl:if test="substring($document,4,1) !='Z'">
+        <xsl:attribute name="src">images/<xsl:value-of select="substring($document,1,5)"/>/thumbs/<xsl:value-of select="substring($document,1,5)"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute>
+        <xsl:attribute name="alt">Thumbnail: <xsl:value-of select="substring($document,1,5)"/>-<xsl:value-of select="@n"/></xsl:attribute>
+      </xsl:if>
+      <xsl:if test="substring($document,4,1) ='Z'">
+        <xsl:attribute name="src">images/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>/thumbs/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute>
+        <xsl:attribute name="alt">Thumbnail: <xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>-<xsl:value-of select="@n"/></xsl:attribute>
+      </xsl:if>
+    </img>
+  </a>
+  <span class="pb-marker">
+    <!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) "p" added because id values must start with a letter -->
+    <a class="pb"><xsl:attribute name="id">p<xsl:value-of select="@n"/></xsl:attribute>[</a><span class="quicklink-popup"><a class="pb quicklink-trigger"><xsl:attribute name="href">#p<xsl:value-of select="@n"/></xsl:attribute><xsl:if test="@rend"><xsl:value-of select="substring(@rend,2)"/></xsl:if><xsl:if test="not(@rend)"><xsl:value-of select="@n"/></xsl:if></a>
+      <span class="quicklink-inline">
+        <span class="quicklink-content">
+          <span class="quicklink-header">
+            <span class="quicklink-caption">Quicklink</span>
+            <a href="#" class="note-close">Sluit</a>
+          </span>
+          <span class="quicklink-body">
+            <a>
+              <xsl:attribute name="href"><xsl:choose><xsl:when test="$trans!='yes'"><xsl:value-of select="$document"/>-varianten.html</xsl:when><xsl:otherwise><xsl:value-of select="$document"/>.html</xsl:otherwise></xsl:choose>#p<xsl:value-of select="@n"/></xsl:attribute>
+              Varianten: <xsl:choose>
+                <xsl:when test="$trans!='yes'">aan</xsl:when>
+                <xsl:otherwise>uit</xsl:otherwise>
+              </xsl:choose>
+            </a>
+            <xsl:if test="contains($document,'Ads')">
+              <br/>
+              <a>
+                <xsl:attribute name="href"><xsl:choose><xsl:when test="$text!='doclinlay'"><xsl:value-of select="$document"/>-zinsvarianten.html</xsl:when><xsl:otherwise><xsl:value-of select="$document"/>.html</xsl:otherwise></xsl:choose>#p<xsl:value-of select="@n"/></xsl:attribute>
+                Toon schrijfproces per zin: <xsl:choose>
+                  <xsl:when test="$text!='doclinlay'">aan</xsl:when>
+                  <xsl:otherwise>uit</xsl:otherwise>
+                </xsl:choose>
+              </a>
+            </xsl:if>
+            <br/><a href="#top">Naar boven</a>
+          </span>
+        </span>
+      </span>
+    </span>]
+  </span>
 </xsl:template>
 
 <xsl:template match="unclear">[<xsl:apply-templates/>]</xsl:template>
@@ -753,9 +795,10 @@
 </xsl:template>
 
 <xsl:template match="figure">
-<xsl:if test="not(@rend)"><img><xsl:attribute name="src">images/<xsl:value-of select="@id"/></xsl:attribute></img></xsl:if>
+  <!-- STATIC CONVERSION 2026-03-13: HTML review: all images need alt attributes -->
+<xsl:if test="not(@rend)"><img><xsl:attribute name="src">images/<xsl:value-of select="@id"/></xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="@id"/></xsl:attribute></img></xsl:if>
 <xsl:if test="@rend">
-<div><xsl:attribute name="style">float:<xsl:if test="substring(@id,2) = '1' or substring(@id,2) = '3' or substring(@id,2) = '5'">left</xsl:if><xsl:if test="substring(@id,2) = '2' or substring(@id,2) = '4' or substring(@id,2) = '6'">right</xsl:if>; width:<xsl:value-of select="@rend + 15"/>px;margin-top:5px;</xsl:attribute><!-- STATIC CONVERSION 2026-03-10: Inleiding: removed link to printable version of illustrative photographs <a target="_blank"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:attribute name="href">javascript:MM_openBrWindow('Ads.htm?text=docfacs&amp;document=inleiding&amp;page=<xsl:value-of select="substring-after(@id,'inleiding/')"/>groot&amp;export=print','','width=825,height=538,resizable=yes,scrollbars=yes')</xsl:attribute>--><img border="0"><xsl:attribute name="src">images/inleiding/<xsl:value-of select="@id"/>.jpg</xsl:attribute><xsl:attribute name="style">border:1px solid #660011;margin-right:5px;margin-left:5px;</xsl:attribute></img><!--</a>--><br/><center><span style="font-size:10px;width:50px;"><xsl:value-of select="."/></span></center></div>
+<div><xsl:attribute name="style">float:<xsl:if test="substring(@id,2) = '1' or substring(@id,2) = '3' or substring(@id,2) = '5'">left</xsl:if><xsl:if test="substring(@id,2) = '2' or substring(@id,2) = '4' or substring(@id,2) = '6'">right</xsl:if>; width:<xsl:value-of select="@rend + 15"/>px;margin-top:5px;</xsl:attribute><!-- STATIC CONVERSION 2026-03-10: Inleiding: removed link to printable version of illustrative photographs <a target="_blank"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:attribute name="href">javascript:MM_openBrWindow('Ads.htm?text=docfacs&amp;document=inleiding&amp;page=<xsl:value-of select="substring-after(@id,'inleiding/')"/>groot&amp;export=print','','width=825,height=538,resizable=yes,scrollbars=yes')</xsl:attribute>--><img><xsl:attribute name="src">images/inleiding/<xsl:value-of select="@id"/>.jpg</xsl:attribute><xsl:attribute name="style">border:1px solid #660011;margin-right:5px;margin-left:5px;</xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="head"/></xsl:attribute></img><!--</a>--><br/><center><span style="font-size:10px;width:50px;"><xsl:value-of select="."/></span></center></div>
 </xsl:if>
 </xsl:template>
 
@@ -856,7 +899,7 @@
 
 <xsl:template match="xref">
   
-    <a><xsl:attribute name="name"><xsl:if test="@type!='extra'"><xsl:value-of select="@id"/></xsl:if><xsl:if test="@type='extra'"><xsl:value-of select="@to"/></xsl:if></xsl:attribute></a>
+    <a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:if test="@type!='extra'"><xsl:value-of select="@id"/></xsl:if><xsl:if test="@type='extra'"><xsl:value-of select="@to"/></xsl:if></xsl:attribute></a>
     
     <a><xsl:if test="$export!='print'"><xsl:attribute name="href"><xsl:if test="@type='email'">mailto:<xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='intra'">#<xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='note'"><xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='text'"><xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='extra'"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="@to"/>.html</xsl:if><xsl:if test="@type='proza'"><xsl:value-of select="@to"/>.html</xsl:if><xsl:if test="@type='url'"><xsl:value-of select="@to"/></xsl:if></xsl:attribute></xsl:if><xsl:if test="@type='url'"><xsl:attribute name="target">_blank</xsl:attribute></xsl:if><xsl:if test="@type='note'"><sup><xsl:apply-templates/></sup></xsl:if><xsl:if test="@type!='note'"><xsl:apply-templates/></xsl:if></a>
   

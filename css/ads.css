@@ -690,3 +690,14 @@ closed via sluit link; dragged via vanilla JS pointer events. */
   cursor: move;
   user-select: none;
 }
+
+/* STATIC CONVERSION 2026-03-13: <font> replaced with <span> */ 
+.red   { color: red; }
+.green { color: green; }
+.blue  { color: blue; }
+
+/* STATIC CONVERSION 2026-03-13: <del> replaced with <span class="del"> 
+in cases of <del> within <del> */ 
+span.del {
+  text-decoration: line-through;
+}
