@@ -5,7 +5,7 @@
 
 <xsl:import href="adsOuter.xsl"/>
 <xsl:import href="home.xsl"/>
-<xsl:output method="html" encoding="iso-8859-1" indent="yes"/>
+<xsl:output method="html" version="5.0" encoding="UTF-8" indent="yes"/>
 
 <xsl:param name="text" select="''"/>
 <xsl:param name="document" select="''"/>
@@ -93,7 +93,20 @@
 </xsl:for-each></tr>
 </xsl:for-each></table></a></xsl:if>
  <!-- draggable image -->
- <xsl:if test="$text='docfacspop'"> <div class="layer" id="reldiv" style="position:absolute;top:400px;right:250px;"><center><table width="700" style="margin-bottom:5px;" cellpadding="0" cellspacing="0"><tr><td width="50%"><a class="layer" href="javascript:myObj.hide();">sluit dit venster</a></td><td width="50%">sleep dit venster bij deze grijze strook</td></tr></table></center><iframe border="0" scrolling="auto" align="center" frameborder="0" width="695" height="315"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="src"><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/>-iframe.html</xsl:attribute></iframe></div></xsl:if>
+ <!-- STATIC CONVERSION 2026-03-13: wz_dragdrop.js dependency eliminated. Draggable popup implemented as position:fixed div (not <dialog>) for HTML4 transitional doctype compatibility. Shown on page load; closed via sluit link; dragged via vanilla JS pointer events. -->
+<xsl:if test="$text='docfacspop'">
+  <div id="topo-dialog" style="display:none; position:fixed; top:280px; left:400px; border:2px solid #888; background:white; z-index:9999;">
+    <div class="topo-titlebar">
+      <a href="#" class="layer" id="sluit-link">sluit dit venster</a>
+      <span>sleep dit venster bij deze grijze strook</span>
+    </div>
+    <iframe scrolling="auto" frameborder="0" width="670" height="315">
+      <xsl:attribute name="src"><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/>-iframe.html</xsl:attribute>
+    </iframe>
+  </div>
+</xsl:if>
+<!-- original, with new url mapping 
+ <xsl:if test="$text='docfacspop'"> <div class="layer" id="reldiv" style="position:absolute;top:400px;right:250px;"><center><table width="700" style="margin-bottom:5px;" cellpadding="0" cellspacing="0"><tr><td width="50%"><a class="layer" href="javascript:myObj.hide();">sluit dit venster</a></td><td width="50%">sleep dit venster bij deze grijze strook</td></tr></table></center><iframe border="0" scrolling="auto" align="center" frameborder="0" width="695" height="315"><xsl:attribute name="src"><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/>-iframe.html</xsl:attribute></iframe></div></xsl:if>-->
 
 
  </xsl:when>
@@ -503,28 +516,36 @@
 </xsl:choose>
 </xsl:template>
 
+<!-- STATIC CONVERSION 2026-03-12: Replace obsolete <strike> with semantic <del>.
+     <strike> is obsolete since HTML4; <del> is the correct inline HTML5 element
+     for deleted text, renders with text-decoration: line-through by default,
+     and is safe for block-level children such as <details> popups. -->
 <xsl:template match="del[not(@corresp)]">
 <xsl:choose>
  <xsl:when test="$view='bovenlaag'">
    <!-- <xsl:value-of select="."/> -->
  </xsl:when>
  <xsl:otherwise>
-   <strike>
+   <del>
     <xsl:apply-templates/>
-   </strike>
+   </del>
  </xsl:otherwise>
 </xsl:choose>
 </xsl:template>
 
+<!-- STATIC CONVERSION 2026-03-12: Replace obsolete <strike> with semantic <del>.
+     <strike> is obsolete since HTML4; <del> is the correct inline HTML5 element
+     for deleted text, renders with text-decoration: line-through by default,
+     and is safe for block-level children such as <details> popups. -->
 <xsl:template match="add/del">
 <xsl:choose>
  <xsl:when test="$view='bovenlaag'">
    <!-- <xsl:value-of select="."/> -->
  </xsl:when>
  <xsl:otherwise>
-   <strike>
+   <del>
     <xsl:apply-templates/>
-   </strike>
+   </del>
  </xsl:otherwise>
 </xsl:choose>
 </xsl:template>
@@ -595,41 +616,134 @@
 </xsl:choose>
 </xsl:template>
 
+<!-- STATIC CONVERSION 2026-03-12: Replace overlib quicklink popup with <span>-based
+     popup using page number as trigger. Popup contains navigation links: varianten
+     toggle, zinsvarianten toggle (Ads only), naar boven. <font> replaced with <span
+     class="pb-marker">. javascript:void(0) and onmouseout="nd()" removed. -->
+
 <xsl:template match="pb">
-<xsl:choose>
- <xsl:when test="not(contains($text,'doclin')) or $text='doclinapp'">
-  <!-- <xsl:value-of select="."/"> -->
- </xsl:when>
- <xsl:when test="parent::rdg and $trans='yes' and contains(@ed,substring($document,1,6))">
- <xsl:if test="$export!='print'">
-  <a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:if test="substring($document,4,1) !='Z'"><xsl:value-of select="substring($document,1,5)"/></xsl:if><xsl:if test="substring($document,4,1) ='Z'"><xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/></xsl:if>-<xsl:value-of select="@n"/>-facsimile.html</xsl:attribute><img border="0" style="float:right;margin: 0px 10px 0px 10px;
-border: 1px solid #666; padding: 2px;"><xsl:if test="substring($document,4,1) !='Z'"><xsl:attribute name="src">images/<xsl:value-of select="substring($document,1,5)"/>/thumbs/<xsl:value-of select="substring($document,1,5)"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute></xsl:if><xsl:if test="substring($document,4,1) ='Z'"><xsl:attribute name="src">images/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>/thumbs/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute></xsl:if></img></a></xsl:if>
- <font color="#660011">[<xsl:if test="@rend"><xsl:value-of select="substring(@rend,2)"/></xsl:if><xsl:if test="not(@rend)"><xsl:value-of select="@n"/></xsl:if>]</font>
- </xsl:when>
- <xsl:otherwise>
-
- <xsl:if test="contains(@ed,substring($document,1,6))">
- <xsl:if test="$export!='print'">
-  <a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:if test="substring($document,4,1) !='Z'"><xsl:value-of select="substring($document,1,5)"/></xsl:if><xsl:if test="substring($document,4,1) ='Z'"><xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/></xsl:if>-<xsl:value-of select="@n"/>-facsimile.html</xsl:attribute><img border="0" style="float:right;margin: 0px 10px 0px 10px;
-border: 1px solid #666; padding: 2px;"><xsl:if test="substring($document,4,1) !='Z'"><xsl:attribute name="src">images/<xsl:value-of select="substring($document,1,5)"/>/thumbs/<xsl:value-of select="substring($document,1,5)"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute></xsl:if><xsl:if test="substring($document,4,1) ='Z'"><xsl:attribute name="src">images/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>/thumbs/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute></xsl:if></img></a></xsl:if>
- <font color="#660011"><a class="pb"><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute>[</a><a href="javascript:void(0);" class="pb"><xsl:attribute name="onclick"><xsl:if test="$export='print'">return false</xsl:if><xsl:if test="$export!='print'"><!-- STATIC CONVERSION 2026-03-10: new url mapping -->return overlib('&lt;ul>&lt;li>&lt;a href=\'<xsl:choose><xsl:when test="$trans!='yes'"><xsl:value-of select="$document"/>-varianten.html</xsl:when><xsl:otherwise><xsl:value-of select="$document"/>.html</xsl:otherwise></xsl:choose>#<xsl:value-of select="@n"/>\'>Varianten: <xsl:if test="$trans!='yes'">aan</xsl:if><xsl:if test="$trans='yes'">uit</xsl:if>&lt;/a>&lt;/li><xsl:if test="contains($document,'Ads')">&lt;li>&lt;a href=\'<xsl:choose><xsl:when test="$text!='doclinlay'"><xsl:value-of select="$document"/>-zinsvarianten.html</xsl:when><xsl:otherwise><xsl:value-of select="$document"/>.html</xsl:otherwise></xsl:choose>#<xsl:value-of select="@n"/>\'>Toon schrijfproces per zin: <xsl:if test="$text!='doclinlay'">aan</xsl:if><xsl:if test="$text='doclinlay'">uit</xsl:if>&lt;/a>&lt;/li></xsl:if>&lt;li>&lt;a href="#top">Naar boven&lt;/a>&lt;/li>&lt;/ul>', STICKY, CAPTION, 'Quicklink', CENTER);</xsl:if></xsl:attribute><xsl:attribute name="onmouseout">nd();</xsl:attribute><xsl:if test="@rend"><xsl:value-of select="substring(@rend,2)"/></xsl:if><xsl:if test="not(@rend)"><xsl:value-of select="@n"/></xsl:if></a>]</font>
- </xsl:if>
- </xsl:otherwise>
-</xsl:choose>
-
+  <xsl:choose>
+    <xsl:when test="not(contains($text,'doclin')) or $text='doclinapp'">
+      <!-- <xsl:value-of select="."/> -->
+    </xsl:when>
+    <xsl:when test="parent::rdg and $trans='yes' and contains(@ed,substring($document,1,6))">
+      <xsl:if test="$export!='print'">
+        <a>
+          <xsl:attribute name="href">
+            <xsl:if test="substring($document,4,1) !='Z'"><xsl:value-of select="substring($document,1,5)"/></xsl:if>
+            <xsl:if test="substring($document,4,1) ='Z'"><xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/></xsl:if>-<xsl:value-of select="@n"/>-facsimile.html</xsl:attribute>
+          <img border="0" style="float:right;margin: 0px 10px 0px 10px; border: 1px solid #666; padding: 2px;">
+            <xsl:if test="substring($document,4,1) !='Z'">
+              <xsl:attribute name="src">images/<xsl:value-of select="substring($document,1,5)"/>/thumbs/<xsl:value-of select="substring($document,1,5)"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute>
+            </xsl:if>
+            <xsl:if test="substring($document,4,1) ='Z'">
+              <xsl:attribute name="src">images/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>/thumbs/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute>
+            </xsl:if>
+          </img>
+        </a>
+      </xsl:if>
+      <span class="pb-marker">[<xsl:if test="@rend"><xsl:value-of select="substring(@rend,2)"/></xsl:if><xsl:if test="not(@rend)"><xsl:value-of select="@n"/></xsl:if>]</span>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:if test="contains(@ed,substring($document,1,6))">
+        <xsl:if test="$export!='print'">
+          <a>
+            <xsl:attribute name="href">
+              <xsl:if test="substring($document,4,1) !='Z'"><xsl:value-of select="substring($document,1,5)"/></xsl:if>
+              <xsl:if test="substring($document,4,1) ='Z'"><xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/></xsl:if>-<xsl:value-of select="@n"/>-facsimile.html</xsl:attribute>
+            <img border="0" style="float:right;margin: 0px 10px 0px 10px; border: 1px solid #666; padding: 2px;">
+              <xsl:if test="substring($document,4,1) !='Z'">
+                <xsl:attribute name="src">images/<xsl:value-of select="substring($document,1,5)"/>/thumbs/<xsl:value-of select="substring($document,1,5)"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute>
+              </xsl:if>
+              <xsl:if test="substring($document,4,1) ='Z'">
+                <xsl:attribute name="src">images/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>/thumbs/<xsl:value-of select="concat(substring($document,1,3),substring($document,5,2))"/>-<xsl:value-of select="@n"/>.jpg</xsl:attribute>
+              </xsl:if>
+            </img>
+          </a>
+          <span class="pb-marker">
+            <a class="pb"><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute>[</a><span class="quicklink-popup"><a class="pb quicklink-trigger"><xsl:attribute name="href">#<xsl:value-of select="@n"/></xsl:attribute><xsl:if test="@rend"><xsl:value-of select="substring(@rend,2)"/></xsl:if><xsl:if test="not(@rend)"><xsl:value-of select="@n"/></xsl:if></a>
+              <span class="quicklink-inline">
+                <span class="quicklink-content">
+                  <span class="quicklink-header">
+                    <span class="quicklink-caption">Quicklink</span>
+                    <a href="#" class="note-close">Sluit</a>
+                  </span>
+                  <span class="quicklink-body">
+                    <a>
+                      <xsl:attribute name="href">
+                        <xsl:choose>
+                          <xsl:when test="$trans!='yes'"><xsl:value-of select="$document"/>-varianten.html</xsl:when>
+                          <xsl:otherwise><xsl:value-of select="$document"/>.html</xsl:otherwise>
+                        </xsl:choose>#<xsl:value-of select="@n"/>
+                      </xsl:attribute>
+                      Varianten: <xsl:choose>
+                        <xsl:when test="$trans!='yes'">aan</xsl:when>
+                        <xsl:otherwise>uit</xsl:otherwise>
+                      </xsl:choose>
+                    </a>
+                    <xsl:if test="contains($document,'Ads')">
+                      <br/>
+                      <a>
+                        <xsl:attribute name="href">
+                          <xsl:choose>
+                            <xsl:when test="$text!='doclinlay'"><xsl:value-of select="$document"/>-zinsvarianten.html</xsl:when>
+                            <xsl:otherwise><xsl:value-of select="$document"/>.html</xsl:otherwise>
+                          </xsl:choose>#<xsl:value-of select="@n"/>
+                        </xsl:attribute>
+                        Toon schrijfproces per zin: <xsl:choose>
+                          <xsl:when test="$text!='doclinlay'">aan</xsl:when>
+                          <xsl:otherwise>uit</xsl:otherwise>
+                        </xsl:choose>
+                      </a>
+                    </xsl:if>
+                    <br/><a href="#top">Naar boven</a>
+                  </span>
+                </span>
+              </span>
+            </span>]
+          </span>
+        </xsl:if>
+      </xsl:if>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template match="unclear">[<xsl:apply-templates/>]</xsl:template>
 
 <xsl:template match="note">
-<xsl:if test="$export!='print'">
+<!-- STATIC CONVERSION 2026-03-12: Replace overlib.js note popups with <span>-based
+     popups toggled by minimal vanilla JS event listener in page footer (no library).
+     Graceful degradation: with JS disabled, note text renders inline in transcription
+     as styled <span class="note-inline">, visually distinct from transcription text.
+     With JS enabled, note-inline spans are collapsed into popup on page load.
+     Escaped apostrophes (\') stripped via translate(., '\', '').
+     overlib.js <script> include removed from page header. -->
+  <xsl:if test="$export!='print'">
+    <xsl:text> </xsl:text>
+    <span class="note-popup">
+      <span class="note-trigger"></span>
+      <span class="note-inline">[<xsl:value-of select="translate(., '\', '')"/>]</span>
+    </span>
+    <xsl:text> </xsl:text>
+  </xsl:if>
+<!-- original <xsl:if test="$export!='print'">
 <xsl:text>  </xsl:text><a href="javascript:void(0);" style="text-decoration:none;"><xsl:attribute name="onclick">return overlib('<xsl:value-of select="."/>', STICKY, CAPTION, 'Noot', CENTER);</xsl:attribute><xsl:attribute name="onmouseout">nd();</xsl:attribute><img src="images/note.gif" border="0"/></a><xsl:text>  </xsl:text>
-</xsl:if>
+</xsl:if>-->
 </xsl:template>
 
+<!-- STATIC CONVERSION 2026-03-12: Replace overlib.js sic popup with <span>-based popup.
+     Note text constructed from @corr attribute: "lees: [value]". No apostrophe
+     escaping needed as content comes from attribute, not text node. -->
 <xsl:template match="sic">
-<xsl:apply-templates/><xsl:if test="$export!='print'"><xsl:text>  </xsl:text><a href="javascript:void(0);" style="text-decoration:none;"><xsl:attribute name="onclick">return overlib('lees: <xsl:value-of select="@corr"/>', STICKY, CAPTION, 'Noot', CENTER);</xsl:attribute><xsl:attribute name="onmouseout">nd();</xsl:attribute><img src="images/note.gif" border="0"/></a><xsl:text>  </xsl:text>
-</xsl:if>
+  <xsl:apply-templates/>
+  <xsl:if test="$export!='print'">
+    <xsl:text> </xsl:text>
+    <span class="note-popup">
+      <span class="note-trigger"></span>
+      <span class="note-inline">[lees: <xsl:value-of select="@corr"/>]</span>
+    </span>
+    <xsl:text> </xsl:text>
+  </xsl:if>
 </xsl:template>
 
 <xsl:template match="toc">
@@ -664,9 +778,9 @@ border: 1px solid #666; padding: 2px;"><xsl:if test="substring($document,4,1) !=
    </u>
   </xsl:when>
   <xsl:when test="@rend='dotted line'">
-   <strike style="">
+   <del style="">
     <xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates>
-   </strike>
+   </del>
   </xsl:when>
   <xsl:when test="@rend='red crayon'">
    <span style="background-color:#FF3F3F;">

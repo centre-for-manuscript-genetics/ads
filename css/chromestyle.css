@@ -10,31 +10,26 @@ clear: both;
 visibility: hidden;
 }
 
-#chromemenu ul{
-/*border: 1px solid #660011;*/
-width: 100%;
-background-color: #BBBBBB; /*url(menu/chromebg.jpg) center center repeat-x; Theme Change here*/
-margin-left: 0;
-padding-left: 0;
-margin: 0;
-float: left;
-border-bottom: 1px solid #660011;
-font: 12px Verdana;
+#chromemenu ul {
+  padding-left: 0;  /* add this */
+  text-align: left;
+  width: 100%;
+  background-color: #BBBBBB;
+  margin: 0;
+  float: left;
+  border-bottom: 1px solid #660011;
+  font: 12px Verdana;
+  font-size: 0;
 }
 
 
-#chromemenu ul li{
-display: inline;
-}
 
-
-#chromemenu ul li a{
-float: left;
-color:#660011;
-/*font-weight: bold;*/
-padding: 6px 6px 6px 7px;
-text-decoration: none;
-background: url(../images/menu/divider.jpg) center right no-repeat; /*Theme Change here*/
+#chromemenu ul li > a {
+  display: inline-block;  /* replaces float: left */
+  color: #660011;
+  padding: 6px 6px 6px 7px;
+  text-decoration: none;
+  background: url(../images/menu/divider.jpg) center right no-repeat;
 }
 
 #chromemenu ul li a:hover{
@@ -48,30 +43,41 @@ color: ##660000;
 
 /* ######### Style for Drop Down Menu ######### */
 
-.dropmenudiv{
-position:absolute;
-top: 0;
-border: 1px solid #660011; /*Theme Change here*/
-border-bottom-width: 0;
-font:normal 12px Verdana;
-line-height:18px;
-z-index:100;
-background-color: #DDDDDD;
-width: 200px;
-visibility: hidden;
-filter: progid:DXImageTransform.Microsoft.Shadow(color=#CACACA,direction=135,strength=4); /*Add Shadow in IE. Remove if desired*/
+/* STATIC CONVERSION [2026-03-12]: replaced JS show/hide with CSS hover */
+.dropmenudiv {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  display: none;
+  border: 1px solid #660011;
+  border-bottom-width: 0;
+  font: normal 12px Verdana;
+  line-height: 18px;
+  z-index: 100;
+  background-color: #DDDDDD;
+  width: 200px;
 }
 
-.dropmenudiv a{
-width: 100%;
-display: block;
-text-align: left;
-text-indent: 3px;
-border-bottom: 1px solid #660011; /*Theme Change here*/
-padding: 0px 0;
-text-decoration: none;
-/*font-weight: bold;*/
-color: #660011;
+#chromemenu ul li {
+  position: relative;  /* add this - needed for dropdown positioning */
+  display: inline-block;
+  font-size: 12px;
+}
+
+#chromemenu ul li:hover .dropmenudiv {
+  display: block;      /* replaces JS visibility toggle */
+}
+
+.dropmenudiv a {
+  width: 100%;          /* replaces width: 100% */
+  display: block;
+  text-align: left;
+  text-indent: 3px;
+  border-bottom: 1px solid #660011;
+  padding: 0px 0;
+  text-decoration: none;
+  color: #660011;
+  box-sizing: border-box;  /* add this */
 }
 
 .dropmenudiv a:hover{ /*Theme Change here*/

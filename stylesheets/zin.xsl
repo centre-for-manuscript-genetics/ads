@@ -160,6 +160,10 @@ border: 1px solid #666; padding: 2px;"><xsl:attribute name="src">images/<xsl:val
    </p>
 </xsl:template>
 
+<!-- STATIC CONVERSION 2026-03-12: Replace obsolete <strike> with semantic <del>.
+     <strike> is obsolete since HTML4; <del> is the correct inline HTML5 element
+     for deleted text, renders with text-decoration: line-through by default,
+     and is safe for block-level children such as <details> popups. -->
 <xsl:template match="del">
 <xsl:param name="ana"/>
 <xsl:param name="view"/>
@@ -184,12 +188,12 @@ border: 1px solid #666; padding: 2px;"><xsl:attribute name="src">images/<xsl:val
     <!-- <xsl:apply-templates/> -->
  </xsl:if>
    <xsl:if test="not(substring-after(@layer,'l'))">
-   <strike>
+   <del>
     <xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates>
-   </strike>
+   </del>
  </xsl:if>
   <xsl:if test="substring-after(@layer,'l') = $ana">
-    <strike><xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates></strike>
+    <del><xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates></del>
  </xsl:if> 
  <xsl:if test="substring-after(@layer,'l') &gt; $ana">
     <xsl:apply-templates><xsl:with-param name="ana" select="$ana"/><xsl:with-param name="view" select="$view"/></xsl:apply-templates>
@@ -243,15 +247,40 @@ border: 1px solid #666; padding: 2px;"><xsl:attribute name="src">images/<xsl:val
 </xsl:template>
 
 <!-- note -->
-<xsl:template match="note"><xsl:param name="ana"/><xsl:param name="view"/> 
- <xsl:if test="$export!='print'"><xsl:if test="substring-after(@layer,'l') = $ana">
-<xsl:text>  </xsl:text><a href="javascript:void(0);" style="text-decoration:none;"><xsl:attribute name="onclick">return overlib('<xsl:value-of select="."/>', STICKY, CAPTION, 'Noot', CENTER);</xsl:attribute><xsl:attribute name="onmouseout">nd();</xsl:attribute><img src="note.gif" border="0"/></a><xsl:text>  </xsl:text>
- </xsl:if> </xsl:if>
+<xsl:template match="note">
+<!-- STATIC CONVERSION 2026-03-12: Replace overlib.js note popups with <span>-based
+     popups toggled by minimal vanilla JS event listener in page footer (no library).
+     Graceful degradation: with JS disabled, note text renders inline in transcription
+     as styled <span class="note-inline">, visually distinct from transcription text.
+     With JS enabled, note-inline spans are collapsed into popup on page load.
+     Escaped apostrophes (\') stripped via translate(., '\', '').
+     overlib.js <script> include removed from page header. -->
+  <xsl:if test="$export!='print'">
+    <xsl:text> </xsl:text>
+    <span class="note-popup">
+      <span class="note-trigger"></span>
+      <span class="note-inline">[<xsl:value-of select="translate(., '\', '')"/>]</span>
+    </span>
+    <xsl:text> </xsl:text>
+  </xsl:if>
+<!-- original <xsl:if test="$export!='print'">
+<xsl:text>  </xsl:text><a href="javascript:void(0);" style="text-decoration:none;"><xsl:attribute name="onclick">return overlib('<xsl:value-of select="."/>', STICKY, CAPTION, 'Noot', CENTER);</xsl:attribute><xsl:attribute name="onmouseout">nd();</xsl:attribute><img src="images/note.gif" border="0"/></a><xsl:text>  </xsl:text>
+</xsl:if>-->
 </xsl:template>
 
-<xsl:template match="sic"><xsl:param name="ana"/><xsl:param name="view"/>
-<xsl:apply-templates/><xsl:if test="$export!='print'"><xsl:if test="substring-after(@layer,'l') = $ana"><xsl:text>  </xsl:text><a href="javascript:void(0);" style="text-decoration:none;"><xsl:attribute name="onclick">return overlib('lees: <xsl:value-of select="@corr"/>', STICKY, CAPTION, 'Noot', CENTER);</xsl:attribute><xsl:attribute name="onmouseout">nd();</xsl:attribute><img src="note.gif" border="0"/></a><xsl:text>  </xsl:text>
-</xsl:if></xsl:if>
+<!-- STATIC CONVERSION 2026-03-12: Replace overlib.js sic popup with <span>-based popup.
+     Note text constructed from @corr attribute: "lees: [value]". No apostrophe
+     escaping needed as content comes from attribute, not text node. -->
+<xsl:template match="sic">
+  <xsl:apply-templates/>
+  <xsl:if test="$export!='print'">
+    <xsl:text> </xsl:text>
+    <span class="note-popup">
+      <span class="note-trigger"></span>
+      <span class="note-inline">[lees: <xsl:value-of select="@corr"/>]</span>
+    </span>
+    <xsl:text> </xsl:text>
+  </xsl:if>
 </xsl:template>
 
 <!-- Unclear -->

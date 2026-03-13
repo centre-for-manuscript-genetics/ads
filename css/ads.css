@@ -498,3 +498,195 @@ blockquote{
 margin: 0px 60px 10px 60px;
 }
 
+/* STATIC CONVERSION 2026-03-12: 
+Replace JS-driven "kies 2 versies" form with plain html alternative
+*/
+.kies-lijst {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+
+  .kies-lijst li a {
+    display: inline-block;
+    padding: 2px 5px;
+    border: 1px solid #999;
+    background: #f0f0f0;
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+  }
+
+  .kies-lijst li a:hover {
+    background: #ddd;
+  }
+
+/* STATIC CONVERSION 2026-03-12: note popup styles, mimicking overlib appearance */
+
+.note-popup {
+  display: inline;
+  position: relative;
+}
+
+.note-trigger {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('../images/note.gif') no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.note-content {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 270px;
+  top: 20px;
+  left: 0;
+  background-color: #AEAEAE;
+  padding: 1px;
+  font-family: Verdana, Arial, Helvetica;
+  font-size: 11px;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 4px;
+  background-color: #AEAEAE;
+}
+
+.note-caption {
+  font-weight: bold;
+  color: black;
+  font-family: Verdana, Arial, Helvetica;
+  font-size: 11px;
+}
+
+.note-close {
+  color: black;
+  font-family: Verdana, Arial, Helvetica;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.note-close:hover {
+  text-decoration: underline;
+}
+
+.note-body {
+  display: block;
+  background-color: white;
+  color: #000000;
+  padding: 4px;
+  font-family: Verdana, Arial, Helvetica;
+  font-size: 11px;
+}
+
+.note-inline {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+}
+
+/* STATIC CONVERSION 2026-03-12: replace <font color="#660011"> for pb markers */
+.pb-marker {
+  color: #660011;
+}
+
+/* STATIC CONVERSION 2026-03-12: quicklink popup styles */
+
+
+
+.quicklink-popup {
+  display: inline-block;
+  position: relative;
+}
+
+.quicklink-popup .note-trigger {
+  display: none;
+}
+
+.quicklink-inline {
+  display: none !important;
+  position: fixed !important;
+  top: 100px !important;
+  left: 100px !important;
+  width: 270px !important;
+  z-index: 9999 !important;
+  background-color: #AEAEAE !important;
+  padding: 1px !important;
+  font-family: Verdana, Arial, Helvetica !important;
+  font-size: 11px !important;
+}
+
+.quicklink-content {
+  display: block;
+}
+
+.quicklink-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 4px;
+  background-color: #AEAEAE;
+}
+
+.quicklink-caption {
+  font-weight: bold;
+  color: black;
+  font-family: Verdana, Arial, Helvetica;
+  font-size: 11px;
+}
+
+.quicklink-body {
+  display: block;
+  background-color: white;
+  color: #000000;
+  padding: 4px;
+  font-family: Verdana, Arial, Helvetica;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.quicklink-body ul {
+  margin: 0;
+  padding: 0 0 0 12px;
+}
+
+.quicklink-body li {
+  margin: 2px 0;
+}
+
+/* STATIC CONVERSION 2026-03-13: wz_dragdrop.js dependency eliminated. 
+Draggable popup implemented as position:fixed div (not <dialog>) 
+for HTML4 transitional doctype compatibility. Shown on page load; 
+closed via sluit link; dragged via vanilla JS pointer events. */
+
+#topo-dialog {
+  position: fixed;
+  top: 280px;
+  left: 400px;
+  width: 670px;
+  padding: 0;
+  border: 2px solid #888;
+  border-radius: 4px;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
+  cursor: default;
+  z-index: 9999;
+}
+.topo-titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  background: #ccc;
+  cursor: move;
+  user-select: none;
+}
