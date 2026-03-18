@@ -14,21 +14,40 @@ form
 select
 {display:inline;}
 
-table.main
-{font-family: Verdana;
-  font-size:10pt; 
-background-color: #DDDDDD;
-  margin: 0px 0px 0px 0px;
+table.main {
+  /* STATIC CONVERSION 2026-03-xx: added margin: 0 auto and width to replace 
+  deprecated align="center" and width attributes on <table> element */
+  font-family: Verdana;
+  font-size: 10pt;
+  background-color: #DDDDDD;
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  padding: 0;
+  border-spacing: 0;
 }
 
-table.outside
-{
+table.outside {
+  /* STATIC CONVERSION 2026-03-xx: added margin: 0 auto, width, border 
+  and border-collapse to replace deprecated align="center", width, border, 
+  cellpadding and cellspacing attributes on <table> element; box-sizing: 
+  border-box added so border is included in width calculation */
   color: #585858;
-  font-size:9pt; 
-  padding: 0px 0px 0px 0px;
-  background-color: white;
-  margin: 0px 0px 0px 0px;
+  font-size: 9pt;
+  background-color: transparent;
+  margin: 0 auto;
+  width: 100%;
+/*  border: 1px solid #660011;*/
+  border-collapse: collapse;
+  padding: 0;
+  border-spacing: 0;
   text-align: center;
+  box-sizing: border-box;
+}
+
+table.outside td {
+  padding: 0;
+  margin: 0;
 }
 
 table.top
@@ -219,8 +238,13 @@ height:95px;
 text-align: left;
 }
 
-div.signed
-{text-align:left;
+/* STATIC CONVERSION 2026-03-14: span.signed added alongside div.signed to 
+support inline rendering when emph[@rend='signed'] appears inside p; see 
+emph template in ads.xsl */
+
+div.signed, span.signed {
+  display: block;
+  text-align: left;
 }
 
 div.empty
@@ -251,20 +275,49 @@ height:435px;
 width:780px;
 }
 
-div.header
-{padding: 0px 0px 0px 0px;
-text-align:justify;
-background-color:#DDDDDD;
-border-left: 1px solid #660011;
-border-right: 1px solid #660011;
-width:802px;
-/*height:100px;*/
+/* STATIC CONVERSION 2026-03-15: deleted outer <center> element
+and added container div with margin: 0 auto; 
+width corrected to 804px to match outer table
+border moved here from table.outside where box-sizing 
+interacts unreliably with table layout */
+div.container {
+  margin: 0 auto;
+  width: 804px;
+  border-left: 1px solid #660011;
+  border-right: 1px solid #660011;
+  border-bottom: 1px solid #660011;
+  box-sizing: border-box;
+}
 
+table.outside {
+  /* STATIC CONVERSION 2026-03-xx: added margin: 0 auto, width and border-collapse 
+  to replace deprecated align="center", width, border, cellpadding and cellspacing 
+  attributes on <table> element; border moved to div.container */
+  color: #585858;
+  font-size: 9pt;
+  background-color: white;
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #660011;
+  padding: 0;
+  border-spacing: 0;
+  text-align: center;
+}
+
+div.header {
+  padding: 0px 0px 0px 0px;
+  text-align: justify;
+  background-color: #DDDDDD;
+/*  border-left: 1px solid #660011;
+  border-right: 1px solid #660011; */
+  /*height:100px;*/
+  /* STATIC CONVERSION 2026-03-xx: clearfix added to prevent header collapse caused by floated .vakskelinks and .vakskerechts children */
+  overflow: hidden;
 }
 
 div.vakske
 {height:33px;
-
 border-top: 1px solid #660011;}
 
 div.vakskeleeg
@@ -275,6 +328,7 @@ div.vakskelinks
 {
 width:400px;
 float:left;
+
 }
 
 div.vakskerechts
@@ -283,30 +337,39 @@ width:400px;
 float:right;
 }
 
-div.variant
-{float:left;
-position:absolute;
-padding-bottom:5px;
-padding-right:2px;
-padding-left:10px;
-left:0px;
-border: 1px solid #660011;
-background-color:#dddddd;
-display:inline;
-width: 200px;}
+/* STATIC CONVERSION 2026-03-14: div.variant/div.variant2 replaced with 
+span.variant/span.variant2; ul/li replaced with span.variant-item; 
+display:block on span.variant preserves original box layout; 
+span.variant-item styled as pseudo-list item with CSS bullet 
+and hanging indent */
 
-div.variant2
-{float:left;
-position:absolute;
-margin-top:40px;
-padding-bottom:5px;
-padding-right:2px;
-padding-left:10px;
-left:0px;
-border: 1px solid #660011;
-background-color:#dddddd;
-display:inline;
-width: 200px;}
+span.variant,
+span.variant2 {
+  display: block;
+  float: left;
+  position: absolute;
+  padding-bottom: 5px;
+  padding-right: 2px;
+  padding-left: 10px;
+  left: 0px;
+  border: 1px solid #660011;
+  background-color: #dddddd;
+  width: 200px;
+}
+
+span.variant2 {
+  margin-top: 40px;
+}
+
+span.variant-item {
+  display: block;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+span.variant-item::before {
+  content: "• ";
+}
 
 h1
 {font-size: 18px;

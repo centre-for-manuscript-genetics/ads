@@ -25,7 +25,18 @@
  <xsl:if test="$text!='iframe'">
  <html>
  <head>
- <title>Achter de Schermen</title>
+  <!-- STATIC CONVERSION 2026-03-15: added meta tags: charset, viewport, description, author, Dublin Core (DC.title, DC.creator, DC.date, DC.language, DC.rights) for correct character rendering, accessibility, and long-term preservation discoverability -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Elektronische editie van Willem Elsschots 'Achter de Schermen' en 'Opdracht'"/>
+  <meta name="author" content="Peter de Bruijn, Vincent Neyt en Dirk Van Hulle"/>
+  <meta lang="nl"/>
+  <meta name="DC.title" content="Willem Elsschot - Achter de Schermen — Elektronische editie"/>
+  <meta name="DC.creator" content="Peter de Bruijn, Vincent Neyt en Dirk Van Hulle"/>
+  <meta name="DC.date" content="2007"/>
+  <meta name="DC.language" content="nl"/>
+  <meta name="DC.rights" content="CC BY 4.0"/>
+  <title>Achter de Schermen</title>
  <!-- STATIC CONVERSION 2026-03-12: unused javascript
  <script language="JavaScript">
 function anyObj(divName) {
@@ -84,26 +95,31 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
  <!--STATIC CONVERSION [2026-03-12]<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
  <script type="text/javascript" src="js/wz_dragdrop.js"></script>-->
  <!--STATIC CONVERSION [2026-03-12]<script language="JavaScript" src="js/overlib.js"> </script> -->
- <center>
+ <!-- STATIC CONVERSION 2026-03-15: <b> replaced with <strong> throughout  -->
+ <!-- STATIC CONVERSION 2026-03-15: deleted outer <center> element
+and added container div with css margin: 0 auto; 
+width corrected to 804px to match outer table; deleted presentational attributes from <table> -->
+  <div class="container">
 <xsl:if test="$export!='print'">
+
 <div class="header">
-<div class="vakske"><h5><a class="top" name="top">Willem Elsschot</a></h5></div>
+<div class="vakske"><h5><a class="top" id="top">Willem Elsschot</a></h5></div>
 <div class="vakske"><div class="vakskelinks"><h5>Tsjip: Opdracht</h5></div><div class="vakskerechts"><h5>Achter de Schermen</h5></div></div>
 </div><!--</td>
 </tr>
 </table>-->
 </xsl:if>
 <xsl:if test="$export='print'">
-<center><b>Printen: Ctrl-P</b></center><table width="100%"><tr><td valign="top">
+<center><strong>Printen: Ctrl-P</strong></center><table width="100%"><tr><td valign="top">
 <div align="left"><p><a href="javascript:window.close();">Sluit dit venster</a><br/><u>(alle links op deze pagina zijn uitgeschakeld)</u>______</p></div></td><td><div align="right"><p>Willem Elsschot, <i>Tsjip: Opdracht</i> / <i>Achter de Schermen</i><br/>
 _________________________________<u>elektronische editie</u></p></div></td></tr></table>
 </xsl:if>
 <!-- outside table -->
-<table class="outside" border="0" cellspacing="0" cellpadding="0" align="center"><xsl:if test="$export!='print'"><xsl:attribute name="style">border: 1px solid #660011;</xsl:attribute></xsl:if><xsl:if test="$export!='print'"><xsl:attribute name="width">804</xsl:attribute></xsl:if><xsl:if test="$export='print'"><xsl:attribute name="width">100%</xsl:attribute></xsl:if>
+<table class="outside">
 <tr><td>
 <!-- table containing menu -->
 <xsl:if test="$export!='print'">
-<table class="main" border="0" cellspacing="0" cellpadding="0" width="802" align="center">
+<table class="main">
  <tr>
   <td>
 <!-- STATIC CONVERSION [2026-03-12]: removed onMouseover attributes and chrome.js dependency; 
@@ -111,54 +127,54 @@ _________________________________<u>elektronische editie</u></p></div></td></tr>
      dropmenudiv elements moved inside parent li elements -->
 <div id="chromemenu">
 <ul>
-<li><a href="#"><xsl:if test="$text='home'"><b>Home</b></xsl:if><xsl:if test="$text!='home'">Home</xsl:if></a>
+<li><a href="#"><xsl:if test="$text='home'"><strong>Home</strong></xsl:if><xsl:if test="$text!='home'">Home</xsl:if></a>
 <!-- home -->
 <div id="dropmenu5" class="dropmenudiv">
 <!-- STATIC CONVERSION 2026-03-10: new url mapping --><a href="index.html">Beginscherm</a>
-<!-- STATIC CONVERSION 2026-03-10: new url mapping --><a href="inleiding.html"><xsl:if test="$document='inleiding'"><b>Inleiding</b></xsl:if><xsl:if test="$document!='inleiding'">Inleiding</xsl:if></a>
-<!-- STATIC CONVERSION 2026-03-10: new url mapping --><a href="overlevering.html"><xsl:if test="$document='overlevering'"><b>Overlevering</b></xsl:if><xsl:if test="$document!='overlevering'">Overlevering</xsl:if></a>
+<!-- STATIC CONVERSION 2026-03-10: new url mapping --><a href="inleiding.html"><xsl:if test="$document='inleiding'"><strong>Inleiding</strong></xsl:if><xsl:if test="$document!='inleiding'">Inleiding</xsl:if></a>
+<!-- STATIC CONVERSION 2026-03-10: new url mapping --><a href="overlevering.html"><xsl:if test="$document='overlevering'"><strong>Overlevering</strong></xsl:if><xsl:if test="$document!='overlevering'">Overlevering</xsl:if></a>
 </div>
 </li>
 <li><a href="#">Tsjip: Opdracht</a>
 <!-- Tsjip -->
 <div id="dropmenu1" class="dropmenudiv">
-<!-- STATIC CONVERSION 2026-03-10: new url mapping: new links for all documents --><a href="OpdM1.html"><xsl:if test="$document='OpdM1'"><b>Typoscript 1 (OpdM1)</b></xsl:if><xsl:if test="$document!='OpdM1'">Typoscript 1 (OpdM1)</xsl:if></a>
-<a href="OpdM2.html"><xsl:if test="$document='OpdM2'"><b>Typoscript 2 (OpdM2)</b></xsl:if><xsl:if test="$document!='OpdM2'">Typoscript 2 (OpdM2)</xsl:if></a>
-<a href="OpdT1.html"><xsl:if test="$document='OpdT1'"><b>Tijdschriftpublicatie (OpdT1)</b></xsl:if><xsl:if test="$document!='OpdT1'">Tijdschriftpublicatie (OpdT1)</xsl:if></a>
-<a href="OpdD1.html"><xsl:if test="$document='OpdD1'"><b>Druk 1 (OpdD1)</b></xsl:if><xsl:if test="$document!='OpdD1'">Druk 1 (OpdD1)</xsl:if></a>
-<a href="OpdD2.html"><xsl:if test="$document='OpdD2'"><b>Druk 2 (OpdD2)</b></xsl:if><xsl:if test="$document!='OpdD2'">Druk 2 (OpdD2)</xsl:if></a>
-<a href="OpdD3.html"><xsl:if test="$document='OpdD3'"><b>Druk 3 (OpdD3)</b></xsl:if><xsl:if test="$document!='OpdD3'">Druk 3 (OpdD3)</xsl:if></a>
-<a href="OpdD4.html"><xsl:if test="$document='OpdD4'"><b>Druk 4 (OpdD4)</b></xsl:if><xsl:if test="$document!='OpdD4'">Druk 4 (OpdD4)</xsl:if></a>
-<a href="OpdD5.html"><xsl:if test="$document='OpdD5'"><b>Druk 5 (OpdD5)</b></xsl:if><xsl:if test="$document!='OpdD5'">Druk 5 (OpdD5)</xsl:if></a>
-<a href="OpdD6.html"><xsl:if test="$document='OpdD6'"><b>Druk 6 (OpdD6)</b></xsl:if><xsl:if test="$document!='OpdD6'">Druk 6 (OpdD6)</xsl:if></a>
-<a href="OpdP1a.html"><xsl:if test="contains($document,'OpdP1')"><b>Drukproef 1 (OpdP1)</b></xsl:if><xsl:if test="not(contains($document,'OpdP1'))">Drukproef 1 (OpdP1)</xsl:if></a>
-<a href="OpdP2.html"><xsl:if test="contains($document,'OpdP2')"><b>Drukproef 2 (OpdP2)</b></xsl:if><xsl:if test="not(contains($document,'OpdP2'))">Drukproef 2 (OpdP2)</xsl:if></a>
-<a href="OpdD7.html"><xsl:if test="$document='OpdD7'"><b>Druk 7 (OpdD7)</b></xsl:if><xsl:if test="$document!='OpdD7'">Druk 7 (OpdD7)</xsl:if></a>
+<!-- STATIC CONVERSION 2026-03-10: new url mapping: new links for all documents --><a href="OpdM1.html"><xsl:if test="$document='OpdM1'"><strong>Typoscript 1 (OpdM1)</strong></xsl:if><xsl:if test="$document!='OpdM1'">Typoscript 1 (OpdM1)</xsl:if></a>
+<a href="OpdM2.html"><xsl:if test="$document='OpdM2'"><strong>Typoscript 2 (OpdM2)</strong></xsl:if><xsl:if test="$document!='OpdM2'">Typoscript 2 (OpdM2)</xsl:if></a>
+<a href="OpdT1.html"><xsl:if test="$document='OpdT1'"><strong>Tijdschriftpublicatie (OpdT1)</strong></xsl:if><xsl:if test="$document!='OpdT1'">Tijdschriftpublicatie (OpdT1)</xsl:if></a>
+<a href="OpdD1.html"><xsl:if test="$document='OpdD1'"><strong>Druk 1 (OpdD1)</strong></xsl:if><xsl:if test="$document!='OpdD1'">Druk 1 (OpdD1)</xsl:if></a>
+<a href="OpdD2.html"><xsl:if test="$document='OpdD2'"><strong>Druk 2 (OpdD2)</strong></xsl:if><xsl:if test="$document!='OpdD2'">Druk 2 (OpdD2)</xsl:if></a>
+<a href="OpdD3.html"><xsl:if test="$document='OpdD3'"><strong>Druk 3 (OpdD3)</strong></xsl:if><xsl:if test="$document!='OpdD3'">Druk 3 (OpdD3)</xsl:if></a>
+<a href="OpdD4.html"><xsl:if test="$document='OpdD4'"><strong>Druk 4 (OpdD4)</strong></xsl:if><xsl:if test="$document!='OpdD4'">Druk 4 (OpdD4)</xsl:if></a>
+<a href="OpdD5.html"><xsl:if test="$document='OpdD5'"><strong>Druk 5 (OpdD5)</strong></xsl:if><xsl:if test="$document!='OpdD5'">Druk 5 (OpdD5)</xsl:if></a>
+<a href="OpdD6.html"><xsl:if test="$document='OpdD6'"><strong>Druk 6 (OpdD6)</strong></xsl:if><xsl:if test="$document!='OpdD6'">Druk 6 (OpdD6)</xsl:if></a>
+<a href="OpdP1a.html"><xsl:if test="contains($document,'OpdP1')"><strong>Drukproef 1 (OpdP1)</strong></xsl:if><xsl:if test="not(contains($document,'OpdP1'))">Drukproef 1 (OpdP1)</xsl:if></a>
+<a href="OpdP2.html"><xsl:if test="contains($document,'OpdP2')"><strong>Drukproef 2 (OpdP2)</strong></xsl:if><xsl:if test="not(contains($document,'OpdP2'))">Drukproef 2 (OpdP2)</xsl:if></a>
+<a href="OpdD7.html"><xsl:if test="$document='OpdD7'"><strong>Druk 7 (OpdD7)</strong></xsl:if><xsl:if test="$document!='OpdD7'">Druk 7 (OpdD7)</xsl:if></a>
 </div>
 </li>
 <li><a href="#">Achter de Schermen</a>
 <!-- Achter de Schermen -->                                                   
 <div id="dropmenu2" class="dropmenudiv">
-<a href="AdsM1.html"><xsl:if test="$document='AdsM1'"><b>Manuscript (AdsM1)</b></xsl:if><xsl:if test="$document!='AdsM1'">Manuscript (AdsM1)</xsl:if></a>
-<a href="AdsM2a.html"><xsl:if test="contains($document,'AdsM2')"><b>Typoscript (AdsM2)</b></xsl:if><xsl:if test="not(contains($document,'AdsM2'))">Typoscript (AdsM2)</xsl:if></a>
-<a href="AdsT1.html"><xsl:if test="$document='AdsT1'"><b>Tijdschriftpublicatie (AdsT1)</b></xsl:if><xsl:if test="$document!='AdsT1'">Tijdschriftpublicatie (AdsT1)</xsl:if></a>
-<a href="AdsM3a.html"><xsl:if test="contains($document,'AdsM3')"><b>Correctie-exemplaar (AdsM3)</b></xsl:if><xsl:if test="not(contains($document,'AdsM3'))">Correctie-exemplaar (AdsM3)</xsl:if></a>
-<a href="AdsD1.html"><xsl:if test="$document='AdsD1'"><b>Druk 1 (AdsD1)</b></xsl:if><xsl:if test="$document!='AdsD1'">Druk 1 (AdsD1)</xsl:if></a>
-<a href="AdsD2.html"><xsl:if test="$document='AdsD2'"><b>Druk 2 (AdsD2)</b></xsl:if><xsl:if test="$document!='AdsD2'">Druk 2 (AdsD2)</xsl:if></a>
-<a href="AdsD3.html"><xsl:if test="$document='AdsD3'"><b>Druk 3 (AdsD3)</b></xsl:if><xsl:if test="$document!='AdsD3'">Druk 3 (AdsD3)</xsl:if></a>
-<a href="AdsD4.html"><xsl:if test="$document='AdsD4'"><b>Druk 4 (AdsD4)</b></xsl:if><xsl:if test="$document!='AdsD4'">Druk 4 (AdsD4)</xsl:if></a>
-<a href="AdsD5.html"><xsl:if test="$document='AdsD5'"><b>Druk 5 (AdsD5)</b></xsl:if><xsl:if test="$document!='AdsD5'">Druk 5 (AdsD5)</xsl:if></a>
-<a href="AdsP1a.html"><xsl:if test="contains($document,'AdsP1')"><b>Drukproef 1 (AdsP1)</b></xsl:if><xsl:if test="not(contains($document,'AdsP1'))">Drukproef 1 (AdsP1)</xsl:if></a>
-<a href="AdsP2.html"><xsl:if test="contains($document,'AdsP2')"><b>Drukproef 2 (AdsP2)</b></xsl:if><xsl:if test="not(contains($document,'AdsP2'))">Drukproef 2 (AdsP2)</xsl:if></a>
-<a href="AdsD6.html"><xsl:if test="$document='AdsD6'"><b>Druk 6 (AdsD6)</b></xsl:if><xsl:if test="$document!='AdsD6'">Druk 6 (AdsD6)</xsl:if></a>
+<a href="AdsM1.html"><xsl:if test="$document='AdsM1'"><strong>Manuscript (AdsM1)</strong></xsl:if><xsl:if test="$document!='AdsM1'">Manuscript (AdsM1)</xsl:if></a>
+<a href="AdsM2a.html"><xsl:if test="contains($document,'AdsM2')"><strong>Typoscript (AdsM2)</strong></xsl:if><xsl:if test="not(contains($document,'AdsM2'))">Typoscript (AdsM2)</xsl:if></a>
+<a href="AdsT1.html"><xsl:if test="$document='AdsT1'"><strong>Tijdschriftpublicatie (AdsT1)</strong></xsl:if><xsl:if test="$document!='AdsT1'">Tijdschriftpublicatie (AdsT1)</xsl:if></a>
+<a href="AdsM3a.html"><xsl:if test="contains($document,'AdsM3')"><strong>Correctie-exemplaar (AdsM3)</strong></xsl:if><xsl:if test="not(contains($document,'AdsM3'))">Correctie-exemplaar (AdsM3)</xsl:if></a>
+<a href="AdsD1.html"><xsl:if test="$document='AdsD1'"><strong>Druk 1 (AdsD1)</strong></xsl:if><xsl:if test="$document!='AdsD1'">Druk 1 (AdsD1)</xsl:if></a>
+<a href="AdsD2.html"><xsl:if test="$document='AdsD2'"><strong>Druk 2 (AdsD2)</strong></xsl:if><xsl:if test="$document!='AdsD2'">Druk 2 (AdsD2)</xsl:if></a>
+<a href="AdsD3.html"><xsl:if test="$document='AdsD3'"><strong>Druk 3 (AdsD3)</strong></xsl:if><xsl:if test="$document!='AdsD3'">Druk 3 (AdsD3)</xsl:if></a>
+<a href="AdsD4.html"><xsl:if test="$document='AdsD4'"><strong>Druk 4 (AdsD4)</strong></xsl:if><xsl:if test="$document!='AdsD4'">Druk 4 (AdsD4)</xsl:if></a>
+<a href="AdsD5.html"><xsl:if test="$document='AdsD5'"><strong>Druk 5 (AdsD5)</strong></xsl:if><xsl:if test="$document!='AdsD5'">Druk 5 (AdsD5)</xsl:if></a>
+<a href="AdsP1a.html"><xsl:if test="contains($document,'AdsP1')"><strong>Drukproef 1 (AdsP1)</strong></xsl:if><xsl:if test="not(contains($document,'AdsP1'))">Drukproef 1 (AdsP1)</xsl:if></a>
+<a href="AdsP2.html"><xsl:if test="contains($document,'AdsP2')"><strong>Drukproef 2 (AdsP2)</strong></xsl:if><xsl:if test="not(contains($document,'AdsP2'))">Drukproef 2 (AdsP2)</xsl:if></a>
+<a href="AdsD6.html"><xsl:if test="$document='AdsD6'"><strong>Druk 6 (AdsD6)</strong></xsl:if><xsl:if test="$document!='AdsD6'">Druk 6 (AdsD6)</xsl:if></a>
 </div>
 </li>
 <!-- STATIC CONVERSION 2026-03-10: Visualisatie menu only in document text views, added xsl:if -->
 <xsl:if test="$text='doclin' and $trans!='yes' or $text='doclincomp'"><li><a href="#">Visualisatie</a>
 <!-- visualisatie -->
 <div id="dropmenu3" class="dropmenudiv">
-<a><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="$document"/>-bovenlaag.html</xsl:attribute><xsl:if test="$view='bovenlaag'"><b>Uiteindelijk resultaat</b></xsl:if><xsl:if test="$view!='bovenlaag'">Uiteindelijk resultaat</xsl:if></a>
-<a><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="$document"/>.html</xsl:attribute><xsl:if test="$view!='bovenlaag'"><b>Volledige transcriptie</b></xsl:if><xsl:if test="$view='bovenlaag'">Volledige transcriptie</xsl:if></a>
+<a><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="$document"/>-bovenlaag.html</xsl:attribute><xsl:if test="$view='bovenlaag'"><strong>Uiteindelijk resultaat</strong></xsl:if><xsl:if test="$view!='bovenlaag'">Uiteindelijk resultaat</xsl:if></a>
+<a><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="$document"/>.html</xsl:attribute><xsl:if test="$view!='bovenlaag'"><strong>Volledige transcriptie</strong></xsl:if><xsl:if test="$view='bovenlaag'">Volledige transcriptie</xsl:if></a>
 <!-- STATIC CONVERSION 2026-03-10: removed printvriendelijke versie from menu <a><xsl:attribute name="href">javascript:MM_openBrWindow('<xsl:if test="$n='' and not(contains($document,'n'))"><xsl:value-of select="substring($document,1,3)"/></xsl:if><xsl:if test="$n='' and contains($document,'n')"><xsl:value-of select="$document"/></xsl:if><xsl:if test="$n!=''">zin</xsl:if>.htm?text=<xsl:value-of select="$text"/>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/>&amp;export=print&amp;comp1=<xsl:value-of select="$comp1"/>&amp;comp2=<xsl:value-of select="$comp2"/>&amp;app=<xsl:value-of select="$app"/>&amp;trans=<xsl:value-of select="$trans"/>&amp;n=<xsl:value-of select="$n"/>&amp;view=<xsl:value-of select="$view"/>&amp;id=<xsl:value-of select="$id"/>&amp;corresp=<xsl:value-of select="$corresp"/>','','width=825,height=538,resizable=yes,scrollbars=yes')</xsl:attribute>Printvriendelijke versie</a>-->
 <a><xsl:attribute name="href"><xsl:value-of select="$document"/>.xml</xsl:attribute><xsl:attribute name="onclick">MM_openBrWindow(this.href,'','width=825,height=538,resizable=yes,scrollbars=yes'); return false;</xsl:attribute>XML Bronbestand</a>
 </div>
@@ -189,8 +205,8 @@ _________________________________<u>elektronische editie</u></p></div></td></tr>
 
 </div>
 </li></xsl:if>
-<!-- STATIC CONVERSION 2026-03-10: new url mapping --><li><a href="gebruiksaanwijzing.html"><xsl:if test="$document='gebruiksaanwijzing'"><b>Gebruiksaanwijzing</b></xsl:if><xsl:if test="$document!='gebruiksaanwijzing'">Gebruiksaanwijzing</xsl:if></a></li>
-<!-- STATIC CONVERSION 2026-03-10: new url mapping --><li><a href="colofon.html"><xsl:if test="$document='colofon'"><b>Colofon</b></xsl:if><xsl:if test="$document!='colofon'">Colofon</xsl:if></a></li>
+<!-- STATIC CONVERSION 2026-03-10: new url mapping --><li><a href="gebruiksaanwijzing.html"><xsl:if test="$document='gebruiksaanwijzing'"><strong>Gebruiksaanwijzing</strong></xsl:if><xsl:if test="$document!='gebruiksaanwijzing'">Gebruiksaanwijzing</xsl:if></a></li>
+<!-- STATIC CONVERSION 2026-03-10: new url mapping --><li><a href="colofon.html"><xsl:if test="$document='colofon'"><strong>Colofon</strong></xsl:if><xsl:if test="$document!='colofon'">Colofon</xsl:if></a></li>
 </ul>
 </div>
 
@@ -199,7 +215,7 @@ _________________________________<u>elektronische editie</u></p></div></td></tr>
 </table>
 </xsl:if>
 <!-- main inside table -->
-<table class="main" align="center" border="0" cellspacing="0"><xsl:if test="$export!='print'"><xsl:attribute name="width">802</xsl:attribute></xsl:if><xsl:if test="$export='print'"><xsl:attribute name="width">100%</xsl:attribute></xsl:if>
+<table class="main">
  <tr><td>
  <!-- home -->
  <xsl:if test="$text='home'"><xsl:call-template name="home"/></xsl:if>
@@ -261,7 +277,7 @@ _________________________________<u>elektronische editie</u></p></div></td></tr>
  </td></tr>
 </table>
 </td></tr></table>
-</center>
+  </div>
 <!--STATIC CONVERSION 2026-03-12 <script type="text/javascript">
 
 SET_DHTML(CURSOR_MOVE, "reldiv2", "reldiv");

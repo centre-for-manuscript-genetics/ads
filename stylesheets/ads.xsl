@@ -170,11 +170,12 @@
   <!-- apparaat -->
   <xsl:when test="$text='doclinapp'">
   <xsl:variable name="adsopd"><xsl:value-of select="substring($document,1,3)"/>Z</xsl:variable>
+  <!-- STATIC CONVERSION 2026-03-15: <b> replaced with <strong> throughout apparatus view (witness labels, "Synopsis:", "Versies:" headings) -->
   <h1>Apparaat</h1><br/><br/>
-  <b>Synopsis:</b>
+  <strong>Synopsis:</strong>
   <xsl:if test="$comp1=''">
   <xsl:for-each select="//app[@n=$app][1]/rdg">
-  <p><b><span style="font-family:Arial Narrow;"><xsl:if test="contains(@wit,'Z')"><xsl:value-of select="substring-before(@wit,$adsopd)"/></xsl:if><xsl:if test="not(contains(@wit,'Z'))"><xsl:value-of select="@wit"/></xsl:if></span></b><br/>
+  <p><strong><span style="font-family:Arial Narrow;"><xsl:if test="contains(@wit,'Z')"><xsl:value-of select="substring-before(@wit,$adsopd)"/></xsl:if><xsl:if test="not(contains(@wit,'Z'))"><xsl:value-of select="@wit"/></xsl:if></span></strong><br/>
   <xsl:if test="substring(@wit,1,6) != ' '"><xsl:apply-templates select="//seg[descendant::app[@n=$app]]"><xsl:with-param name="wit" select="substring(@wit,1,6)"/></xsl:apply-templates></xsl:if>
   <xsl:if test="substring(@wit,1,6) = ' '"><xsl:apply-templates select="//seg[descendant::app[@n=$app]]"><xsl:with-param name="wit" select="substring(@wit,1,5)"/></xsl:apply-templates></xsl:if>
   <xsl:if test="ancestor::TEI.2//head/app[@n=$app]"><xsl:apply-templates select="//head[descendant::app[@n=$app]]"><xsl:with-param name="wit" select="substring(@wit,1,5)"/></xsl:apply-templates></xsl:if>
@@ -185,7 +186,7 @@
   <xsl:if test="$comp1!=''">
   <xsl:for-each select="front//witness[@n = $comp1] | front//witness[@n = $comp2] | front//witness[contains(@n,concat(substring($comp2,1,3),substring($comp2,5,2)))] | front//witness[contains(@n,concat(substring($comp1,1,3),substring($comp1,5,2)))]">
   <xsl:if test="//app[@n=$app]/rdg[1][contains(@wit,current()/@n)] or //app[@n=$app]/rdg[2][contains(@wit,current()/@n)] or //app[@n=$app]/rdg[3][contains(@wit,current()/@n)] or //app[@n=$app]/rdg[4][contains(@wit,current()/@n)] or //app[@n=$app]/rdg[5][contains(@wit,current()/@n)]">
-  <p><b><span style="font-family:Arial Narrow;"><xsl:value-of select="@n"/></span></b>:<br/>
+  <p><strong><span style="font-family:Arial Narrow;"><xsl:value-of select="@n"/></span></strong>:<br/>
     <xsl:apply-templates select="//seg[descendant::app[@n=$app]]"><xsl:with-param name="wit" select="@n"/></xsl:apply-templates>
     <xsl:if test="ancestor::TEI.2//head/app[@n=$app]"><xsl:apply-templates select="//head[descendant::app[@n=$app]]"><xsl:with-param name="wit" select="@n"/></xsl:apply-templates></xsl:if>
   </p>
@@ -194,11 +195,11 @@
   </xsl:if>
 
   ________<br/><br/>
-  <b>Versies:</b>
+  <strong>Versies:</strong>
   <xsl:for-each select="front//witness">
   <xsl:if test="//app[@n=$app]/rdg[1][not(contains(@wit,current()/@n))] and //app[@n=$app]/rdg[2][not(contains(@wit,current()/@n))] and //app[@n=$app]/rdg[3][not(contains(@wit,current()/@n))] and //app[@n=$app]/rdg[4][not(contains(@wit,current()/@n))] and //app[@n=$app]/rdg[5][not(contains(@wit,current()/@n))]"></xsl:if>
   <xsl:if test="//app[@n=$app]/rdg[1][contains(@wit,current()/@n)] or //app[@n=$app]/rdg[2][contains(@wit,current()/@n)] or //app[@n=$app]/rdg[3][contains(@wit,current()/@n)] or //app[@n=$app]/rdg[4][contains(@wit,current()/@n)] or //app[@n=$app]/rdg[5][contains(@wit,current()/@n)]">
-  <p><b><xsl:if test="ancestor::TEI.2//app[@n=$app]/rdg[contains(@wit,@sigil)]"><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="substring($comp1,4,1) ='Z' or substring($comp2,4,1) = 'Z'"><xsl:if test="contains(@n,concat('Ads',substring($comp2,5,2))) or contains(@n,concat('Ads',substring($comp1,5,2))) "><xsl:attribute name="style">font-family:Arial Narrow;color:green;</xsl:attribute></xsl:if></xsl:if><xsl:if test="$comp1 = @n or $comp2 = @n"><xsl:attribute name="style">font-family:Arial Narrow;color:green;</xsl:attribute></xsl:if><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="@n"/>-varianten.html#<xsl:value-of select="$id"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></xsl:if></b>:<br/>
+  <p><strong><xsl:if test="ancestor::TEI.2//app[@n=$app]/rdg[contains(@wit,@sigil)]"><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="substring($comp1,4,1) ='Z' or substring($comp2,4,1) = 'Z'"><xsl:if test="contains(@n,concat('Ads',substring($comp2,5,2))) or contains(@n,concat('Ads',substring($comp1,5,2))) "><xsl:attribute name="style">font-family:Arial Narrow;color:green;</xsl:attribute></xsl:if></xsl:if><xsl:if test="$comp1 = @n or $comp2 = @n"><xsl:attribute name="style">font-family:Arial Narrow;color:green;</xsl:attribute></xsl:if><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="@n"/>-varianten.html#<xsl:value-of select="$id"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></xsl:if></strong>:<br/>
     <xsl:apply-templates select="//seg[descendant::app[@n=$app]]"><xsl:with-param name="wit" select="@n"/></xsl:apply-templates>
     <xsl:if test="ancestor::TEI.2//head/app[@n=$app]"><xsl:apply-templates select="//head[descendant::app[@n=$app]]"><xsl:with-param name="wit" select="@n"/></xsl:apply-templates></xsl:if>
     <!-- toon schrijfproces -->
@@ -323,19 +324,29 @@
 </xsl:template>
 
 <xsl:template match="emph">
-<xsl:param name="wit"/>
-<xsl:choose>
- <xsl:when test="@rend='signed'">
- <div class="signed"><!--<xsl:attribute name="class"><xsl:value-of select="ancestor::div/@type"/></xsl:attribute>-->
-  <xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates>
- </div>
- </xsl:when>
- <xsl:otherwise>
-  <span class="emph">
-    <xsl:apply-templates/>
-  </span>
-  </xsl:otherwise>
-</xsl:choose>
+  <xsl:param name="wit"/>
+  <xsl:choose>
+    <xsl:when test="@rend='signed'">
+      <xsl:choose>
+        <!-- STATIC CONVERSION 2026-03-14: replaced unconditional div.signed with ancestor::p check to avoid div-in-p validity error; outputs span.signed inside p, div.signed elsewhere -->
+        <xsl:when test="ancestor::p">
+          <span class="signed">
+            <xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates>
+          </span>
+        </xsl:when>
+        <xsl:otherwise>
+          <div class="signed">
+            <xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates>
+          </div>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:when>
+    <xsl:otherwise>
+      <span class="emph">
+        <xsl:apply-templates/>
+      </span>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template match="app">
@@ -368,10 +379,10 @@
   <xsl:when test="$comp1!=''">apparaat_<xsl:value-of select="$comp1"/>_<xsl:value-of select="$comp2"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="parent::app/@n"/>.html</xsl:when>
   <xsl:otherwise>apparaat-<xsl:value-of select="$document"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="parent::app/@n"/>.html</xsl:otherwise>
 </xsl:choose></xsl:attribute><xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates><xsl:if test="current()=''">|</xsl:if></a>
-   <xsl:if test="descendant::app/rdg[contains(@wit,$comp1) and not(contains(@wit,$comp2))] and $export!= 'print'"><div><xsl:attribute name="class">variant<xsl:if test="descendant::app/@n='d0e529' or descendant::app/@n='d0e409' or descendant::app/@n='eee5412'">2</xsl:if></xsl:attribute><ul><xsl:for-each select="descendant::app/rdg[contains(@wit,$comp1) and not(contains(@wit,$comp2))]"><li class="variant"><a class="variant"><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:choose>
+   <xsl:if test="descendant::app/rdg[contains(@wit,$comp1) and not(contains(@wit,$comp2))] and $export!= 'print'"><!-- STATIC CONVERSION 2026-03-14: changed div.variant/div.variant2 to span.variant/span.variant2, and ul/li to span.variant-item, to avoid block-in-inline validity errors throughout; span.variant-item styled as pseudo-list item in CSS --><span><xsl:attribute name="class">variant<xsl:if test="descendant::app/@n='d0e529' or descendant::app/@n='d0e409' or descendant::app/@n='eee5412'">2</xsl:if></xsl:attribute><xsl:for-each select="descendant::app/rdg[contains(@wit,$comp1) and not(contains(@wit,$comp2))]"><span class="variant-item"><a class="variant"><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:choose>
   <xsl:when test="$comp1!=''">apparaat_<xsl:value-of select="$comp1"/>_<xsl:value-of select="$comp2"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="parent::app/@n"/>.html</xsl:when>
   <xsl:otherwise>apparaat-<xsl:value-of select="$document"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="parent::app/@n"/>.html</xsl:otherwise>
-</xsl:choose></xsl:attribute><xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates><xsl:if test="current()=''">|</xsl:if><xsl:if test="current()=' '">|</xsl:if></a></li></xsl:for-each></ul></div></xsl:if></span>
+</xsl:choose></xsl:attribute><xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates><xsl:if test="current()=''">|</xsl:if><xsl:if test="current()=' '">|</xsl:if></a></span></xsl:for-each></span></xsl:if></span>
  </xsl:if>
  </xsl:for-each>
  <xsl:for-each select="rdg[contains(@wit,$comp1) and contains(@wit,$comp2)]">
@@ -406,10 +417,10 @@
   <xsl:when test="$comp1!=''">apparaat_<xsl:value-of select="$comp1"/>_<xsl:value-of select="$comp2"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="parent::app/@n"/>.html</xsl:when>
   <xsl:otherwise>apparaat-<xsl:value-of select="$document"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="parent::app/@n"/>.html</xsl:otherwise>
 </xsl:choose></xsl:attribute><xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates><xsl:if test="current()=''">|</xsl:if></a>
-   <xsl:if test="descendant::app/rdg[contains(@wit,$comp1) and not(contains(@wit,$comp2))] and $export!= 'print'"><div><xsl:attribute name="class">variant<xsl:if test="descendant::app/@n='d0e529' or descendant::app/@n='d0e409' or descendant::app/@n='eee5412'">2</xsl:if></xsl:attribute><ul><xsl:for-each select="descendant::app/rdg[contains(@wit,$comp1) and not(contains(@wit,$comp2))]"><li class="variant"><a class="variant"><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:choose>
+   <xsl:if test="descendant::app/rdg[contains(@wit,$comp1) and not(contains(@wit,$comp2))] and $export!= 'print'"><!-- STATIC CONVERSION 2026-03-14: changed div.variant/div.variant2 to span.variant/span.variant2, and ul/li to span.variant-item, to avoid block-in-inline validity errors throughout; span.variant-item styled as pseudo-list item in CSS --><span><xsl:attribute name="class">variant<xsl:if test="descendant::app/@n='d0e529' or descendant::app/@n='d0e409' or descendant::app/@n='eee5412'">2</xsl:if></xsl:attribute><xsl:for-each select="descendant::app/rdg[contains(@wit,$comp1) and not(contains(@wit,$comp2))]"><span class="variant-item"><a class="variant"><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:choose>
   <xsl:when test="$comp1!=''">apparaat_<xsl:value-of select="$comp1"/>_<xsl:value-of select="$comp2"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="parent::app/@n"/>.html</xsl:when>
   <xsl:otherwise>apparaat-<xsl:value-of select="$document"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="parent::app/@n"/>.html</xsl:otherwise>
-</xsl:choose></xsl:attribute><xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates><xsl:if test="current()=''">|</xsl:if><xsl:if test="current()=' '">|</xsl:if></a></li></xsl:for-each></ul></div></xsl:if></span>
+</xsl:choose></xsl:attribute><xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates><xsl:if test="current()=''">|</xsl:if><xsl:if test="current()=' '">|</xsl:if></a></span></xsl:for-each></span></xsl:if></span>
  </xsl:if>
  </xsl:for-each>
  <xsl:for-each select="rdg[contains(@wit,$comp1) and contains(@wit,$comp2)]">
@@ -503,10 +514,10 @@
   <xsl:when test="$comp1!=''">apparaat_<xsl:value-of select="$comp1"/>_<xsl:value-of select="$comp2"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="parent::app/@n"/>.html</xsl:when>
   <xsl:otherwise>apparaat-<xsl:value-of select="$document"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="parent::app/@n"/>.html</xsl:otherwise>
 </xsl:choose></xsl:attribute><xsl:if test="current()=''">|</xsl:if><xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates></a><xsl:text> </xsl:text>
- <xsl:if test="$export!= 'print'"><div><xsl:attribute name="class">variant<xsl:if test="descendant::app/@n='d0e529' or descendant::app/@n='d0e409' or descendant::app/@n='eee5412'">2</xsl:if></xsl:attribute><ul><xsl:for-each select="descendant::app"><li class="variant"><a class="variant"><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:choose>
+ <xsl:if test="$export!= 'print'"><!-- STATIC CONVERSION 2026-03-14: changed div.variant/div.variant2 to span.variant/span.variant2, and ul/li to span.variant-item, to avoid block-in-inline validity errors throughout; span.variant-item styled as pseudo-list item in CSS --><span><xsl:attribute name="class">variant<xsl:if test="descendant::app/@n='d0e529' or descendant::app/@n='d0e409' or descendant::app/@n='eee5412'">2</xsl:if></xsl:attribute><xsl:for-each select="descendant::app"><span class="variant-item"><a class="variant"><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:choose>
   <xsl:when test="$comp1!=''">apparaat_<xsl:value-of select="$comp1"/>_<xsl:value-of select="$comp2"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="@n"/>.html</xsl:when>
   <xsl:otherwise>apparaat-<xsl:value-of select="$document"/>-<xsl:value-of select="ancestor::seg/@base"/>-<xsl:value-of select="@n"/>.html</xsl:otherwise>
-</xsl:choose></xsl:attribute><xsl:value-of select="rdg[contains(@wit,$document)]"/><xsl:if test="rdg[contains(@wit,$document)]=' '">|</xsl:if><xsl:if test="rdg[contains(@wit,$document)]=''">|</xsl:if></a></li></xsl:for-each></ul></div><xsl:text> </xsl:text></xsl:if>
+</xsl:choose></xsl:attribute><xsl:value-of select="rdg[contains(@wit,$document)]"/><xsl:if test="rdg[contains(@wit,$document)]=' '">|</xsl:if><xsl:if test="rdg[contains(@wit,$document)]=''">|</xsl:if></a></span></xsl:for-each></span><xsl:text> </xsl:text></xsl:if>
  </xsl:if>
  </xsl:if>
  <xsl:if test="$trans!='yes' and contains(@wit,concat($document, ' '))">
@@ -841,7 +852,8 @@
    </span>
   </xsl:when>
   <xsl:when test="@rend='b'">
-  <b><xsl:apply-templates/></b>
+    <!-- STATIC CONVERSION 2026-03-15: <b> replaced with <strong> throughout -->
+  <strong><xsl:apply-templates/></strong>
   </xsl:when>
   <xsl:otherwise>
     <!--

@@ -33,9 +33,50 @@
      <!-- boven -->
    <td align="center" colspan="3"><p class="navigation"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-zinsvarianten.html#<xsl:value-of select="$n"/></xsl:attribute>Terug naar de tekst<br/><img alt="up" src="images/navi/up.jpg"/></a></p></td></tr>
      <!-- links -->
-    <tr><td align="right" width="49%"><p class="navigation"><xsl:if test="$segn = 'z001'"><img alt="left" src="images/navi/left.jpg"/></xsl:if><xsl:if test="$segn != 'z001'"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping -->zin-AdsM1-<xsl:if test="contains($document,'AdsM2')"><xsl:value-of select="//seg[@n = //seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@n - 1]/@n"/>-<xsl:value-of select="//seg[@n = substring(//seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@base,2,4) - 1]/@base"/>-<xsl:value-of select="//seg[@n = //seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@n - 1]/@type"/></xsl:if><xsl:if test="contains($document,'AdsM1')"><xsl:value-of select="//seg[@n=substring($n,1,3) - 1]/@n"/>-<xsl:value-of select="//seg[@n=substring($n,1,3) - 1]/@base"/>-<xsl:value-of select="//seg[@n=substring($n,1,3) - 1]/@type"/></xsl:if><xsl:if test="contains($document,'AdsD') or contains($document,'AdsP') or contains($document,'AdsT') or contains($document,'AdsM3')"><xsl:value-of select="//seg[@n = //seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@n - 1]/@n"/>-<xsl:value-of select="//seg[@n = substring(//seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@base,2,4) - 1]/@base"/>-<xsl:value-of select="//seg[@n = //seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@n - 1]/@type"/></xsl:if>.html</xsl:attribute>Vorige<xsl:text> </xsl:text><img alt="left" src="images/navi/left.jpg"/></a></xsl:if></p></td>
+     <!-- STATIC CONVERSION 2026-03-18: previous/next sentence links in zin.xsl rewritten to use $n directly as sentence index into //seg[ancestor::text/@id='AdsM1'], replacing flawed $id-based lookup that incorrectly matched @base values and returned suffixed @n values (e.g. '004a'). Link target now uses $document instead of hardcoded 'AdsM1'. -->
+    <tr><td align="right" width="49%">
+  <p class="navigation">
+    <!-- STATIC CONVERSION 2026-03-10: new url mapping -->
+    <xsl:variable name="current-seg-n" select="$n"/>
+    <xsl:variable name="prev-seg"
+  select="//seg[ancestor::text/@id='AdsM1' and @n = $current-seg-n - 1]"/>
+    <xsl:comment>
+  document=<xsl:value-of select="$document"/>
+  n=<xsl:value-of select="$n"/>
+  id=<xsl:value-of select="$id"/>
+  segn=<xsl:value-of select="$segn"/>
+  current-seg-n=<xsl:value-of select="$current-seg-n"/>
+  seg-base-lookup=<xsl:value-of select="//seg[ancestor::text/@id='AdsM1' and @base=substring($id,1,4)]/@n"/>
+</xsl:comment>
+    <xsl:if test="$segn = 'z001'">
+      <img alt="left" src="images/navi/left.jpg"/>
+    </xsl:if>
+    <xsl:if test="$segn != 'z001'">
+      <a>
+        <xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="$prev-seg/@n"/>-<xsl:value-of select="$prev-seg/@base"/>-<xsl:value-of select="$prev-seg/@type"/>.html</xsl:attribute>
+        Vorige<xsl:text> </xsl:text><img alt="left" src="images/navi/left.jpg"/>
+      </a>
+    </xsl:if>
+  </p>
+</td>
      <!-- rechts -->
-   <td width="1%"/><td align="left" width="49%"><p class="navigation"><xsl:if test="$segn = 'z324'"><img alt="right" src="images/navi/right.jpg"/></xsl:if><xsl:if test="$segn != 'z324'"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping -->zin-AdsM1-<xsl:if test="contains($document,'AdsM2')"><xsl:value-of select="//seg[@n = //seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@n + 1]/@n"/>-<xsl:value-of select="//seg[@n = substring(//seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@base,2,4) + 1]/@base"/>-<xsl:value-of select="//seg[@n = //seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@n + 1]/@type"/></xsl:if><xsl:if test="contains($document,'AdsM1')"><xsl:value-of select="//seg[@n=substring($n,1,3) + 1]/@n"/>-<xsl:value-of select="//seg[@n=substring($n,1,3) + 1]/@base"/>-<xsl:value-of select="//seg[@n=substring($n,1,3) + 1]/@type"/></xsl:if><xsl:if test="contains($document,'AdsD') or contains($document,'AdsP') or contains($document,'AdsT') or contains($document,'AdsM3')"><xsl:value-of select="//seg[@n = //seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@n + 1]/@n"/>-<xsl:value-of select="//seg[@n = substring(//seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@base,2,4) + 1]/@base"/>-<xsl:value-of select="//seg[@n = //seg[ancestor::text/@id='AdsM1' and substring($id,1,4)=@base]/@n + 1]/@type"/></xsl:if>.html</xsl:attribute><img alt="right" src="images/navi/right.jpg"/><xsl:text> </xsl:text>Volgende</a></xsl:if></p></td></tr>
+   <td width="1%"/>
+<td align="left" width="49%">
+  <p class="navigation">
+    <!-- STATIC CONVERSION 2026-03-18: next sentence link rewritten to use $n directly as sentence index into //seg[ancestor::text/@id='AdsM1'], replacing flawed $id-based lookup. Link target now uses $document instead of hardcoded 'AdsM1'. -->
+    <xsl:variable name="next-seg"
+      select="//seg[ancestor::text/@id='AdsM1' and @n = $n + 1]"/>
+    <xsl:if test="$segn = 'z324'">
+      <img alt="right" src="images/navi/right.jpg"/>
+    </xsl:if>
+    <xsl:if test="$segn != 'z324'">
+      <a>
+        <xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="$next-seg/@n"/>-<xsl:value-of select="$next-seg/@base"/>-<xsl:value-of select="$next-seg/@type"/>.html</xsl:attribute>
+        <img alt="right" src="images/navi/right.jpg"/><xsl:text> </xsl:text>Volgende
+      </a>
+    </xsl:if>
+  </p>
+</td></tr>
   </table>
  </div>
  </xsl:if>
@@ -53,8 +94,9 @@
 <table>
 <tr><td><h4>Schrijfproces</h4><br/></td></tr>
 <tr><td>
+  <!-- STATIC CONVERSION 2026-03-15: <b> replaced with <strong> throughout apparatus view  -->
 <xsl:for-each select="ancestor::TEI.2//text[@id='AdsDD']//front//witness[@n = 'AdsM1']">
-<p><b><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:if test="not(contains($document,'AdsM2'))"><xsl:value-of select="ancestor::TEI.2//seg[@base=$correspsegDD]/@base"/></xsl:if><xsl:if test="contains($document,'AdsM2')"><xsl:value-of select="ancestor::TEI.2//seg[@base=$correspseg]/@base"/></xsl:if></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></b>:<xsl:if test="$corresp=''"><br/>|</xsl:if></p>
+<p><strong><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:if test="not(contains($document,'AdsM2'))"><xsl:value-of select="ancestor::TEI.2//seg[@base=$correspsegDD]/@base"/></xsl:if><xsl:if test="contains($document,'AdsM2')"><xsl:value-of select="ancestor::TEI.2//seg[@base=$correspseg]/@base"/></xsl:if></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></strong>:<xsl:if test="$corresp=''"><br/>|</xsl:if></p>
 </xsl:for-each></td></tr>
 <xsl:apply-templates select="document('../../ads/xml/toc.xml')//toc/nums/num"/>
 <!-- apparaat -->
@@ -62,17 +104,19 @@
 
 <xsl:for-each select="ancestor::TEI.2//text[@id='AdsDD']//front//witness[@n != 'AdsM1']">
 <xsl:variable name="jip"><xsl:value-of select="@n"/></xsl:variable>
+<!-- STATIC CONVERSION 2026-03-15: <b> replaced with <strong> throughout -->
 <xsl:if test="contains($document,'AdsM')">
 <xsl:if test="ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspseg]//app/rdg[contains(@wit,current()/@sigil)]">
-  <p><b><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspseg]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></b>:<br/>
+  <p><strong><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspseg]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></strong>:<br/>
     <xsl:for-each select="ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspseg]"><xsl:apply-templates select="."><xsl:with-param name="wit" select="$jip"/></xsl:apply-templates><xsl:text> </xsl:text></xsl:for-each>
     <!--<xsl:apply-templates select="ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspseg]"><xsl:with-param name="wit" select="@n"/></xsl:apply-templates><xsl:text> </xsl:text>-->
   </p>
 </xsl:if>
 </xsl:if>
+<!-- STATIC CONVERSION 2026-03-15: <b> replaced with <strong> throughout -->
 <xsl:if test="not(contains($document,'AdsM'))">
 <xsl:if test="ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspsegDD]//app/rdg[contains(@wit,current()/@sigil)]">
-  <p><b><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspsegDD]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></b>:<br/>
+  <p><strong><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspsegDD]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></strong>:<br/>
     <xsl:apply-templates select="ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspsegDD]"><xsl:with-param name="wit" select="@n"/></xsl:apply-templates>
   </p>
 </xsl:if>
@@ -81,12 +125,12 @@
 <!-- voor de M'n -->
 <xsl:if test="contains($document,'AdsM')">
 <xsl:if test="not(ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspseg]//app)">
-
-<xsl:if test="substring(@n,6,1) = ''"><p><b><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspseg]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></b>:<br/>
+<!-- STATIC CONVERSION 2026-03-15: <b> replaced with <strong> throughout -->
+<xsl:if test="substring(@n,6,1) = ''"><p><strong><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspseg]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></strong>:<br/>
 <xsl:apply-templates select="ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspseg]"><xsl:with-param name="wit" select="@n"/></xsl:apply-templates></p></xsl:if>
     
 
-<xsl:if test="substring(@n,6,1) = 'a'"><p><b><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspseg]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></b>:<br/><xsl:apply-templates select="ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspseg]"><xsl:with-param name="wit" select="concat(substring(@n,1,5), 'a')"/></xsl:apply-templates></p></xsl:if>
+<xsl:if test="substring(@n,6,1) = 'a'"><p><strong><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspseg]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></strong>:<br/><xsl:apply-templates select="ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspseg]"><xsl:with-param name="wit" select="concat(substring(@n,1,5), 'a')"/></xsl:apply-templates></p></xsl:if>
 
 <xsl:if test="substring(@n,6,1) != 'a' and substring(@n,6,1) != ''"></xsl:if>
   
@@ -95,12 +139,12 @@
 <!-- voor de Niet M'en -->
 <xsl:if test="not(contains($document,'AdsM'))">
 <xsl:if test="not(ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspsegDD]//app)">
-
-<xsl:if test="substring(@n,6,1) = ''"><p><b><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspsegDD]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></b>:<br/>
+<!-- STATIC CONVERSION 2026-03-15: <b> replaced with <strong> throughout -->
+<xsl:if test="substring(@n,6,1) = ''"><p><strong><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspsegDD]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></strong>:<br/>
 <xsl:apply-templates select="ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspsegDD]"><xsl:with-param name="wit" select="@n"/></xsl:apply-templates></p></xsl:if>
     
-
-<xsl:if test="substring(@n,6,1) = 'a'"><p><b><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspsegDD]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></b>:<br/><xsl:apply-templates select="ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspsegDD]"><xsl:with-param name="wit" select="concat(substring(@n,1,5), 'a')"/></xsl:apply-templates></p></xsl:if>
+<!-- STATIC CONVERSION 2026-03-15: <b> replaced with <strong> throughout apparatus view -->
+<xsl:if test="substring(@n,6,1) = 'a'"><p><strong><a><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute></a><a style="font-family:Arial Narrow;"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:if test="$document=current()/@n"><xsl:attribute name="style">color:green;font-family:Arial Narrow;</xsl:attribute></xsl:if><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:attribute name="href"><xsl:value-of select="@n"/>-zinsvarianten.html#<xsl:value-of select="ancestor::TEI.2//seg[@base=$correspsegDD]/@base"/></xsl:attribute><xsl:value-of select="text()"/> [<xsl:value-of select="@n"/>]</a></strong>:<br/><xsl:apply-templates select="ancestor::TEI.2//text[@id='AdsDD']//seg[@base=$correspsegDD]"><xsl:with-param name="wit" select="concat(substring(@n,1,5), 'a')"/></xsl:apply-templates></p></xsl:if>
 
 <xsl:if test="substring(@n,6,1) != 'a' and substring(@n,6,1) != ''"></xsl:if>
   
@@ -111,8 +155,9 @@
 <!-- einde apparaat -->
 </table>
 <!-- facsimile thumbnail -->
+<!-- STATIC CONVERSION 2026-03-15: <b> replaced with <strong> throughout  -->
 </td><td valign="top" width="150"><br/>
-<table><tr><td align="center">  <span style="color:green;font-family:Arial Narrow;"><b><xsl:value-of select="substring($document,1,5)"/></b></span><br/>
+<table><tr><td align="center">  <span style="color:green;font-family:Arial Narrow;"><strong><xsl:value-of select="substring($document,1,5)"/></strong></span><br/>
 <a><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="substring($document,1,5)"/>-<xsl:if test="$document='AdsM1' and document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['061' &gt;= substring($n,1,3) and '055' &lt;= substring($n,1,3)]">3</xsl:if><xsl:if test="$document='AdsM1' and document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['130' &gt;= substring($n,1,3) and '120' &lt;= substring($n,1,3)]">6</xsl:if><xsl:if test="$document='AdsM1' and not(document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['061' &gt;= substring($n,1,3) and '055' &lt;= substring($n,1,3)]) and not(document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['130' &gt;= substring($n,1,3) and '120' &lt;= substring($n,1,3)])"><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page[@segn &gt;= substring($n,1,3) and @segp &lt;= substring($n,1,3)]/@id"/></xsl:if><xsl:if test="$document!='AdsM1'"><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page[@segn &gt;= substring($n,1,3) and @segp &lt;= substring($n,1,3)]/@id"/></xsl:if>-facsimile.html</xsl:attribute><!-- STATIC CONVERSION 2026-03-13: HTML review: all images need alt attributes --><img style="float:left;margin: 0px 10px 0px 0px; border: 1px solid #666; padding: 2px;"><xsl:attribute name="src">images/<xsl:value-of select="substring($document,1,5)"/>/thumbs/<xsl:value-of select="substring($document,1,5)"/>-<xsl:if test="$document='AdsM1' and document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['061' &gt;= substring($n,1,3) and '055' &lt;= substring($n,1,3)]">3</xsl:if><xsl:if test="$document='AdsM1' and document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['130' &gt;= substring($n,1,3) and '120' &lt;= substring($n,1,3)]">6</xsl:if><xsl:if test="$document='AdsM1' and not(document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['061' &gt;= substring($n,1,3) and '055' &lt;= substring($n,1,3)]) and not(document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['130' &gt;= substring($n,1,3) and '120' &lt;= substring($n,1,3)])"><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page[@segn &gt;= substring($n,1,3) and @segp &lt;= substring($n,1,3)]/@id"/></xsl:if><xsl:if test="$document!='AdsM1'"><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page[@segn &gt;= substring($n,1,3) and @segp &lt;= substring($n,1,3)]/@id"/></xsl:if>.jpg</xsl:attribute><xsl:attribute name="alt">Thumbnail: <xsl:value-of select="substring($document,1,5)"/>-<xsl:if test="$document='AdsM1' and document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['061' &gt;= substring($n,1,3) and '055' &lt;= substring($n,1,3)]">3</xsl:if><xsl:if test="$document='AdsM1' and document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['130' &gt;= substring($n,1,3) and '120' &lt;= substring($n,1,3)]">6</xsl:if><xsl:if test="$document='AdsM1' and not(document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['061' &gt;= substring($n,1,3) and '055' &lt;= substring($n,1,3)]) and not(document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['130' &gt;= substring($n,1,3) and '120' &lt;= substring($n,1,3)])"><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page[@segn &gt;= substring($n,1,3) and @segp &lt;= substring($n,1,3)]/@id"/></xsl:if><xsl:if test="$document!='AdsM1'"><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page[@segn &gt;= substring($n,1,3) and @segp &lt;= substring($n,1,3)]/@id"/></xsl:if></xsl:attribute></img></a>
  </td></tr><tr><td align="center"><!-- STATIC CONVERSION 2026-03-13: <font> replaced with <span> --><span class="red"><a class="pb"><xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute>[<xsl:if test="$document='AdsM1' and document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['061' &gt;= substring($n,1,3) and '055' &lt;= substring($n,1,3)]">3</xsl:if><xsl:if test="$document='AdsM1' and document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['130' &gt;= substring($n,1,3) and '120' &lt;= substring($n,1,3)]">6</xsl:if><xsl:if test="$document='AdsM1' and not(document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['061' &gt;= substring($n,1,3) and '055' &lt;= substring($n,1,3)]) and not(document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page['130' &gt;= substring($n,1,3) and '120' &lt;= substring($n,1,3)])"><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page[@segn &gt;= substring($n,1,3) and @segp &lt;= substring($n,1,3)]/@id"/></xsl:if><xsl:if test="$document!='AdsM1'"><xsl:value-of select="document('../../ads/xml/toc.xml')//toc/document[@id=substring($document,1,5)]/thumbs/page[@segn &gt;= substring($n,1,3) and @segp &lt;= substring($n,1,3)]/@id"/></xsl:if>]</a><xsl:text> </xsl:text></span></td></tr></table></td></tr>
 </table>
