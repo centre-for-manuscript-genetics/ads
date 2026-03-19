@@ -535,7 +535,8 @@
      for deleted text, renders with text-decoration: line-through by default,
      and is safe for block-level children such as <details> popups. -->
 <!-- STATIC CONVERSION 2026-03-13: nested <del> replaced with <span class="del"> to avoid invalid nesting -->
-<xsl:template match="del[not(@corresp)]">
+<!-- STATIC CONVERSION 2026-03-19: Added explicit priority attributes to resolve ambiguous rule matches (XTDE0540) flagged by Saxon. del[not(@corresp)] priority=1 loses to add/del priority=2; add/add priority=1 loses to add/add/add priority=2. -->
+<xsl:template match="del[not(@corresp)]" priority="1">
   <xsl:choose>
     <xsl:when test="$view='bovenlaag'">
       <!-- <xsl:value-of select="."/> -->
@@ -558,7 +559,8 @@
      for deleted text, renders with text-decoration: line-through by default,
      and is safe for block-level children such as <details> popups. -->
 <!-- STATIC CONVERSION 2026-03-13: nested <del> replaced with <span class="del"> to avoid invalid nesting -->
-<xsl:template match="add/del">
+<!-- STATIC CONVERSION 2026-03-19: Added explicit priority attributes to resolve ambiguous rule matches (XTDE0540) flagged by Saxon. del[not(@corresp)] priority=1 loses to add/del priority=2; add/add priority=1 loses to add/add/add priority=2. -->
+<xsl:template match="add/del" priority="2">
   <xsl:choose>
     <xsl:when test="$view='bovenlaag'">
       <!-- <xsl:value-of select="."/> -->
@@ -576,7 +578,8 @@
   </xsl:choose>
 </xsl:template>
 
-<xsl:template match="add/add">
+<!-- STATIC CONVERSION 2026-03-19: Added explicit priority attributes to resolve ambiguous rule matches (XTDE0540) flagged by Saxon. del[not(@corresp)] priority=1 loses to add/del priority=2; add/add priority=1 loses to add/add/add priority=2. -->
+<xsl:template match="add/add" priority="1">
   <xsl:choose>
     <xsl:when test="$view='bovenlaag'">
       <xsl:apply-templates/>
@@ -595,7 +598,8 @@
   </xsl:choose>
 </xsl:template>
 
-<xsl:template match="add/add/add">
+<!-- STATIC CONVERSION 2026-03-19: Added explicit priority attributes to resolve ambiguous rule matches (XTDE0540) flagged by Saxon. del[not(@corresp)] priority=1 loses to add/del priority=2; add/add priority=1 loses to add/add/add priority=2. -->
+<xsl:template match="add/add/add" priority="2">
   <xsl:choose>
     <xsl:when test="$view='bovenlaag'">
       <xsl:apply-templates/>

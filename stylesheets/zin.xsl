@@ -33,27 +33,19 @@
      <!-- boven -->
    <td align="center" colspan="3"><p class="navigation"><a><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="$document"/>-zinsvarianten.html#<xsl:value-of select="$n"/></xsl:attribute>Terug naar de tekst<br/><img alt="up" src="images/navi/up.jpg"/></a></p></td></tr>
      <!-- links -->
-     <!-- STATIC CONVERSION 2026-03-18: previous/next sentence links in zin.xsl rewritten to use $n directly as sentence index into //seg[ancestor::text/@id='AdsM1'], replacing flawed $id-based lookup that incorrectly matched @base values and returned suffixed @n values (e.g. '004a'). Link target now uses $document instead of hardcoded 'AdsM1'. -->
+     <!-- STATIC CONVERSION 2026-03-18: previous/next sentence links in zin.xsl rewritten to use $n directly as sentence index into //seg[ancestor::text/@id='AdsM1'], replacing flawed $id-based lookup that incorrectly matched @base values and returned suffixed @n values (e.g. '004a'). Link target uses hardcoded AdsM1 as document -->
     <tr><td align="right" width="49%">
   <p class="navigation">
     <!-- STATIC CONVERSION 2026-03-10: new url mapping -->
     <xsl:variable name="current-seg-n" select="$n"/>
     <xsl:variable name="prev-seg"
   select="//seg[ancestor::text/@id='AdsM1' and @n = $current-seg-n - 1]"/>
-    <xsl:comment>
-  document=<xsl:value-of select="$document"/>
-  n=<xsl:value-of select="$n"/>
-  id=<xsl:value-of select="$id"/>
-  segn=<xsl:value-of select="$segn"/>
-  current-seg-n=<xsl:value-of select="$current-seg-n"/>
-  seg-base-lookup=<xsl:value-of select="//seg[ancestor::text/@id='AdsM1' and @base=substring($id,1,4)]/@n"/>
-</xsl:comment>
     <xsl:if test="$segn = 'z001'">
       <img alt="left" src="images/navi/left.jpg"/>
     </xsl:if>
     <xsl:if test="$segn != 'z001'">
       <a>
-        <xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="$prev-seg/@n"/>-<xsl:value-of select="$prev-seg/@base"/>-<xsl:value-of select="$prev-seg/@type"/>.html</xsl:attribute>
+        <xsl:attribute name="href">zin-AdsM1-<xsl:value-of select="$prev-seg/@n"/>-<xsl:value-of select="$prev-seg/@base"/>-<xsl:value-of select="$prev-seg/@type"/>.html</xsl:attribute>
         Vorige<xsl:text> </xsl:text><img alt="left" src="images/navi/left.jpg"/>
       </a>
     </xsl:if>
@@ -63,7 +55,7 @@
    <td width="1%"/>
 <td align="left" width="49%">
   <p class="navigation">
-    <!-- STATIC CONVERSION 2026-03-18: next sentence link rewritten to use $n directly as sentence index into //seg[ancestor::text/@id='AdsM1'], replacing flawed $id-based lookup. Link target now uses $document instead of hardcoded 'AdsM1'. -->
+    <!-- STATIC CONVERSION 2026-03-18: next sentence link rewritten to use $n directly as sentence index into //seg[ancestor::text/@id='AdsM1'], replacing flawed $id-based lookup. Link target uses hardcoded AdsM1 as document -->
     <xsl:variable name="next-seg"
       select="//seg[ancestor::text/@id='AdsM1' and @n = $n + 1]"/>
     <xsl:if test="$segn = 'z324'">
@@ -71,7 +63,7 @@
     </xsl:if>
     <xsl:if test="$segn != 'z324'">
       <a>
-        <xsl:attribute name="href">zin-<xsl:value-of select="$document"/>-<xsl:value-of select="$next-seg/@n"/>-<xsl:value-of select="$next-seg/@base"/>-<xsl:value-of select="$next-seg/@type"/>.html</xsl:attribute>
+        <xsl:attribute name="href">zin-AdsM1-<xsl:value-of select="$next-seg/@n"/>-<xsl:value-of select="$next-seg/@base"/>-<xsl:value-of select="$next-seg/@type"/>.html</xsl:attribute>
         <img alt="right" src="images/navi/right.jpg"/><xsl:text> </xsl:text>Volgende
       </a>
     </xsl:if>
