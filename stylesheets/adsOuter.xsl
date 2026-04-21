@@ -3,8 +3,7 @@
      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
      version="1.0">
 
-<xsl:output method="html" version="5.0" encoding="UTF-8" indent="no"
-            include-content-type="no"/>
+<xsl:output method="html" version="5.0" encoding="UTF-8" indent="no"/>
 
 <xsl:param name="text" select="''"/>
 <xsl:param name="trans" select="''"/>
@@ -115,14 +114,14 @@ width corrected to 804px to match outer table; deleted presentational attributes
 _________________________________<u>elektronische editie</u></p></div></td></tr></table>
 </xsl:if>
 <!-- outside table -->
-<table class="outside">
-<tr><td>
+<!-- STATIC CONVERSION 2026-04-21: removed two unnecessary structural <table> elements --><!--<table class="outside">
+<tr><td>--><!--end removal two <table> elements -->
 <!-- table containing menu -->
 <!-- STATIC CONVERSION 2026-04-21: removed a defunct if clause for the export view to fix two-table HTML inelegance -->
 <!--<xsl:if test="$export!='print'">-->
-<table class="main">
+<!-- STATIC CONVERSION 2026-04-21: removed two unnecessary structural <table> elements --><!--<table class="main">
  <tr>
-  <td>
+  <td>--><!--end removal two <table> elements -->
 <!-- STATIC CONVERSION [2026-03-12]: removed onMouseover attributes and chrome.js dependency; 
      dropdown menu now handled by CSS :hover in chromestyle.css; 
      dropmenudiv elements moved inside parent li elements -->
@@ -211,13 +210,13 @@ _________________________________<u>elektronische editie</u></p></div></td></tr>
 </ul>
 </div>
 
-</td>
- </tr>
+<!-- STATIC CONVERSION 2026-04-21: removed two unnecessary structural <table> elements --><!--</td>
+ </tr>--><!--end removal two <table> elements -->
 <!-- STATIC CONVERSION 2026-04-21: removed a defunct if clause for the export view so that everything can stay in one "main" table -->
 <!--</xsl:if>-->
 <!-- main inside table -->
 <!--<table class="main">-->
- <tr><td>
+ <!-- STATIC CONVERSION 2026-04-21: removed two unnecessary structural <table> elements --><!--<tr><td>--><!--end removal two <table> elements -->
  <!-- home -->
  <xsl:if test="$text='home'"><xsl:call-template name="home"/></xsl:if>
  <xsl:if test="$text='overlevering'"><xsl:apply-templates/></xsl:if>
@@ -275,9 +274,9 @@ _________________________________<u>elektronische editie</u></p></div></td></tr>
   <xsl:if test="contains($text,'docfacs') and $document = 'inleiding'">
   <center><img><xsl:attribute name="src">images/inleiding/<xsl:value-of select="$page"/>.jpg</xsl:attribute></img></center>
  </xsl:if>
- </td></tr>
+ <!-- STATIC CONVERSION 2026-04-21: removed two unnecessary structural <table> elements --><!--</td></tr>
 </table>
-</td></tr></table>
+</td></tr></table>--><!--end removal two <table> elements -->
   </div>
 <!--STATIC CONVERSION 2026-03-12 <script type="text/javascript">
 
@@ -296,14 +295,14 @@ SET_DHTML(CURSOR_MOVE, "reldiv2", "reldiv");
 //     position:fixed placement calculated from trigger.getBoundingClientRect(). All
 //     popup styling applied via cssText with !important to override HTML4 transitional
 //     quirks mode inheritance. Graceful degradation: with JS disabled, quicklink links
-//     hidden via .quicklink-inline { display: none !important } — acceptable as same
+//     hidden via .quicklink-inline { display: none !important } - acceptable as same
 //     links available via navigation menu.
 //     Close buttons handled by delegated click listener targeting .note-close class,
 //     closing .note-content (notes) or .quicklink-inline (quicklinks) respectively.
 //     overlib.js script include removed from page header.
 
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOMContentLoaded fired');
+
 
   // note popups
   document.querySelectorAll('.note-popup').forEach(function(popup) {
@@ -331,7 +330,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // quicklink popups
-  console.log('quicklink section reached');
   document.querySelectorAll('.quicklink-popup').forEach(function(popup) {
     try {
       var trigger = popup.querySelector('.quicklink-trigger');

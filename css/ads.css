@@ -14,9 +14,9 @@ form
 select
 {display:inline;}
 
-table.main {
-  /* STATIC CONVERSION 2026-03-xx: added margin: 0 auto and width to replace 
-  deprecated align="center" and width attributes on <table> element */
+/* STATIC CONVERSION 2026-04-21: removed the unnecessary <table class="main"> */
+
+/* table.main {
   font-family: Verdana;
   font-size: 10pt;
   background-color: #DDDDDD;
@@ -25,30 +25,27 @@ table.main {
   border-collapse: collapse;
   padding: 0;
   border-spacing: 0;
-}
+} */
 
-table.outside {
-  /* STATIC CONVERSION 2026-03-xx: added margin: 0 auto, width, border 
-  and border-collapse to replace deprecated align="center", width, border, 
-  cellpadding and cellspacing attributes on <table> element; box-sizing: 
-  border-box added so border is included in width calculation */
+/* STATIC CONVERSION 2026-04-21: removed the unnecessary <table class="outside"> */
+/* table.outside {
+
   color: #585858;
   font-size: 9pt;
   background-color: transparent;
   margin: 0 auto;
   width: 100%;
-/*  border: 1px solid #660011;*/
   border-collapse: collapse;
   padding: 0;
   border-spacing: 0;
   text-align: center;
   box-sizing: border-box;
-}
+} 
 
 table.outside td {
   padding: 0;
   margin: 0;
-}
+}*/
 
 table.top
 {
@@ -283,16 +280,15 @@ interacts unreliably with table layout */
 div.container {
   margin: 0 auto;
   width: 804px;
+  background-color: #DDDDDD;
   border-left: 1px solid #660011;
   border-right: 1px solid #660011;
   border-bottom: 1px solid #660011;
   box-sizing: border-box;
 }
 
-table.outside {
-  /* STATIC CONVERSION 2026-03-xx: added margin: 0 auto, width and border-collapse 
-  to replace deprecated align="center", width, border, cellpadding and cellspacing 
-  attributes on <table> element; border moved to div.container */
+/* STATIC CONVERSION 2026-04-21: removed the unnecessary <table class="outside"> */
+/* table.outside {
   color: #585858;
   font-size: 9pt;
   background-color: white;
@@ -303,7 +299,7 @@ table.outside {
   padding: 0;
   border-spacing: 0;
   text-align: center;
-}
+}*/
 
 div.header {
   padding: 0px 0px 0px 0px;
@@ -797,4 +793,41 @@ p.gebruiksaanwijzingspacer {
     min-height: 0;
     margin: 9;
     padding: 0;
+}
+
+div.spacer-block {
+    float: left;
+    width: 200px;
+    height: 50px;
+}
+
+#schrijfproces {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    width:100%;
+    margin-top: 20px;
+}
+div.schrijfproces-main {
+    flex: 1;
+}
+div.schrijfproces-thumb {
+    width: 200px;
+    text-align: center;
+}
+div.stap {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+.wit-AdsM1 {
+    color: green;
+    font-family: Arial Narrow, Arial, sans-serif;
+}
+a.wit-link {
+    font-family: Arial Narrow, Arial, sans-serif;
+}
+img.sentencethumbnail {
+    margin: 0 10px 0 0;
+    border: 1px solid #666;
+    padding: 2px;
 }

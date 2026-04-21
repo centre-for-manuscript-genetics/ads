@@ -5,8 +5,7 @@
 
 <xsl:import href="adsOuter.xsl"/>
 <xsl:import href="home.xsl"/>
-<xsl:output method="html" version="5.0" encoding="UTF-8" indent="no"
-            include-content-type="no"/>
+<xsl:output method="html" version="5.0" encoding="UTF-8" indent="no"/>
 
 <xsl:param name="text" select="''"/>
 <xsl:param name="document" select="''"/>
