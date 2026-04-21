@@ -204,7 +204,7 @@
     <xsl:if test="ancestor::TEI.2//head/app[@n=$app]"><xsl:apply-templates select="//head[descendant::app[@n=$app]]"><xsl:with-param name="wit" select="@n"/></xsl:apply-templates></xsl:if>
     <!-- toon schrijfproces -->
     <xsl:if test="@n='AdsM1'">
-    <xsl:if test="$id!=''"><br/>[<a><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping -->zin-AdsM1-<xsl:value-of select="//text[@id='AdsM1']//seg[@base=$id]/@n"/>-<xsl:value-of select="$id"/>-<xsl:value-of select="//text[@id='AdsM1']//seg[@base=$id]//@type"/>.html</xsl:attribute>toon schrijfproces</a>]</xsl:if>
+    <xsl:if test="$id!='' and $id!='z318'"><br/>[<a><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:attribute name="href"><!-- STATIC CONVERSION 2026-03-10: new url mapping -->zin-AdsM1-<xsl:value-of select="//text[@id='AdsM1']//seg[@base=$id]/@n"/>-<xsl:value-of select="$id"/>-<xsl:value-of select="//text[@id='AdsM1']//seg[@base=$id]//@type"/>.html</xsl:attribute>toon schrijfproces</a>]</xsl:if>
     </xsl:if>
   </p>
   </xsl:if>
@@ -747,7 +747,7 @@
                 <xsl:otherwise>uit</xsl:otherwise>
               </xsl:choose>
             </a>
-            <xsl:if test="contains($document,'Ads')">
+            <xsl:if test="$document='AdsM1'">
               <br/>
               <a>
                 <xsl:attribute name="href"><xsl:choose><xsl:when test="$text!='doclinlay'"><xsl:value-of select="$document"/>-zinsvarianten.html</xsl:when><xsl:otherwise><xsl:value-of select="$document"/>.html</xsl:otherwise></xsl:choose>#p<xsl:value-of select="@n"/></xsl:attribute>
