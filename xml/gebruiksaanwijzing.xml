@@ -61,6 +61,8 @@
 
   </encodingDesc>
   </teiHeader>
+  <!-- STATIC CONVERSION 2026-04-21: English: contents reviewed to represent current functionality -->
+  <!-- STATIC CONVERSION 2026-04-21: Nederlands: inhoud herzien om de huidige functionaliteit van de statische editie te weerspiegelen -->
 <text>
 <body>
 <div type="sectie"><head>Gebruiksaanwijzing</head>
@@ -71,10 +73,10 @@
 <p><lb/>
 </p>
 <p>
-<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> <!--Zoek--> Gebruiksaanwijzing | Colofon</emph></p>
 <p><lb/>
 </p>
-<p>In deze gebruiksaanwijzing worden de belangrijkste mogelijkheden van de editie beknopt besproken. Het gebruik vergt geen uitzonderlijke technische vaardigheden. Na gebruik dient u de elektronische editie steeds af te sluiten door op de <hi rend="b">Exit</hi>-knop rechtsboven de werkbalk te klikken. Het icoontje onder in de taakbalk van uw computer verdwijnt dan vanzelf.
+<p>In deze gebruiksaanwijzing worden de belangrijkste mogelijkheden van de editie beknopt besproken. Het gebruik vergt geen uitzonderlijke technische vaardigheden. <!--Na gebruik dient u de elektronische editie steeds af te sluiten door op de <hi rend="b">Exit</hi>-knop rechtsboven de werkbalk te klikken. Het icoontje onder in de taakbalk van uw computer verdwijnt dan vanzelf.-->
 </p>
 <p><lb/>
 </p>
@@ -150,11 +152,11 @@
 <p>- De optie "Facsimile + Topografisch" combineert de scan met de topografische transcriptie in een bovenliggend venster. Gebruik de bovenste grijze strook om het venster  naar believen te verslepen.</p>
 <p><lb/>
 </p>
-<p>- De optie "Vergrootglas facsimile" kan helpen om in te zoomen op een bepaalde passage.</p>
+<!--<p>- De optie "Vergrootglas facsimile" kan helpen om in te zoomen op een bepaalde passage.</p>
 <p><lb/>
 </p>
 <p>- De optie "Vergrootglas transcriptie" heeft een soortgelijke functie maar toont in plaats van een vergroting meteen een transcriptie van de geselecteerde passage.</p> <p><lb/>
-</p>
+</p>-->
 <p>- De optie "Thumbnails" geeft een overzicht van alle pagina's van het document.  </p>
 <p><lb/>
 </p>
@@ -175,7 +177,7 @@
 <p><lb/>
 </p>
 <p>
-<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | <!--Zoek--> Gebruiksaanwijzing | Colofon</emph></p>
 <p><lb/>
 </p>
 <p>Klik op: "Manuscript" </p>
@@ -184,10 +186,10 @@
 <p><lb/>
 </p>
 <p>
-<emph>Home | Tsjip: Opdracht  | Achter de Schermen  <hi rend="background">| Visualisatie |</hi> Variantenapparaat | Zoek</emph></p>
+<emph>Home | Tsjip: Opdracht  | Achter de Schermen  <hi rend="background">| Visualisatie |</hi> Variantenapparaat | <!--Zoek--> Gebruiksaanwijzing | Colofon</emph></p>
 <p><lb/>
 </p>
-<p>De optie "Visualisatie" in het hoofmenu biedt vier opties:</p>
+<p>Bij het verkennen van de bronnen verschijnen twee extra opties in het hoofdmenu: "Visualisatie" en "Variantenapparaat". De optie "Visualisatie" biedt drie opties:</p>
 <p><lb/>
 </p>
 <p>- "Uiteindelijk resultaat": Deze optie biedt de mogelijkheid om het resultaat van al het schrappen en toevoegen te bekijken, de zogenaamde toplaag van het gekozen document.</p>
@@ -196,7 +198,7 @@
 <p>- "Volledige transcriptie" toont alle doorhalingen en toevoegingen.</p>
 <p><lb/>
 </p>
-<p>- "Printvriendelijke versie": Een venster springt open met een printvriendelijke versie van de huidige pagina. Druk op Control-P om dit venster af te drukken.</p>
+<!--<p>- "Printvriendelijke versie": Een venster springt open met een printvriendelijke versie van de huidige pagina. Druk op Control-P om dit venster af te drukken.</p>-->
 <p><lb/>
 </p>
 <p>- "XML bronbestand": Deze optie biedt de mogelijkheid om de onderliggende codering van de transcriptie te bekijken.</p>
@@ -231,26 +233,27 @@
 <p><lb/>
 </p>
 <p>
-<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | <!--Zoek--> Gebruiksaanwijzing | Colofon</emph></p>
 <p><lb/>
 </p>
 <p>Kies onder "Variantenapparaat":</p>
 <p><lb/>
 </p>
 <p>
-<emph>Home | Tsjip: Opdracht  | Achter de Schermen  | Visualisatie <hi rend="background">| Variantenapparaat |</hi> Zoek</emph></p>
+<emph>Home | Tsjip: Opdracht  | Achter de Schermen  | Visualisatie <hi rend="background">| Variantenapparaat |</hi> <!--Zoek--> Gebruiksaanwijzing | Colofon</emph></p>
 <p><lb/>
 </p>
 <p>de optie "Kies 2 versies" om twee (niet noodzakelijk opeenvolgende) tekstversies te vergelijken.  </p>
 <p><lb/>
 </p>
-<p>Rechtsbovenaan verschijnen twee <hi rend="i">drop down</hi>-menu's.  </p>
+<p>Kies eerst een versie via het navigatiemenu. Klik vervolgens op de optie "Kies 2 versies": op de vernieuwde pagina verschijnt rechtsboven een overzicht van alle beschikbare versies. Klik op een sigle om de vergelijking met de gekozen versie direct te activeren.</p>
 <p><lb/>
 </p>
-<p>Van de typoscripten zijn telkens de getypte grondlaag en de toplaag (de tekst inclusief alle aanpassingen in inkt, potlood of ander schrijfmateriaal) apart te kiezen. Zo kunt u bijvoorbeeld van M2 de getypte grondlaag met de toplaag vergelijken door links "M2 grond" en rechts "M2 top" te kiezen.</p>
+<p>Van de typoscripten zijn telkens de getypte grondlaag en de toplaag (de tekst inclusief alle aanpassingen in inkt, potlood of ander schrijfmateriaal) apart beschikbaar. Zo kunt u bijvoorbeeld van M2 de getypte grondlaag met de toplaag vergelijken door eerst "M2 grond" en dan "M2 top" te kiezen.</p>
 <p><lb/>
 </p>
-<p>Klik op het bolletje rechts om uw keuze te bevestigen en de collatie te activeren. De tekst die verschijnt, is die van de versie die in het linkermenu is gekozen; de varianten ten opzichte van uw tweede keuze zijn gemarkeerd met grijze achtergrond (<hi rend="background">lichtgrijs</hi> = een variant; <hi rend="background2">donkergrijs</hi> = een variant binnen een variant). De varianten binnen varianten zijn in de linkermarge aanklikbaar om het apparaat op te roepen.</p> <p><lb/>
+<p>De tekst die verschijnt, is die van de eerst gekozen versie; de varianten ten opzichte van uw tweede keuze zijn gemarkeerd met grijze achtergrond (<hi rend="background">lichtgrijs</hi> = een variant; <hi rend="background2">donkergrijs</hi> = een variant binnen een variant). De varianten binnen varianten zijn in de linkermarge aanklikbaar om het apparaat op te roepen.</p>
+ <p><lb/>
 </p>
 <p>Door te klikken op een variant (met grijze achtergrond) verschijnen de variante lezingen in de twee gekozen versies binnen de context van de volledige zin.  </p>
 <p><lb/>
@@ -267,14 +270,14 @@
 <p><lb/>
 </p>
 <p>
-<emph>Home <hi rend="background">| Tsjip: Opdracht  |</hi> Achter de Schermen  | Visualisatie | Variantenapparaat | Zoek</emph></p>
+<emph>Home <hi rend="background">| Tsjip: Opdracht  |</hi> Achter de Schermen  | Visualisatie | Variantenapparaat | <!--Zoek--> Gebruiksaanwijzing | Colofon</emph></p>
 <p><lb/>
 </p>
 <p>Kies onder "Variantenapparaat":  </p>
 <p><lb/>
 </p>
 <p>
-<emph>Home | Tsjip: Opdracht  | Achter de Schermen  | Visualisatie <hi rend="background">| Variantenapparaat |</hi> Zoek</emph></p>
+<emph>Home | Tsjip: Opdracht  | Achter de Schermen  | Visualisatie <hi rend="background">| Variantenapparaat |</hi> <!--Zoek--> Gebruiksaanwijzing | Colofon</emph></p>
 <p><lb/>
 </p>
 <p>de optie "OpdM1 Varianten: aan". In de tekst worden nu de varianten ten opzichte van alle andere versies gemarkeerd met grijze achtergrond. Door te klikken op een variant (met grijze achtergrond) verschijnt een synopsis van de variante lezingen: de versies waarin een bepaalde variant voorkomt, worden gegroepeerd aan de hand van hun siglen. Daarop volgt een overzicht van alle versies van dezelfde zin. De titel van elke versie is aanklikbaar. Via deze weg is het mogelijk meteen naar de plaats van de variant in het relevante document te gaan.</p>
@@ -291,7 +294,7 @@
 <p>In sommige documenten zijn verschillende lagen te onderscheiden, bijvoorbeeld op basis van het gebruikte schrijfmateriaal. Deze editie biedt de mogelijkheid varianten en correcties binnen &eacute;&eacute;n versie op te roepen. Deze optie is het best te illustreren aan de hand van het "Correctie-exemplaar" (M3) onder "Achter de Schermen":</p> <p><lb/>
 </p>
 <p>
-<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | <!--Zoek--> Gebruiksaanwijzing | Colofon</emph></p>
 <p><lb/>
 </p>
 <p>Op het digitale facsimile is duidelijk te zien dat er slechts &eacute;&eacute;n woord ("onzen") is doorgehaald en vervangen door "haren" in zwarte inkt.  </p>
@@ -301,7 +304,7 @@
 <p><lb/>
 </p>
 <p>
-<emph>Home | Tsjip: Opdracht  | Achter de Schermen  | Visualisatie <hi rend="background">| Variantenapparaat |</hi> Zoek</emph></p> <p><lb/>
+<emph>Home | Tsjip: Opdracht  | Achter de Schermen  | Visualisatie <hi rend="background">| Variantenapparaat |</hi> <!--Zoek--> Gebruiksaanwijzing | Colofon</emph></p> <p><lb/>
 </p>
 <p>verschijnen nu de opties  </p>
 <p>- "AdsM3a (gedrukte tekst): Varianten aan" en  </p>
@@ -318,7 +321,7 @@
 <p><lb/>
 </p>
 <p>
-<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen |</hi> Visualisatie | Variantenapparaat | <!--Zoek--> Gebruiksaanwijzing | Colofon</emph></p>
 <p><lb/>
 </p>
 <p>Klik op: "Typoscript" </p>
@@ -355,7 +358,7 @@
 <p><lb/>
 </p>
 <p>
-<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | Zoek</emph></p>
+<emph>Home | Tsjip: Opdracht  <hi rend="background">| Achter de Schermen  |</hi> Visualisatie | Variantenapparaat | <!--Zoek--> Gebruiksaanwijzing | Colofon</emph></p>
 <p><lb/>
 </p>
 <p>Klik op: "Manuscript" </p>
@@ -369,22 +372,22 @@
 <p>Daaronder volgt dezelfde zin in alle versies van het werk.</p>
 <p><lb/>
 </p>
-<p>Waar er een verschil is met de vorige versie is de variant gemarkeerd (met grijze achtergrond). Een verticale streep staat voor een woord of leesteken dat weggevallen is ten opzichte van de vorige versie. De versie van waaruit u vertrokken bent, verschijnt in het groen.<hi rend="b"> </hi>Nadrukkelijk willen wij erop wijzen dat het stappenonderscheid tot stand is gekomen op grond van disparate (tekstuele en materi&euml;le) gegevens, die lang niet allemaal even ondubbelzinnig te interpreteren zijn (ook doordat het manuscript van "Achter de Schermen" voor het overgrote deel in een en dezelfde schrijfstof &ndash; zwarte inkt &ndash; is geschreven). Vooral in complexe gevallen zal een andere volgorde denkbaar kunnen zijn. Met het facsimile van het manuscript bij de hand en met de topografische transcriptie als hulpmiddel is de gebruiker in staat om het editeurswerk in deze gevallen kritisch te volgen.</p>
+<p>Waar er een verschil is met de vorige versie is de variant gemarkeerd (met grijze achtergrond). Een verticale streep staat voor een woord of leesteken dat weggevallen is ten opzichte van de vorige versie. De versie van waaruit u vertrokken bent, verschijnt in het groen. Nadrukkelijk willen wij erop wijzen dat het stappenonderscheid tot stand is gekomen op grond van disparate (tekstuele en materi&euml;le) gegevens, die lang niet allemaal even ondubbelzinnig te interpreteren zijn (ook doordat het manuscript van "Achter de Schermen" voor het overgrote deel in een en dezelfde schrijfstof &ndash; zwarte inkt &ndash; is geschreven). Vooral in complexe gevallen zal een andere volgorde denkbaar kunnen zijn. Met het facsimile van het manuscript bij de hand en met de topografische transcriptie als hulpmiddel is de gebruiker in staat om het editeurswerk in deze gevallen kritisch te volgen.</p>
 <p><lb/>
 </p>
 </div>
-<div id="zoekfunctie"><p><hi rend="b">Zoekfunctie </hi> </p>
+<!--<div id="zoekfunctie"><p><hi rend="b">Zoekfunctie </hi> </p>
 <p>De zoekfunctie doorzoekt alle teksten naar de ingevoerde woorden. De resultaten verschijnen telkens in de context van een volledige zin. De opdracht kan verfijnd worden door alleen toevoegingen of schrappingen te doorzoeken, in plaats van de hele tekst. De zoekresultaten zijn geordend volgens de bronteksten. Een zoekopdracht naar het woord "Hersens" levert bijvoorbeeld in totaal 14 hits op, drie keer in AdsM1 en telkens &eacute;&eacute;n keer in elk van de overige versies van "Achter de Schermen".<lb/><lb/>  </p>
 <p>Om een beter overzicht te krijgen van de verdeling van de hits over de bronnen, klikt u op "alles dichtklappen". Zo verdwijnen alle hits en blijven alleen de grijze titelbalken staan. Met een klik op "alles openklappen" roept u alle zoekresultaten weer op, maar u kunt ook een brontekst apart open- of dichtklappen door op het plus- of het min-icoontje te klikken, rechts in elke grijze titelbalk. Bij elke hit kunt u klikken op "&gt; naar tekst" om naar de overeenkomstige plaats in de lineaire transcriptie van de betreffende bron te gaan.</p>
 <p>Waar u zich ook in de editie bevindt, overal kunt u een woord met de muis selecteren, en er met de rechtermuisknop op klikken. Een pop-up venster vraagt: Zoeken naar "..."? Klik op "OK" (of druk op enter) om naar het zoekscherm te gaan. Het geselecteerde woord is dan al ingevuld in het zoekvenster en u hoeft alleen maar op enter te drukken om de zoekoperatie te starten.</p>
 <p><lb/>
-</p></div>
+</p></div>-->
 <div id="quicklink"><p><hi rend="b">Quicklink</hi></p>
 <p>In om het even welke versie van de "Opdracht" en van "Achter de Schermen" is het begin van een nieuwe pagina telkens weergegeven aan de hand van het paginanummer tussen vierkante haken, bijvoorbeeld [5]. Deze nummers doen ook dienst als "quicklink" om enkele van de hierboven beschreven opties te activeren:</p>
 <p>- "Varianten: aan / uit"  </p>
-<p>- "Toon schrijfproces per zin: aan / uit"  </p>
+<p>- "Toon schrijfproces per zin: aan / uit" (enkel bij het Manuscript van "Achter de Schermen)") </p>
 <p>- "Naar boven" (om weer naar het begin van de versie te gaan)</p> 
-<p>- "Zoek"</p>
+<!--<p>- "Zoek"</p>-->
 <p><lb/>
 </p>
 <p><lb/>
