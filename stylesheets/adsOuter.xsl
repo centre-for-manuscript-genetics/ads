@@ -3,7 +3,8 @@
      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
      version="1.0">
 
-<xsl:output method="html" version="5.0" encoding="UTF-8" indent="no"/>
+<xsl:output method="html" version="5.0" encoding="UTF-8" indent="no"
+            include-content-type="no"/>
 
 <xsl:param name="text" select="''"/>
 <xsl:param name="trans" select="''"/>
