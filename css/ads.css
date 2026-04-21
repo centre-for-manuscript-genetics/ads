@@ -464,6 +464,9 @@ a.pb
 a.top
 {color:#660011;}
 
+span.top
+{color:#660011;}
+
 a.home
 {color:#660011;}
 
@@ -763,4 +766,35 @@ closed via sluit link; dragged via vanilla JS pointer events. */
 in cases of <del> within <del> */ 
 span.del {
   text-decoration: line-through;
+}
+
+/* STATIC CONVERSION 2026-04-21: HTML review */
+p.editors {
+    text-align: center;
+    color: #660011;
+}
+
+span.underline {
+  text-decoration: underline;
+}
+
+p.caption {
+  text-align: center;
+  font-size:10px;
+}
+
+img.inleiding {
+  border:1px solid #660011;
+  margin-right:5px;
+  margin-left:5px;
+}
+
+p.spacer {
+    min-height: 0.8em;
+}
+
+p.gebruiksaanwijzingspacer {
+    min-height: 0;
+    margin: 9;
+    padding: 0;
 }

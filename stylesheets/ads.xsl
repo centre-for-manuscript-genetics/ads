@@ -22,8 +22,9 @@
 <xsl:param name="trans" select="''"/>
 <xsl:param name="highlight" select="''"/>
 
+
 <xsl:template match="teiHeader">
- <meta name="author">
+<!-- STATIC CONVERSION 2026-04-21: moved to HTML header  <meta name="author">
   <xsl:attribute name="content">
       <xsl:value-of select="fileDesc/titleStmt/principal"/>
     </xsl:attribute>
@@ -37,7 +38,7 @@
   <xsl:attribute name="content">
       <xsl:value-of select="fileDesc/titleStmt/title"/>
     </xsl:attribute>
- </meta>
+ </meta> -->
 </xsl:template>
 
 <xsl:template match="text">
@@ -236,6 +237,22 @@
 
 <xsl:template match="quote">
   <blockquote><xsl:apply-templates/></blockquote>
+</xsl:template>
+
+<!-- STATIC CONVERSION 2026-04-21: Suppress empty paragraphs containing only <lb/> in
+     introduction XML. Original source produces <p><lb/>\n</p> as paragraph separator;
+     this generated <p><br/></p> in HTML output. Template matches p with single lb child
+     and no text content and outputs an empty <p class="spacer"> instead, styled via CSS
+     to mimic the vertical spacing of the original. Source XML unchanged. -->
+<xsl:template match="p[count(*)=1 and lb and normalize-space(.)='']" priority="1">
+  <p>
+  <xsl:attribute name="class">
+    <xsl:choose>
+      <xsl:when test="$document='gebruiksaanwijzing'">gebruiksaanwijzingspacer</xsl:when>
+      <xsl:otherwise>spacer</xsl:otherwise>
+    </xsl:choose>
+  </xsl:attribute>
+</p>
 </xsl:template>
 
 <xsl:template match="p">
@@ -813,7 +830,7 @@
   <!-- STATIC CONVERSION 2026-03-13: HTML review: all images need alt attributes -->
 <xsl:if test="not(@rend)"><img><xsl:attribute name="src">images/<xsl:value-of select="@id"/></xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="@id"/></xsl:attribute></img></xsl:if>
 <xsl:if test="@rend">
-<div><xsl:attribute name="style">float:<xsl:if test="substring(@id,2) = '1' or substring(@id,2) = '3' or substring(@id,2) = '5'">left</xsl:if><xsl:if test="substring(@id,2) = '2' or substring(@id,2) = '4' or substring(@id,2) = '6'">right</xsl:if>; width:<xsl:value-of select="@rend + 15"/>px;margin-top:5px;</xsl:attribute><!-- STATIC CONVERSION 2026-03-10: Inleiding: removed link to printable version of illustrative photographs <a target="_blank"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:attribute name="href">javascript:MM_openBrWindow('Ads.htm?text=docfacs&amp;document=inleiding&amp;page=<xsl:value-of select="substring-after(@id,'inleiding/')"/>groot&amp;export=print','','width=825,height=538,resizable=yes,scrollbars=yes')</xsl:attribute>--><img><xsl:attribute name="src">images/inleiding/<xsl:value-of select="@id"/>.jpg</xsl:attribute><xsl:attribute name="style">border:1px solid #660011;margin-right:5px;margin-left:5px;</xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="head"/></xsl:attribute></img><!--</a>--><br/><center><span style="font-size:10px;width:50px;"><xsl:value-of select="."/></span></center></div>
+  <div><xsl:attribute name="style">float:<xsl:if test="substring(@id,2) = '1' or substring(@id,2) = '3' or substring(@id,2) = '5'">left</xsl:if><xsl:if test="substring(@id,2) = '2' or substring(@id,2) = '4' or substring(@id,2) = '6'">right</xsl:if>; width:<xsl:value-of select="@rend + 15"/>px;margin-top:5px;</xsl:attribute><!-- STATIC CONVERSION 2026-03-10: Inleiding: removed link to printable version of illustrative photographs <a target="_blank"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:attribute name="href">javascript:MM_openBrWindow('Ads.htm?text=docfacs&amp;document=inleiding&amp;page=<xsl:value-of select="substring-after(@id,'inleiding/')"/>groot&amp;export=print','','width=825,height=538,resizable=yes,scrollbars=yes')</xsl:attribute>--><!-- STATIC CONVERSION 2026-04-21: HTML review: replace inline style with css class --><img class="inleiding"><xsl:attribute name="src">images/inleiding/<xsl:value-of select="@id"/>.jpg</xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="head"/></xsl:attribute></img><!--</a>--><!-- STATIC CONVERSION 2026-04-21: HTML review: caption handling--><p class="caption"><xsl:value-of select="."/></p></div>
 </xsl:if>
 </xsl:template>
 
@@ -826,17 +843,19 @@
    </i>
   </xsl:when>
   <xsl:when test="@rend='onderstreept'">
-   <u>
+  <!-- STATIC CONVERSION 2026-04-21: replaced <u> with <span class="underline"> -->
+   <span class="underline">
     <xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates>
-   </u>
+   </span>
   </xsl:when>
   <xsl:when test="@rend='underline'">
-   <u>
+   <!-- STATIC CONVERSION 2026-04-21: replaced <u> with <span class="underline"> -->
+   <span class="underline">
     <xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates>
-   </u>
+   </span>
   </xsl:when>
   <xsl:when test="@rend='dotted line'">
-   <del style="">
+   <del>
     <xsl:apply-templates><xsl:with-param name="wit" select="$wit"/></xsl:apply-templates>
    </del>
   </xsl:when>
@@ -915,9 +934,8 @@
 
 <xsl:template match="xref">
   
-    <a><!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) --><xsl:attribute name="id"><xsl:if test="@type!='extra'"><xsl:value-of select="@id"/></xsl:if><xsl:if test="@type='extra'"><xsl:value-of select="@to"/></xsl:if></xsl:attribute></a>
-    
-    <a><xsl:if test="$export!='print'"><xsl:attribute name="href"><xsl:if test="@type='email'">mailto:<xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='intra'">#<xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='note'"><xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='text'"><xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='extra'"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="@to"/>.html</xsl:if><xsl:if test="@type='proza'"><xsl:value-of select="@to"/>.html</xsl:if><xsl:if test="@type='url'"><xsl:value-of select="@to"/></xsl:if></xsl:attribute></xsl:if><xsl:if test="@type='url'"><xsl:attribute name="target">_blank</xsl:attribute></xsl:if><xsl:if test="@type='note'"><sup><xsl:apply-templates/></sup></xsl:if><xsl:if test="@type!='note'"><xsl:apply-templates/></xsl:if></a>
+    <!-- STATIC CONVERSION 2026-03-13: name= replaced with id= on anchor elements (name deprecated in HTML5) -->
+    <a><xsl:choose><xsl:when test="@type!='extra' and @id"><xsl:attribute name="id"><xsl:value-of select="@id"/></xsl:attribute></xsl:when><xsl:when test="@type='extra'"><xsl:attribute name="id"><xsl:value-of select="@to"/></xsl:attribute></xsl:when></xsl:choose><xsl:if test="$export!='print'"><xsl:attribute name="href"><xsl:if test="@type='email'">mailto:<xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='intra'">#<xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='note'"><xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='text'"><xsl:value-of select="@to"/></xsl:if><xsl:if test="@type='extra'"><!-- STATIC CONVERSION 2026-03-10: new url mapping --><xsl:value-of select="@to"/>.html</xsl:if><xsl:if test="@type='proza'"><xsl:value-of select="@to"/>.html</xsl:if><xsl:if test="@type='url'"><xsl:value-of select="@to"/></xsl:if></xsl:attribute></xsl:if><xsl:if test="@type='url'"><xsl:attribute name="target">_blank</xsl:attribute></xsl:if><xsl:if test="@type='note'"><sup><xsl:apply-templates/></sup></xsl:if><xsl:if test="@type!='note'"><xsl:apply-templates/></xsl:if></a>
   
 </xsl:template>
 

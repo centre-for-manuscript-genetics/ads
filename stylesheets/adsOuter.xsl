@@ -23,15 +23,14 @@
  <body><img><xsl:attribute name="src">images/<xsl:value-of select="$document"/>/white/<xsl:value-of select="$document"/>-<xsl:value-of select="$page"/>.jpg</xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/> Topografische transcriptie</xsl:attribute></img></body>
  </xsl:if>
  <xsl:if test="$text!='iframe'">
- <html>
+ <html lang="nl">
  <head>
   <!-- STATIC CONVERSION 2026-03-15: added meta tags: charset, viewport, description, author, Dublin Core (DC.title, DC.creator, DC.date, DC.language, DC.rights) for correct character rendering, accessibility, and long-term preservation discoverability -->
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Elektronische editie van Willem Elsschots 'Achter de Schermen' en 'Opdracht'"/>
   <meta name="author" content="Peter de Bruijn, Vincent Neyt en Dirk Van Hulle"/>
-  <meta lang="nl"/>
-  <meta name="DC.title" content="Willem Elsschot - Achter de Schermen — Elektronische editie"/>
+  <meta name="DC.title" content="Willem Elsschot - Achter de Schermen - Elektronische editie"/>
   <meta name="DC.creator" content="Peter de Bruijn, Vincent Neyt en Dirk Van Hulle"/>
   <meta name="DC.date" content="2007"/>
   <meta name="DC.language" content="nl"/>
@@ -74,7 +73,7 @@ myObj = new anyObj("reldiv");
 }
 onload=initialize
 </script>-->
-<script language="JavaScript">
+<script>
 
 function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
@@ -83,8 +82,8 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 
   <!--<xsl:apply-templates select="teiHeader"/>-->
 
- <link rel="stylesheet" type="text/css" href="css/chromestyle.css" />
- <LINK rel="stylesheet"  type="text/css" href="css/ads.css" />
+ <link rel="stylesheet" href="css/chromestyle.css" />
+ <link rel="stylesheet"  href="css/ads.css" />
  <!-- STATIC CONVERSION [2026-03-12]: removed chrome.js dependency;<script type="text/javascript" src="js/chrome.js"></script> -->
 
  </head>
@@ -103,7 +102,7 @@ width corrected to 804px to match outer table; deleted presentational attributes
 <xsl:if test="$export!='print'">
 
 <div class="header">
-<div class="vakske"><h5><a class="top" id="top">Willem Elsschot</a></h5></div>
+<div class="vakske"><h5><span class="top" id="top">Willem Elsschot</span></h5></div>
 <div class="vakske"><div class="vakskelinks"><h5>Tsjip: Opdracht</h5></div><div class="vakskerechts"><h5>Achter de Schermen</h5></div></div>
 </div><!--</td>
 </tr>
@@ -118,7 +117,8 @@ _________________________________<u>elektronische editie</u></p></div></td></tr>
 <table class="outside">
 <tr><td>
 <!-- table containing menu -->
-<xsl:if test="$export!='print'">
+<!-- STATIC CONVERSION 2026-04-21: removed a defunct if clause for the export view to fix two-table HTML inelegance -->
+<!--<xsl:if test="$export!='print'">-->
 <table class="main">
  <tr>
   <td>
@@ -212,10 +212,10 @@ _________________________________<u>elektronische editie</u></p></div></td></tr>
 
 </td>
  </tr>
-</table>
-</xsl:if>
+<!-- STATIC CONVERSION 2026-04-21: removed a defunct if clause for the export view so that everything can stay in one "main" table -->
+<!--</xsl:if>-->
 <!-- main inside table -->
-<table class="main">
+<!--<table class="main">-->
  <tr><td>
  <!-- home -->
  <xsl:if test="$text='home'"><xsl:call-template name="home"/></xsl:if>
