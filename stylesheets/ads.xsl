@@ -5,7 +5,7 @@
 
 <xsl:import href="adsOuter.xsl"/>
 <xsl:import href="home.xsl"/>
-<xsl:output method="html" version="5.0" encoding="UTF-8" indent="no"/>
+<xsl:output method="html" version="5.0" encoding="UTF-8" indent="yes" include-content-type="no"/>
 
 <xsl:param name="text" select="''"/>
 <xsl:param name="document" select="''"/>
@@ -85,17 +85,20 @@
  <h2><xsl:if test="$text='docfacs' or $text='docfacspop'">Facsimile</xsl:if><xsl:if test="$text='docfacstopo'">Topografische transcriptie</xsl:if> van<br/> <xsl:value-of select="$document"/>, <xsl:if test="not(contains(document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs/page[@n=$pageid]/@id,'a'))">pagina</xsl:if><xsl:text> </xsl:text><xsl:value-of select="$page"/></h2>
  <!-- image -->
  <!-- STATIC CONVERSION 2026-03-13: HTML review: all images need alt attributes -->
-  <center><img><xsl:attribute name="src">images/<xsl:value-of select="$document"/>/<xsl:value-of select="$document"/>-<xsl:value-of select="$page"/><xsl:if test="$text='docfacstopo'">topo</xsl:if>.jpg</xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/><xsl:if test="$text='docfacstopo'">topo</xsl:if></xsl:attribute><xsl:if test="$export='print'"><xsl:attribute name="width">550</xsl:attribute></xsl:if></img></center>
+ <!-- STATIC CONVERSION 2026-03-13: HTML review: removed <center> and added class to image -->
+  <img class="image-view"><xsl:attribute name="src">images/<xsl:value-of select="$document"/>/<xsl:value-of select="$document"/>-<xsl:value-of select="$page"/><xsl:if test="$text='docfacstopo'">topo</xsl:if>.jpg</xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="$document"/>-<xsl:value-of select="$page"/><xsl:if test="$text='docfacstopo'">topo</xsl:if></xsl:attribute><xsl:if test="$export='print'"><xsl:attribute name="width">550</xsl:attribute></xsl:if></img>
   <!-- thumbs -->
-  <xsl:if test="$export!='print'"><a name="thumbs"><table align="left" width="100%">
+  <xsl:if test="$export!='print'">
+    <!-- STATIC CONVERSION 2026-03-13: HTML review: @name to @id and attached to table rather than <a> element -->
+    <table id="thumbs">
 <xsl:for-each select="document('../../ads/xml/toc.xml')//toc/document[@id=$document]/thumbs">
 <tr>
 <xsl:for-each select="page">
   <!-- STATIC CONVERSION 2026-03-10: new url mapping -->
-  <!-- STATIC CONVERSION 2026-03-13: HTML review: all images need alt attributes -->
-<td><p><center><a><xsl:attribute name="href"><xsl:value-of select="$document"/>-<xsl:value-of select="@id"/>-<xsl:if test="$text='docfacs'">facsimile</xsl:if><xsl:if test="$text='docfacstopo'">topo</xsl:if><xsl:if test="$text='docfacspop'">popup</xsl:if>.html</xsl:attribute><img width="100"><xsl:attribute name="src">images/<xsl:value-of select="$document"/>/thumbs/<xsl:value-of select="$document"/>-<xsl:value-of select="@id"/>.jpg</xsl:attribute><xsl:attribute name="alt">Thumbnail: <xsl:value-of select="$document"/>-<xsl:value-of select="@id"/></xsl:attribute></img><br/><xsl:value-of select="@id"/></a></center></p></td>
+  <!-- STATIC CONVERSION 2026-03-13: HTML review: all images need alt attributes, removed <center> tags, img class added -->
+  <td><a class="thumblinks"><xsl:attribute name="href"><xsl:value-of select="$document"/>-<xsl:value-of select="@id"/>-<xsl:if test="$text='docfacs'">facsimile</xsl:if><xsl:if test="$text='docfacstopo'">topo</xsl:if><xsl:if test="$text='docfacspop'">popup</xsl:if>.html</xsl:attribute><img class="thumbs"><xsl:attribute name="src">images/<xsl:value-of select="$document"/>/thumbs/<xsl:value-of select="$document"/>-<xsl:value-of select="@id"/>.jpg</xsl:attribute><xsl:attribute name="alt">Thumbnail: <xsl:value-of select="$document"/>-<xsl:value-of select="@id"/></xsl:attribute></img><span class="thumblabel"><xsl:value-of select="@id"/></span></a></td>
 </xsl:for-each></tr>
-</xsl:for-each></table></a></xsl:if>
+</xsl:for-each></table></xsl:if>
  <!-- draggable image -->
  <!-- STATIC CONVERSION 2026-03-13: wz_dragdrop.js dependency eliminated. Draggable popup implemented as position:fixed div (not <dialog>) for HTML4 transitional doctype compatibility. Shown on page load; closed via sluit link; dragged via vanilla JS pointer events. -->
 <xsl:if test="$text='docfacspop'">

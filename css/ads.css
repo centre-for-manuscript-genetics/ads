@@ -855,11 +855,32 @@ div.stap {
 a.wit-link {
     font-family: Arial Narrow, Arial, sans-serif;
 }
+
+.web2026 {
+  margin:10px 10px 0px ;text-align:justify;text-indent:20px;
+}
+a.thumblinks {
+  display: block;
+  text-align: center;
+}
+span.thumblabel {
+    display: block;
+    text-align: center;
+}
+img.thumbs {
+    display: block;
+  margin: 0 auto;
+  width:100px;
+}
 img.sentencethumbnail {
     margin: 0 10px 0 0;
     border: 1px solid #666;
     padding: 2px;
 }
-.web2026 {
-  margin:10px 10px 0px ;text-align:justify;text-indent:20px;
+img.image-view {
+  display: block;
+  margin: 0 auto;
+}
+#thumbs {
+  width:100%;
 }
