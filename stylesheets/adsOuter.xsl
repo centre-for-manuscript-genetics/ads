@@ -223,6 +223,8 @@ _________________________________<u>elektronische editie</u></p></div></td></tr>
  <xsl:if test="$text='gebruiksaanwijzing'"><xsl:apply-templates/></xsl:if>
  <xsl:if test="$text='inleiding'"><xsl:apply-templates/></xsl:if>
  <xsl:if test="$text='colofon'"><xsl:call-template name="colofon"/></xsl:if>
+ <!-- STATIC CONVERSION 2026-04-22: added a "Webpublicatie 2026" page-->
+ <xsl:if test="$text='2026'"><xsl:call-template name="web2026"/></xsl:if>
  <!-- 2 teksten vglkn -->
  <!-- M's zonder varianten -->
  <xsl:if test="contains($text,'doclin') and substring($document,4,1) = 'M' and $trans!='yes'">

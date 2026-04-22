@@ -828,7 +828,7 @@
 
 <xsl:template match="figure">
   <!-- STATIC CONVERSION 2026-03-13: HTML review: all images need alt attributes -->
-<xsl:if test="not(@rend)"><img><xsl:attribute name="src">images/<xsl:value-of select="@id"/></xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="@id"/></xsl:attribute></img></xsl:if>
+  <xsl:if test="not(@rend)"><img><xsl:attribute name="src">images/<xsl:value-of select="@id"/></xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="@id"/></xsl:attribute><xsl:if test="ancestor::table[@id='logos']"><xsl:attribute name="height">48</xsl:attribute></xsl:if></img></xsl:if>
 <xsl:if test="@rend">
   <div><xsl:attribute name="style">float:<xsl:if test="substring(@id,2) = '1' or substring(@id,2) = '3' or substring(@id,2) = '5'">left</xsl:if><xsl:if test="substring(@id,2) = '2' or substring(@id,2) = '4' or substring(@id,2) = '6'">right</xsl:if>; width:<xsl:value-of select="@rend + 15"/>px;margin-top:5px;</xsl:attribute><!-- STATIC CONVERSION 2026-03-10: Inleiding: removed link to printable version of illustrative photographs <a target="_blank"><xsl:if test="$export='print'"><xsl:attribute name="onclick">return false</xsl:attribute></xsl:if><xsl:attribute name="href">javascript:MM_openBrWindow('Ads.htm?text=docfacs&amp;document=inleiding&amp;page=<xsl:value-of select="substring-after(@id,'inleiding/')"/>groot&amp;export=print','','width=825,height=538,resizable=yes,scrollbars=yes')</xsl:attribute>--><!-- STATIC CONVERSION 2026-04-21: HTML review: replace inline style with css class --><img class="inleiding"><xsl:attribute name="src">images/inleiding/<xsl:value-of select="@id"/>.jpg</xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="head"/></xsl:attribute></img><!--</a>--><!-- STATIC CONVERSION 2026-04-21: HTML review: caption handling--><p class="caption"><xsl:value-of select="."/></p></div>
 </xsl:if>
@@ -914,7 +914,7 @@
         <xsl:otherwise>0</xsl:otherwise>
       </xsl:choose>
     </xsl:attribute>
-    <xsl:if test="@id='logos'"><xsl:attribute name="width">680</xsl:attribute><xsl:attribute name="align">center</xsl:attribute><xsl:attribute name="style">background-color:white;border:1px solid #660011;</xsl:attribute></xsl:if>
+    <xsl:if test="@id='logos'"><xsl:attribute name="class">logos</xsl:attribute></xsl:if>
     <xsl:apply-templates/>
   </table>
 </xsl:template>
@@ -926,7 +926,7 @@
 </xsl:template>
 
 <xsl:template match="cell">
-  <td align="left" valign="top">
+  <td valign="top">
     <xsl:if test="@cols"><xsl:attribute name="colspan"><xsl:value-of select="@cols"/></xsl:attribute></xsl:if>
     <xsl:apply-templates/>
   </td>

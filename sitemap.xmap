@@ -394,6 +394,16 @@
       <map:serialize type="html"/>
     </map:match>
 
+    <map:match pattern="2026.html">
+      <map:generate src="xml/ads.xml" label="adsXML"/>
+      <map:transform src="stylesheets/ads.xsl">
+        <map:parameter name="use-request-parameters" value="true"/>
+        <map:parameter name="text" value="2026"/>
+        <map:parameter name="document" value="2026"/>
+      </map:transform>
+      <map:serialize type="html"/>
+    </map:match>
+
 <!-- original pipelines -->
 
     <map:match pattern="Ads.htm">

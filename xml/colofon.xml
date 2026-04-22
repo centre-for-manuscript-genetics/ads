@@ -64,8 +64,8 @@
 <body>
 <div type="colofon">
 <head>COLOFON</head>
-<lb/>
 <p>Editie: Peter de Bruijn, Vincent Neyt en Dirk Van Hulle</p>
+<p>In 2026 herwerkte Vincent Neyt deze editie <xref type="proza" to="2026">tot een webpublicatie</xref>.</p>
 
 <p>Met dank aan: Letterkundig Museum (Den Haag), AMVC-Letterenhuis (Antwerpen), Willem Elsschot Genootschap (W.E.G.), Wieneke 't Hoen, Jan Maniewski, Walter Mees, Ron Van den Branden, Vic van de Reijt, Edward Vanhoutte, Cyriel Van Tilborgh.</p>
 
@@ -87,8 +87,6 @@ De Universiteit Antwerpen, het Huygens Instituut (KNAW) en het Centrum voor
 Teksteditie en Bronnenstudie (KANTL) kunnen niet verantwoordelijk worden gesteld 
 voor handelingen van gebruikers.</p></div>
 <div type="colofon">
-<p><lb/></p>
-
 <table id="logos">
 <row><cell><figure id="ua_logo.jpg"/></cell><cell><figure id="HI.jpg"/></cell><cell><figure id="ctb.jpg"/></cell></row></table>
 </div>

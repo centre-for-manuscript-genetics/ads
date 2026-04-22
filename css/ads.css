@@ -101,10 +101,13 @@ color:#660011;}
 
 p.colofon
 {margin-left:60px;
-padding-top: 10px;
-  font-size:10pt;
+padding-right: 60px; /*added*/
+margin-bottom: 0px;
+padding-bottom: 0px;
+  font-size:9pt; /*changed*/
   text-align: left;
-color:#660011;}
+color:#660011;
+}
   
 p.navigation
 {font-family: Verdana;
@@ -127,16 +130,16 @@ text-align:justify;
 font-size:10pt;
 }
 
-span.date
-{margin: 10px 10px 10px 10px;
-display:block;}
-
 p.customize
 {margin-bottom: 0px;
 margin-top: 0px;
 font-size: 10px;
 letter-spacing: 1;
 }
+
+span.date
+{margin: 10px 10px 10px 10px;
+display:block;}
 
 blockquote
 {font-family: Verdana;
@@ -166,9 +169,32 @@ font-size:12pt;
   text-align:center;
 }
 
+/* STATIC CONVERSION 2026-04-22: colofon changed from image 
+to html rendering of colofon.xml */
+div.colofoncontainer
+{
+padding: 0px 10px 0px 10px;
+background-image: url('../images/colofon-achtergrond.jpg');
+background-position:center;
+background-repeat: no-repeat;
+height:490px;
+width:780px;
+font-size:12pt;
+}
+div.colofoncontainer p {
+    max-width: 700px;
+
+}
+table.logos {
+  background-color:white;border:1px solid #660011;width:680px;
+  margin: 0 auto;
+}
+table.logos td {text-align: center;}
+/* END STATIC CONVERSION UPDATE */
+
 div.colofon
 {
-font-size:13pt;
+font-size:13pt; 
   text-align:center;
   color:#660011;
 }
@@ -181,8 +207,11 @@ font-size:8pt;
   vertical-align:middle;
   text-align:justify;
   border: 1px solid #660011;
+ /* changed 
  margin: 10px 10px 10px 10px;
- padding: 10px 10px 10px 10px;
+ padding: 10px 10px 10px 10px; */
+ margin: 10px 0px 10px 0px;
+ padding: 0px 10px 0px 10px;
 }
 
 div.stop
@@ -830,4 +859,7 @@ img.sentencethumbnail {
     margin: 0 10px 0 0;
     border: 1px solid #666;
     padding: 2px;
+}
+.web2026 {
+  margin:10px 10px 0px ;text-align:justify;text-indent:20px;
 }
