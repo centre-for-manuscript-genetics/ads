@@ -33,17 +33,17 @@ from pathlib import Path
 
 
 # ---------------------------------------------------------------------------
-# Configuration — all paths relative to this script's directory (ads-build/)
+# Configuration — all paths relative to this script's directory (ads/build/)
 # ---------------------------------------------------------------------------
-
 BASE_DIR       = Path(__file__).resolve().parent
+REPO_DIR       = BASE_DIR.parent
 MANIFEST_FILE  = BASE_DIR / "manifest-final.json"
 SAXON_DIR      = BASE_DIR / "saxon"
-SOURCE_DIR     = BASE_DIR / "xml"
-STYLESHEET_DIR = BASE_DIR / "stylesheets"
-OUTPUT_DIR     = BASE_DIR / "output"
+SOURCE_DIR     = REPO_DIR / "source" / "xml"
+STYLESHEET_DIR = REPO_DIR / "source" / "stylesheets"
+ASSETS_DIR     = REPO_DIR / "assets"
+OUTPUT_DIR     = REPO_DIR / "output"
 LOG_FILE       = BASE_DIR / "build_server.log"
-
 JAVA_OPTS      = ["-Xmx256m"]
 
 # Default workers — same as build.py
@@ -64,7 +64,7 @@ def get_classpath() -> str:
         print(f"ERROR: no JARs found in {SAXON_DIR}", file=sys.stderr)
         sys.exit(1)
     sep = ";" if os.name == "nt" else ":"
-    # Append BASE_DIR so Java can find BuildServer.class
+    # Append BASE_DIR (ads/build/) so Java can find BuildServer.class
     return sep.join([str(j) for j in jars] + [str(BASE_DIR)])
 
 
@@ -88,6 +88,22 @@ def is_stale(output_path: Path, source_mtime: float) -> bool:
         return True
     return output_path.stat().st_mtime < source_mtime
 
+# ---------------------------------------------------------------------------
+# Asset copying
+# ---------------------------------------------------------------------------
+def copy_assets():
+    """Copy images and CSS from assets/ into output/."""
+    import shutil
+    for subdir in ("images", "css"):
+        src = ASSETS_DIR / subdir
+        dst = OUTPUT_DIR / subdir
+        if not src.exists():
+            print(f"WARNING: assets directory not found: {src}", file=sys.stderr)
+            continue
+        if dst.exists():
+            shutil.rmtree(dst)
+        shutil.copytree(src, dst)
+        print(f"Copied {src} → {dst}")
 
 # ---------------------------------------------------------------------------
 # Job formatting
@@ -95,12 +111,9 @@ def is_stale(output_path: Path, source_mtime: float) -> bool:
 
 def format_job(entry: dict) -> str:
     """Format a manifest entry as a tab-separated job line for BuildServer."""
-    # Strip directory prefixes that are already encoded in SOURCE_DIR/STYLESHEET_DIR,
-    # then resolve to absolute paths — matching how build.py constructs paths.
     source_xml  = SOURCE_DIR     / entry["source_xml"].replace("xml/", "", 1)
     stylesheet  = STYLESHEET_DIR / entry["stylesheet"].replace("stylesheets/", "", 1)
     output_file = OUTPUT_DIR     / entry["output_file"]
-
     parts = [
         f"input={source_xml}",
         f"stylesheet={stylesheet}",
@@ -333,6 +346,10 @@ class BuildOrchestrator:
 
         for w in workers:
             w.shutdown()
+
+        # Copy assets into output
+        if not self.args.dry_run:
+            copy_assets()
 
         elapsed = time.time() - start_time
         rate = self.total / elapsed if elapsed > 0 else 0
