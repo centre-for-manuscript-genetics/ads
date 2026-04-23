@@ -40,8 +40,6 @@ build/
 Source XML and stylesheets are in `../source/xml/` and
 `../source/stylesheets/`. Output is written to `../output/`.
 
-Source XML and stylesheets are in `../source/xml/` and
-`../source/stylesheets/`. Output is written to `../output/`.
 
 ## The manifest
 
