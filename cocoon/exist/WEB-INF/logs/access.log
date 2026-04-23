@@ -1,0 +1,5 @@
+INFO    (2026-04-23) 12:07.57:757   [access] (Unknown-URI) Unknown-thread/CocoonServlet: Reloading from: file:/Users/vincentneyt/GJStomcat/webapps/exist/WEB-INF/cocoon.xconf
+INFO    (2026-04-23) 12:10.08:289   [access] (/exist/xquery/search.xq) http-nio-9999-exec-10/CocoonServlet: 'xquery/search.xq' Processed by Apache Cocoon 2.1.5.1 in 519 milliseconds.
+INFO    (2026-04-23) 12:10.10:912   [access] (/exist/xquery/process.xq) http-nio-9999-exec-2/CocoonServlet: 'xquery/process.xq' Processed by Apache Cocoon 2.1.5.1 in 670 milliseconds.
+INFO    (2026-04-23) 12:10.16:315   [access] (/exist/xquery/process.xq) http-nio-9999-exec-5/CocoonServlet: 'xquery/process.xq' Processed by Apache Cocoon 2.1.5.1 in 197 milliseconds.
+INFO    (2026-04-23) 12:10.32:452   [access] (/exist/xquery/search.xq) http-nio-9999-exec-4/CocoonServlet: 'xquery/search.xq' Processed by Apache Cocoon 2.1.5.1 in 75 milliseconds.

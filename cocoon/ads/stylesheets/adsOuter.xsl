@@ -69,22 +69,26 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 </script>
 
   <!--<xsl:apply-templates select="teiHeader"/>-->
-
+ <LINK rel="STYLESHEET" href="ads.css" type="TEXT/CSS"/>
  <link rel="stylesheet" type="text/css" href="chromestyle.css" />
- <LINK rel="stylesheet"  type="text/css" href="ads.css" />
  <script type="text/javascript" src="chrome.js"></script>
+ <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"/>
+ <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"/>
+ <META HTTP-EQUIV="Expires" CONTENT="-1"/>
 
  </head>
  <body oncontextmenu="show_contextmenu(event);return false;">
 
  <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
  <script type="text/javascript" src="wz_dragdrop.js"></script>
+ <script type="text/javascript" src="rightclick.js"></script>
  <script language="JavaScript" src="overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
  <center>
 <xsl:if test="$export!='print'">
 <div class="header">
 <div class="vakske"><h5><a class="top" name="top">Willem Elsschot</a></h5></div>
 <div class="vakske"><div class="vakskelinks"><h5>Tsjip: Opdracht</h5></div><div class="vakskerechts"><h5>Achter de Schermen</h5></div></div>
+<div class="vakske"><div class="stop"><b><a class="home" href="http://localhost:9999/exit/exit.jsp">Exit</a></b></div></div>
 </div><!--</td>
 </tr>
 </table>-->
@@ -108,6 +112,7 @@ _________________________________<u>elektronische editie</u></p></div></td></tr>
 <li><a href="#" onMouseover="cssdropdown.dropit(this,event,'dropmenu2')">Achter de Schermen</a></li>
 <li><a href="#" onMouseover="cssdropdown.dropit(this,event,'dropmenu3')">Visualisatie</a></li>
 <li><a href="#" onMouseover="cssdropdown.dropit(this,event,'dropmenu4')">Variantenapparaat</a></li>
+<li><a href="http://localhost:9999/exist/xquery/search.xq">Zoek</a></li>
 <li><a href="gebruiksaanwijzing.htm?text=gebruiksaanwijzing&amp;document=gebruiksaanwijzing"><xsl:if test="$document='gebruiksaanwijzing'"><b>Gebruiksaanwijzing</b></xsl:if><xsl:if test="$document!='gebruiksaanwijzing'">Gebruiksaanwijzing</xsl:if></a></li>
 <li><a href="colofon.htm?text=colofon&amp;document=colofon"><xsl:if test="$document='colofon'"><b>Colofon</b></xsl:if><xsl:if test="$document!='colofon'">Colofon</xsl:if></a></li>
 </ul>
@@ -153,8 +158,8 @@ _________________________________<u>elektronische editie</u></p></div></td></tr>
 <div id="dropmenu3" class="dropmenudiv">
 <a><xsl:attribute name="href"><xsl:if test="$n='' and not(contains($document,'n'))"><xsl:value-of select="substring($document,1,3)"/></xsl:if><xsl:if test="$n!=''">zin</xsl:if><xsl:if test="$n='' and contains($document,'n')"><xsl:value-of select="$document"/></xsl:if>.htm?text=<xsl:value-of select="$text"/>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/>&amp;view=bovenlaag&amp;comp1=<xsl:value-of select="$comp1"/>&amp;comp2=<xsl:value-of select="$comp2"/>&amp;app=<xsl:value-of select="$app"/>&amp;trans=<xsl:value-of select="$trans"/>&amp;n=<xsl:value-of select="$n"/>&amp;id=<xsl:value-of select="$id"/>&amp;corresp=<xsl:value-of select="$corresp"/></xsl:attribute><xsl:if test="$view='bovenlaag'"><b>Uiteindelijk resultaat</b></xsl:if><xsl:if test="$view!='bovenlaag'">Uiteindelijk resultaat</xsl:if></a>
 <a><xsl:attribute name="href"><xsl:if test="$n='' and not(contains($document,'n'))"><xsl:value-of select="substring($document,1,3)"/></xsl:if><xsl:if test="$n!=''">zin</xsl:if><xsl:if test="$n='' and contains($document,'n')"><xsl:value-of select="$document"/></xsl:if>.htm?text=<xsl:value-of select="$text"/>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/>&amp;comp1=<xsl:value-of select="$comp1"/>&amp;comp2=<xsl:value-of select="$comp2"/>&amp;app=<xsl:value-of select="$app"/>&amp;trans=<xsl:value-of select="$trans"/>&amp;n=<xsl:value-of select="$n"/>&amp;id=<xsl:value-of select="$id"/>&amp;corresp=<xsl:value-of select="$corresp"/>&amp;view=</xsl:attribute><xsl:if test="$view!='bovenlaag'"><b>Volledige transcriptie</b></xsl:if><xsl:if test="$view='bovenlaag'">Volledige transcriptie</xsl:if></a>
-<a><xsl:attribute name="href">javascript:MM_openBrWindow('<xsl:if test="$n='' and not(contains($document,'n'))"><xsl:value-of select="substring($document,1,3)"/></xsl:if><xsl:if test="$n='' and contains($document,'n')"><xsl:value-of select="$document"/></xsl:if><xsl:if test="$n!=''">zin</xsl:if>.htm?text=<xsl:value-of select="$text"/>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/>&amp;export=print&amp;comp1=<xsl:value-of select="$comp1"/>&amp;comp2=<xsl:value-of select="$comp2"/>&amp;app=<xsl:value-of select="$app"/>&amp;trans=<xsl:value-of select="$trans"/>&amp;n=<xsl:value-of select="$n"/>&amp;view=<xsl:value-of select="$view"/>&amp;id=<xsl:value-of select="$id"/>&amp;corresp=<xsl:value-of select="$corresp"/>','','width=825,height=538,resizable=yes,scrollbars=yes')</xsl:attribute>Printvriendelijke versie</a>
-<a><xsl:attribute name="href">javascript:MM_openBrWindow('xml<xsl:if test="contains($document,'Opd')">Opd</xsl:if><xsl:if test="contains($document,'n')"><xsl:value-of select="$document"/></xsl:if>.xml?text=<xsl:value-of select="$text"/>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/>&amp;export=xml&amp;comp1=<xsl:value-of select="$comp1"/>&amp;comp2=<xsl:value-of select="$comp2"/>&amp;app=<xsl:value-of select="$app"/>&amp;trans=<xsl:value-of select="$trans"/>&amp;n=<xsl:value-of select="$n"/>&amp;view=<xsl:value-of select="$view"/>&amp;id=<xsl:value-of select="$id"/>&amp;corresp=<xsl:value-of select="$corresp"/>','','width=825,height=538,resizable=yes,scrollbars=yes')</xsl:attribute>XML Bronbestand</a>
+<a><xsl:attribute name="href">javascript:MM_openBrWindow('http://localhost:9999/ads/<xsl:if test="$n='' and not(contains($document,'n'))"><xsl:value-of select="substring($document,1,3)"/></xsl:if><xsl:if test="$n='' and contains($document,'n')"><xsl:value-of select="$document"/></xsl:if><xsl:if test="$n!=''">zin</xsl:if>.htm?text=<xsl:value-of select="$text"/>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/>&amp;export=print&amp;comp1=<xsl:value-of select="$comp1"/>&amp;comp2=<xsl:value-of select="$comp2"/>&amp;app=<xsl:value-of select="$app"/>&amp;trans=<xsl:value-of select="$trans"/>&amp;n=<xsl:value-of select="$n"/>&amp;view=<xsl:value-of select="$view"/>&amp;id=<xsl:value-of select="$id"/>&amp;corresp=<xsl:value-of select="$corresp"/>','','width=825,height=538,resizable=yes,scrollbars=yes')</xsl:attribute>Printvriendelijke versie</a>
+<a><xsl:attribute name="href">javascript:MM_openBrWindow('http://localhost:9999/ads/xml<xsl:if test="contains($document,'Opd')">Opd</xsl:if><xsl:if test="contains($document,'n')"><xsl:value-of select="$document"/></xsl:if>.xml?text=<xsl:value-of select="$text"/>&amp;document=<xsl:value-of select="$document"/>&amp;page=<xsl:value-of select="$page"/>&amp;export=xml&amp;comp1=<xsl:value-of select="$comp1"/>&amp;comp2=<xsl:value-of select="$comp2"/>&amp;app=<xsl:value-of select="$app"/>&amp;trans=<xsl:value-of select="$trans"/>&amp;n=<xsl:value-of select="$n"/>&amp;view=<xsl:value-of select="$view"/>&amp;id=<xsl:value-of select="$id"/>&amp;corresp=<xsl:value-of select="$corresp"/>','','width=825,height=538,resizable=yes,scrollbars=yes')</xsl:attribute>XML Bronbestand</a>
 </div>
 
 <!-- variantenapp -->

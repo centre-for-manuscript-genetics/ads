@@ -1,0 +1,4 @@
+WARN    (2026-04-23) 12:07.57:960   [core.language.java] (Unknown-URI) Unknown-thread/JavaLanguage: Attempted to retrieve directory listing of non-directory /Users/vincentneyt/Library/Java/Extensions
+WARN    (2026-04-23) 12:07.57:961   [core.language.java] (Unknown-URI) Unknown-thread/JavaLanguage: Attempted to retrieve directory listing of non-directory /Network/Library/Java/Extensions
+WARN    (2026-04-23) 12:07.57:961   [core.language.java] (Unknown-URI) Unknown-thread/JavaLanguage: Attempted to retrieve directory listing of non-directory /System/Library/Java/Extensions
+WARN    (2026-04-23) 12:07.57:961   [core.language.java] (Unknown-URI) Unknown-thread/JavaLanguage: Attempted to retrieve directory listing of non-directory /usr/lib/java
