@@ -22,12 +22,23 @@ build/
 │       ├── xmlresolver-5.3.3.jar
 │       ├── xmlresolver-5.3.3-data.jar
 │       └── jline-2.14.6.jar
+├── conversion/
+│   ├── generate-manifest.py     (generative manifest from XML source — reference only)
+│   ├── scrape-dynamic.py        (crawl live Cocoon instance)
+│   ├── filter-manifest.py       (cross-reference scrape vs generated manifest)
+│   ├── patch-manifest.py        (add missing jobs to manifest)
+│   ├── scrape-manifest.py       (validate static output against manifest)
+│   ├── validate-links.py        (check hrefs in output HTML against manifest)
+│   └── README.md                (explanation of conversion process)
 ├── BuildServer.java             (persistent Saxon worker — source)
 ├── BuildServer.class            (persistent Saxon worker — compiled, Java 8 target)
 ├── build_server.py              (primary build script)
 ├── build.py                     (fallback build script)
 └── manifest-final.json          (authoritative build manifest — 54,732 jobs)
 ```
+
+Source XML and stylesheets are in `../source/xml/` and
+`../source/stylesheets/`. Output is written to `../output/`.
 
 Source XML and stylesheets are in `../source/xml/` and
 `../source/stylesheets/`. Output is written to `../output/`.
