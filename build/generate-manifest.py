@@ -6,16 +6,22 @@ import json
 import re
 from lxml import etree
 
+# ---------------------------------------------------------------------------
+# Configuration — all paths relative to this script's directory (ads/build/)
+# ---------------------------------------------------------------------------
+BASE_DIR       = Path(__file__).resolve().parent
+REPO_DIR       = BASE_DIR.parent
+SOURCE_DIR     = REPO_DIR / "source" / "xml"
+STYLESHEET_DIR = REPO_DIR / "source" / "stylesheets"
+
 # ----------------------------
 # Data classes
 # ----------------------------
-
 @dataclass(frozen=True)
 class EditionConfig:
     prefix: str        # "Ads" or "Opd"
-    witlist_file: str  # "ads-witlist.xml" or "opd-witlist.xml"
-    source_xml: str    # "xml/ads.xml" or "xml/opd.xml"  (relative to ads-build/)
-    stylesheet: str    # "stylesheets/ads.xsl"           (relative to ads-build/)
+    source_xml: str    # "xml/ads.xml" or "xml/opd.xml"  (relative, for manifest params)
+    stylesheet: str    # "stylesheets/ads.xsl"           (relative, for manifest params)
     zin: bool          # whether to generate -zinsvarianten pages
 
 @dataclass(frozen=True)
@@ -51,11 +57,9 @@ class BuildJob:
     stylesheet: str
     params: Dict[str, str]
 
-
 # ----------------------------
 # lxml parser
 # ----------------------------
-
 def make_parser() -> etree.XMLParser:
     """
     Shared lxml parser: recover=True tolerates malformed markup,
@@ -69,13 +73,15 @@ def parse_xml(text: str, encoding: str = "utf-8") -> etree._Element:
     parser = make_parser()
     return etree.fromstring(text.encode(encoding), parser)
 
-
 # ----------------------------
 # Parsing
 # ----------------------------
-
-def parse_witlist(xml_text: str) -> List[Witness]:
-    root = parse_xml(xml_text)
+def parse_witlist(xml_text: str, encoding: str = "iso-8859-1") -> List[Witness]:
+    """
+    Parse witnesses from //witList in the edition source XML (ads.xml or opd.xml).
+    Replaces the separate ads-witlist.xml / opd-witlist.xml files.
+    """
+    root = parse_xml(xml_text, encoding=encoding)
     witnesses: List[Witness] = []
     for el in root.iter("witness"):
         witnesses.append(
@@ -178,47 +184,37 @@ def parse_apps(
 ) -> List[AppEntry]:
     """
     Parse all <app> elements and compute varying witness pairs per app/@n.
-
     z_to_subs maps each Z-base sigil to the list of subwitnesses (b–f) that
     inherit from it when absent from an <app>. Example:
         {"AdsZM2": ["AdsM2b", "AdsM2c", "AdsM2d", "AdsM2e", "AdsM2f"],
          "AdsZM3": ["AdsM3b"],
          "AdsZP1": ["AdsP1b"]}
-
     base_to_a maps each synthetic base document to its a-witness. Example:
         {"AdsM2": "AdsM2a", "AdsM3": "AdsM3a", "AdsP1": "AdsP1a",
          "OpdP1": "OpdP1a"}
-
     Absent-witness fix (three parts):
-
     Part A — Z-base present in varying_pairs: clone Z-base partners for each
     absent b–f subwitness.
-
     Part B — Z-base absent but a-witness present and varying: use a-witness
     partners as proxy. Handles apps like azze458 where AdsZM2 is absent but
     AdsM2a varies.
-
     Part C — Synthetic base documents: the XSLT renders AdsM2 pages by finding
-    AdsM2a readings (4th char != 'Z' fallback in app template). So AdsM2 varies
+    AdsM2a readings (4th char != 'Z' branch in app template). So AdsM2 varies
     with exactly the same witnesses as AdsM2a at each app. Clone AdsM2a pairs
     substituting AdsM2 for AdsM2a.
     """
     root = parse_xml(xml_text, encoding="iso-8859-1")
-
     # Build reverse mapping: Z-base -> a-witness (e.g. "AdsZM2" -> "AdsM2a")
     z_to_a: Dict[str, str] = {}
     for z_base in z_to_subs:
         m = re.match(r"^(Ads|Opd)Z(.+)$", z_base)
         if m:
             z_to_a[z_base] = f"{m.group(1)}{m.group(2)}a"
-
     entries_dict: Dict[tuple, set] = {}
-
     for app in root.iter("app"):
         app_n = app.attrib.get("n", "").strip()
         if not app_n:
             continue
-
         # Walk up to find nearest ancestor <seg @base>
         seg_base = ""
         node = app.getparent()
@@ -227,7 +223,6 @@ def parse_apps(
                 seg_base = node.attrib.get("base", "").strip()
                 break
             node = node.getparent()
-
         # Build list of witness sets per <rdg>
         rdg_witness_sets = []
         for rdg in app:
@@ -237,7 +232,6 @@ def parse_apps(
             wits = frozenset(w.strip() for w in wit_attr.split() if w.strip())
             if wits:
                 rdg_witness_sets.append(wits)
-
         # Two witnesses vary if they appear in different <rdg> elements
         varying_pairs: set = set()
         for i, wits_a in enumerate(rdg_witness_sets):
@@ -245,7 +239,6 @@ def parse_apps(
                 for wit_a in wits_a:
                     for wit_b in wits_b:
                         varying_pairs.add(frozenset({wit_a, wit_b}))
-
         # For nested apps: register pairs between witnesses in the ancestor
         # <rdg> containing this app and witnesses in sibling <rdg> elements
         # of each ancestor <app>.
@@ -269,14 +262,11 @@ def parse_apps(
                             for wit_sibling in sibling_wits:
                                 varying_pairs.add(frozenset({wit_containing, wit_sibling}))
             node = node.getparent()
-
         # Collect all witnesses explicitly present in this app
         present_wits: set = set()
         for wits in rdg_witness_sets:
             present_wits.update(wits)
-
         extra_pairs: set = set()
-
         # Parts A and B: absent b–f subwitnesses
         for z_base, subs in z_to_subs.items():
             # Part A: find partners of the Z-base directly from varying_pairs
@@ -287,7 +277,6 @@ def parse_apps(
                     z_partners.add(pair_list[1])
                 elif z_base == pair_list[1]:
                     z_partners.add(pair_list[0])
-
             # Part B: Z-base absent but a-witness present and varying —
             # use a-witness's partners as proxy for the Z-base.
             if not z_partners:
@@ -301,16 +290,13 @@ def parse_apps(
                             z_partners.add(pair_list[0])
                     # b–f witnesses share the same reading as a at this app
                     z_partners.discard(a_wit)
-
             if not z_partners:
                 continue
-
             for sub in subs:
                 if sub in present_wits:
                     continue  # already handled via normal path
                 for partner in z_partners:
                     extra_pairs.add(frozenset({sub, partner}))
-
         # Part C: synthetic base documents (AdsM2, AdsM3, AdsP1, OpdP1).
         # The XSLT renders these by finding their a-witness readings, so each
         # base document varies with the same witnesses as its a-witness.
@@ -333,14 +319,11 @@ def parse_apps(
             base_partners.discard(a_wit)
             for partner in base_partners:
                 extra_pairs.add(frozenset({base_doc, partner}))
-
         varying_pairs.update(extra_pairs)
-
         key = (app_n, seg_base)
         if key not in entries_dict:
             entries_dict[key] = set()
         entries_dict[key].update(varying_pairs)
-
     return [
         AppEntry(
             app_n=app_n,
@@ -350,11 +333,9 @@ def parse_apps(
         for (app_n, seg_base), pairs in entries_dict.items()
     ]
 
-
 # ----------------------------
 # Witness comparison logic
 # ----------------------------
-
 def split_prefix_rest(wit: str) -> tuple:
     m = re.match(r"^(Ads|Opd)(.+)$", wit)
     if not m:
@@ -405,11 +386,9 @@ def comparison_targets(witnesses: Iterable[Witness]) -> List[CompareTarget]:
             deduped.append(t)
     return deduped
 
-
 # ----------------------------
 # Helper: derive synthetic base documents
 # ----------------------------
-
 def synthetic_base_documents(
     edition_witnesses: List[Witness],
     toc_pages: Dict[str, List[TocPage]],
@@ -435,11 +414,9 @@ def synthetic_base_documents(
             result.append(doc_id)
     return result
 
-
 # ----------------------------
 # Job generators
 # ----------------------------
-
 def static_page_jobs() -> List[BuildJob]:
     return [
         BuildJob(
@@ -471,6 +448,12 @@ def static_page_jobs() -> List[BuildJob]:
             source_xml="xml/colofon.xml",
             stylesheet="stylesheets/ads.xsl",
             params={"text": "colofon", "document": "colofon"},
+        ),
+        BuildJob(
+            output_file="2026.html",
+            source_xml="xml/ads.xml",
+            stylesheet="stylesheets/ads.xsl",
+            params={"text": "2026", "document": "2026"},
         ),
     ]
 
@@ -536,7 +519,6 @@ def comparison_jobs(
 ) -> List[BuildJob]:
     """
     Generate text-view comparison pages for a document against all targets.
-
     Issue 2 fix: for b–f subwitnesses, also generates a comparison page
     against their own Z-base (e.g. AdsM2b-varianten-AdsZM2.html). This page
     is not produced by the normal target iteration because the only target
@@ -544,7 +526,6 @@ def comparison_jobs(
     excluded by the raw_n == document skip condition.
     """
     jobs: List[BuildJob] = []
-
     targets_to_use = list(compare_targets)
     sixth = sixth_char(document)
     if sixth in "bcdef":
@@ -554,7 +535,6 @@ def comparison_jobs(
             targets_to_use.append(
                 CompareTarget(raw_n=z_base, href_value=z_base, kind="plain")
             )
-
     for target in targets_to_use:
         if target.raw_n == document:
             continue
@@ -616,7 +596,6 @@ def two_witness_apparatus_jobs(
 ) -> List[BuildJob]:
     """
     Generate two-witness apparatus pages for all documents against all targets.
-
     Accepts all_documents as a flat list of document id strings so that
     synthetic base documents (AdsM2, AdsM3, AdsP1, OpdP1) are included
     as comp1 alongside real witnesses.
@@ -713,11 +692,9 @@ def image_view_jobs(
                 ])
     return jobs
 
-
 # ----------------------------
 # Manifest builder
 # ----------------------------
-
 def dedupe_jobs(jobs: Iterable[BuildJob]) -> List[BuildJob]:
     seen = set()
     deduped: List[BuildJob] = []
@@ -742,12 +719,15 @@ def build_manifest(
     jobs.extend(static_page_jobs())
 
     # Parse AdsM1 segs once for sentence-version page generation.
-    ads_source_xml_text = Path("xml/ads.xml").read_text(encoding="iso-8859-1")
+    ads_source_xml_text = (SOURCE_DIR / "ads.xml").read_text(encoding="iso-8859-1")
     segs = parse_segs(ads_source_xml_text)
 
     for ed in editions:
-        witlist_xml = Path(ed.witlist_file).read_text(encoding="utf-8")
-        witnesses = parse_witlist(witlist_xml)
+        # Parse witnesses directly from //witList in the edition source XML.
+        # Replaces the separate ads-witlist.xml / opd-witlist.xml files.
+        source_xml_path = SOURCE_DIR / ed.source_xml.replace("xml/", "", 1)
+        source_xml_text = source_xml_path.read_text(encoding="iso-8859-1")
+        witnesses = parse_witlist(source_xml_text, encoding="iso-8859-1")
         edition_witnesses = [w for w in witnesses if w.n.startswith(ed.prefix)]
         edition_documents = {w.n for w in edition_witnesses}
         targets = comparison_targets(edition_witnesses)
@@ -771,9 +751,7 @@ def build_manifest(
         # e.g. {"AdsM2": "AdsM2a", "AdsM3": "AdsM3a", "AdsP1": "AdsP1a"}
         base_to_a: Dict[str, str] = {doc_id: doc_id + "a" for doc_id in base_docs}
 
-        # Parse app entries from the edition source XML
-        source_xml_path = Path("xml") / ed.source_xml.replace("xml/", "", 1)
-        source_xml_text = source_xml_path.read_text(encoding="iso-8859-1")
+        # source_xml_text already read above — reuse for parse_apps
         app_entries = parse_apps(source_xml_text, z_to_subs, base_to_a)
 
         # All document ids for two-witness apparatus generation:
@@ -829,24 +807,20 @@ def build_manifest(
 def manifest_as_json(jobs: Iterable[BuildJob]) -> str:
     return json.dumps([asdict(job) for job in jobs], indent=2, ensure_ascii=False)
 
-
 # ----------------------------
 # Main
 # ----------------------------
-
 if __name__ == "__main__":
-    toc_xml = Path("xml/toc.xml").read_text(encoding="latin-1")
+    toc_xml = (SOURCE_DIR / "toc.xml").read_text(encoding="latin-1")
     editions = [
         EditionConfig(
             prefix="Ads",
-            witlist_file="xml/ads-witlist.xml",
             source_xml="xml/ads.xml",
             stylesheet="stylesheets/ads.xsl",
             zin=True,
         ),
         EditionConfig(
             prefix="Opd",
-            witlist_file="xml/opd-witlist.xml",
             source_xml="xml/opd.xml",
             stylesheet="stylesheets/ads.xsl",
             zin=False,
@@ -854,5 +828,6 @@ if __name__ == "__main__":
     ]
     jobs = build_manifest(editions, toc_xml)
     print(f"Total jobs: {len(jobs)}")
-    Path("manifest.json").write_text(manifest_as_json(jobs), encoding="utf-8")
-    print("Wrote manifest.json")
+    manifest_path = BASE_DIR / "manifest.json"
+    manifest_path.write_text(manifest_as_json(jobs), encoding="utf-8")
+    print(f"Wrote {manifest_path}")
