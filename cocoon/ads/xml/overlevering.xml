@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE TEI.2 PUBLIC "-//UA//DTD Ads (based on TEI)//NL" "../dtd/Ads.dtd"
+[
+]>
+
+<TEI.2>
+ <teiHeader creator="Dirk Van Hulle" date.created="2000-06-08">
+ <fileDesc>
+ <titleStmt>
+  <title>Achter de Schermen: a machine readable transcription</title> 
+  <author>Willem Elsschot</author> 
+  <principal>Dirk Van Hulle &amp; Peter De Bruijn</principal> 
+ <funder>
+  <name>Centre for Manuscript Genetics (UA)</name>
+  <name>Huygens Instituut (HI), Koninklijke Nederlandse Akademie van Wetenschappen</name>
+  <name>Centrum voor Teksteditie en Bronnenstudie (CTB), Koninklijke Academie voor Nederlandse Taal- en Letterkunde</name>
+ <address>
+  <addrLine>Universiteit Antwerpen (UA)</addrLine> 
+  <addrLine>Prinsstraat 13</addrLine> 
+  <addrLine>B-2000 Antwerpen</addrLine> 
+  <addrLine>Belgium</addrLine> 
+  <addrLine>tel: +32 (0)3 220 42 46</addrLine> 
+  <addrLine>email: dirk.vanhulle@ua.ac.be</addrLine> 
+  </address>
+  </funder>
+  </titleStmt>
+  <extent /> 
+ <publicationStmt>
+  <authority>Centre for Manuscript Genetics (UA)</authority> 
+  <authority>Huygens Instituut (HI), Koninklijke Nederlandse Akademie van Wetenschappen</authority>
+<authority>Centrum voor Teksteditie en Bronnenstudie (CTB), Koninklijke Academie voor Nederlandse Taal- en Letterkunde</authority>
+  <pubPlace>Antwerp</pubPlace> 
+  <date>2007</date> 
+ <availability status="restricted"> 
+ <p></p>
+  </availability>
+  </publicationStmt>
+  <sourceDesc>
+      <bibl>Aangemaakt in elektronische vorm</bibl>
+  </sourceDesc>
+  </fileDesc>
+ <encodingDesc>
+ <projectDesc>
+  <p /> 
+  </projectDesc>
+ <editorialDecl>
+ <p>
+ <list>
+  <item>Correction:</item> 
+  <item>Normalization:</item> 
+  <item>Quotation:</item> 
+  <item>Hyphenation:</item> 
+  <item>Interpretation:</item> 
+  </list>
+  </p>
+  </editorialDecl>
+  
+  <tagsDecl>
+</tagsDecl>
+
+  </encodingDesc>
+  </teiHeader>
+<text>
+<body>
+<div type="sectie">
+<head>Overlevering<xref type="note" id="sdendnote1anc" to="#sdendnote1sym">1</xref></head>
+
+<table>
+<row><cell><hi rend="b"><xref type="intra" to="OpdM1">OpdM1</xref></hi></cell><cell>Eerste
+typoscript "Inleiding"</cell><cell>Mei 1934</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="OpdM2">OpdM2</xref></hi></cell><cell>Tweede
+typoscript "Inleiding"</cell><cell>Mei/juni 1934</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="OpdT1">OpdT1</xref></hi></cell><cell>Voorpublicatie
+"Tsjip" in <hi rend="i">Forum</hi></cell><cell>Juli 1934</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="OpdD1">OpdD1</xref></hi></cell><cell><hi rend="i">Tsjip</hi>, eerste druk</cell><cell>Oktober 1934</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="AdsM1">AdsM1</xref></hi></cell><cell>Manuscript
+"Achter de Schermen"</cell><cell>November 1934</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="AdsM2">AdsM2</xref></hi></cell><cell>Typoscript
+"Achter de Schermen"</cell><cell>November 1934</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="AdsT1">AdsT1</xref></hi></cell><cell>Voorpublicatie
+"Achter de Schermen" in <hi rend="i">Groot Nederland</hi></cell><cell>Januari
+1935</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="AdsM3">AdsM3</xref></hi></cell><cell>Correctie-exemplaar
+van de publicatie in <hi rend="i">Groot Nederland</hi></cell><cell>Na januari 1935</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="OpdD2">OpdD2</xref>
+<xref type="intra" to="AdsD1">AdsD1</xref>	</hi></cell><cell><hi rend="i">Tsjip</hi>, tweede druk</cell><cell>Najaar 1936</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="OpdD3">OpdD3</xref>
+<xref type="intra" to="AdsD2">AdsD2</xref>	</hi></cell><cell><hi rend="i">Tsjip</hi>, derde druk</cell><cell>Maart 1942</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="OpdD4">OpdD4</xref>
+<xref type="intra" to="AdsD3">AdsD3</xref>	</hi></cell><cell><hi rend="i">Tsjip</hi>/<hi rend="i">De Leeuwentemmer</hi>, eerste druk</cell><cell>Mei
+1943</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="OpdD5">OpdD5</xref>
+<xref type="intra" to="AdsD4">AdsD4</xref>	</hi></cell><cell><hi rend="i">Tsjip</hi>/<hi rend="i">De Leeuwentemmer</hi>, tweede
+druk</cell><cell>Maart/april 1944</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="OpdD6">OpdD6</xref>
+<xref type="intra" to="AdsD5">AdsD5</xref>	</hi></cell><cell><hi rend="i">Tsjip/De Leeuwentemmer</hi>, derde druk</cell><cell>Maart 1952</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="OpdP1">OpdP1</xref>
+<xref type="intra" to="AdsP1">AdsP1</xref>	</hi></cell><cell>Eerste drukproef voor het <hi rend="i">Verzameld werk</hi></cell><cell>December
+1956/januari 1957</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="OpdP2">OpdP2</xref>
+<xref type="intra" to="AdsP2">AdsP2</xref>	</hi></cell><cell>Tweede drukproef voor het <hi rend="i">Verzameld werk</hi></cell><cell>Februari
+1957</cell></row>
+<row><cell><hi rend="b"><xref type="intra" to="OpdD7">OpdD7</xref>
+<xref type="intra" to="AdsD6">AdsD6</xref>	</hi></cell><cell><hi rend="i">Verzameld werk</hi>, eerste druk</cell><cell>Maart 1957</cell></row>
+</table>
+
+<p>__________________________________________________________________________________</p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="OpdM1">OpdM1</xref></hi></p>
+<p>Eerste
+typoscript "Inleiding"</p>
+<p>Mei
+1934</p>
+<p>Nederlands
+Letterkundig Museum en Documentatiecentrum, signatuur R 461 H 1</p>
+<p><lb/>
+</p>
+<p>"Het
+manuscript van Tsjip bestaat niet meer. Dat heb ik stuk gescheurd
+naar gelang ik het overgetijpt heb. Was trouwens op allerlei stukken
+papier geschreven", zo schreef Elsschot op 5 mei 1934 aan Jan
+Greshoff.<xref type="note" id="sdendnote2anc" to="#sdendnote2sym">2</xref>
+Hetzelfde lot trof mogelijk de naderhand toegevoegde "Inleiding",
+want ook daarvan is de eerste overgeleverde versie een voltooid
+typoscript. Het is de tekst zoals Elsschot die in de loop van mei aan
+Greshoff heeft gestuurd met de begeleidende woorden: "Ik hoop
+dat deze korte inleiding Tsjip bevattelijker zal maken voor den
+middelmatigen lezer."<xref type="note" id="sdendnote3anc" to="#sdendnote3sym">3</xref>
+Vooral de kritiek die vanuit literaire hoek op <hi rend="i">Tsjip</hi> was geuit
+&ndash; met name door Menno ter Braak &ndash; sloeg in zijn ogen de
+plank mis door de nadruk zo sterk op de inhoud te leggen. Hij had
+juist "<hi rend="i">zonder</hi> inhoud" een boek willen schrijven:
+"Ik ben natuurlijk allerminst van plan dat met de voorgaande of
+daaropvolgende jaren &oacute;&oacute;k te doen. Maar dat kind dat
+hier rondloopt was het, in mijn oogen, wel waard."<xref type="note" id="sdendnote4anc" to="#sdendnote4sym">4</xref></p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="OpdM2">OpdM2</xref></hi></p>
+<p>Tweede
+typoscript "Inleiding"</p>
+<p>Mei/juni
+1934</p>
+<p>AMVC-Letterenhuis,
+signatuur E 285 5253</p>
+<p><lb/>
+</p>
+<p>Van
+de "Inleiding" bestaat een tweede typoscript, dat op
+verschillende plaatsen afwijkt van de aan Greshoff gestuurde versie.
+Elsschot heeft het naderhand gevoegd bij de doorslag van <hi rend="i">Tsjip</hi>
+die als kopij zou dienen voor <hi rend="i">Forum</hi>.<xref type="note" id="sdendnote5anc" to="#sdendnote5sym">5</xref>
+In dit typoscript bracht hij met zwarte inkt nog &eacute;&eacute;n
+kleine variant aan ("hij" in plaats van "men"
+op p. 2) en noteerde hij de definitieve opdracht "Aan mijn
+kleinzoon Jan Maniewski".<xref type="note" id="sdendnote6anc" to="#sdendnote6sym">6</xref></p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="OpdT1">OpdT1</xref></hi></p>
+<p>Voorpublicatie
+"Tsjip" in <hi rend="i">Forum</hi></p>
+<p>Juli
+1934</p>
+<p>
+<lb/>
+</p>
+<p>Het
+ongunstige oordeel van Ter Braak had geen invloed op de beslissing
+over de opname van <hi rend="i">Tsjip</hi> in <hi rend="i">Forum</hi>, want dat was in de
+nieuwe constructie van het tijdschrift louter een zaak van de Vlaamse
+redactieleden, en die hadden zich &ndash; na eerdere bedenkingen
+tegen enkele godsdienstige passages &ndash; inmiddels stuk voor stuk
+lovend over het verhaal uitgelaten.<xref type="note" id="sdendnote7anc" to="#sdendnote7sym">7</xref>
+<hi rend="i">Tsjip</hi> verscheen &ndash; inclusief de "Inleiding",
+omgedoopt tot "Opdracht" &ndash; vanaf juli 1934 in het
+tijdschrift, verspreid over vijf afleveringen.<xref type="note" id="sdendnote8anc" to="#sdendnote8sym">8</xref>
+Uit de verschillen tussen de kopij en de tijdschriftpublicatie blijkt
+dat Elsschot een drukproef heeft ontvangen en gecorrigeerd, waarbij
+hij in het gehele verhaal een twintigtal woord- en zinsvarianten
+aanbracht; behalve de titelwijziging bevat de "Opdracht"
+alleen spellingvarianten, waarvoor Elsschot niet noodzakelijk
+verantwoordelijk is geweest.<xref type="note" id="sdendnote9anc" to="#sdendnote9sym">9</xref></p>
+<p>
+<lb/>
+</p>
+<p>
+<hi rend="b"><xref type="extra" to="OpdD1">OpdD1</xref></hi></p>
+<p>
+<hi rend="i">Tsjip</hi>, eerste druk</p>
+<p>
+Oktober 1934</p>
+<p><lb/>
+</p>
+<p>De
+eerste besprekingen over de boekuitgave van <hi rend="i">Tsjip</hi> hadden al
+plaatsgevonden toen het verhaal net af was, in december 1933. Nadat
+Marnix Gijsen de roman voor <hi rend="i">Forum</hi> in de wacht had gesleept,
+heeft hij Elsschot voorgesteld om het boek te laten verschijnen bij
+de uitgever van het tijdschrift, de firma Nijgh &amp; Van Ditmar. Op
+advies van Jan Greshoff koos Elsschot voor de Amsterdamse uitgever
+P.N. van Kampen, bij wie in 1933 ook <hi rend="i">Kaas</hi> was verschenen, en
+die toonde zich al snel bereid: begin januari 1934 was de zaak rond.<xref type="note" id="sdendnote10anc" to="#sdendnote10sym">10</xref>
+Half mei meldde de uitgever zich met het verzoek om de kopij van
+<hi rend="i">Tsjip</hi> te sturen. De kopij bleef niet bewaard, maar moet
+bestaan hebben uit een andere doorslag van het <hi rend="i">Tsjip</hi>-typoscript
+dan OpdM2, dat als kopij voor <hi rend="i">Forum</hi> heeft gediend: de tekst in
+de eerste druk volgt namelijk in enkele gevallen de eerste getypte
+laag van het typoscript, en <hi rend="i">niet</hi> de correctielaag ervan (in de
+"Opdracht" bijvoorbeeld staat op p. 3 weer "men"
+in plaats van "hij"). Het gaat steeds om kleine
+verschillen, andere (inhoudelijke) varianten uit de <hi rend="i">Forum</hi>-kopij
+en -drukproef zijn wel in de eerste druk overgenomen. D1 bevat ook
+nieuwe varianten, die Elsschot in de &ndash; niet overgeleverde &ndash;
+drukproef kan hebben aangebracht.</p>
+<p>
+Nadere gegevens over de
+totstandkoming van de uitgave ontbreken. De eerste druk van <hi rend="i">Tsjip</hi>
+verscheen vermoedelijk half oktober 1934 in een oplage van 1500
+exemplaren, met op de binnenflap lovende woorden van Greshoff: "Het
+zou mij niet verbazen, wanneer deze roman tot een groot succes
+geroepen wordt." Die voorspelling kwam uit, want <hi rend="i">Tsjip</hi>
+werd goed verkocht &eacute;n goed besproken. De enige kritiek op de
+roman kwam van Menno ter Braak, maar dat kon voor Elsschot geen
+verrassing meer zijn.<xref type="note" id="sdendnote11anc" to="#sdendnote11sym">11</xref></p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="AdsM1">AdsM1</xref></hi></p>
+<p>Manuscript
+"Achter de Schermen"</p>
+<p>November
+1934</p>
+<p>AMVC-Letterenhuis,
+signatuur E 285 H 5372</p>
+<p><lb/>
+</p>
+<p>Op
+12 november 1934 meldde Elsschot aan Greshoff: "Ik ben weer
+bezig. Maar nog maar pas begonnen. 't Wordt iets voor ter
+Braak, du Perron e.c. Je herinnert je de inleiding tot Kaas? Iets in
+dien aard, maar veel langer en naar aanleiding van Tsjip. Ik ben
+benieuwd of het goed wordt."<xref type="note" id="sdendnote12anc" to="#sdendnote12sym">12</xref>
+Acht dagen later was de tekst af, blijkens de datum die Elsschot
+onder de eerste versie van zijn tekst noteerde: "20/11/'34"
+(naderhand heeft hij de datum &ndash; abusievelijk? &ndash;
+doorgehaald toen hij het oorspronkelijke slot verving). De eerste
+versie van "Achter de Schermen" is een kladhandschrift,
+bestaande uit twintig geruite blocnoteblaadjes, die zijn beschreven
+met zwarte inkt en grijs en rood potlood. Het manuscript bevat
+talloze doorhalingen en toevoegingen in de lopende tekst en twee
+omvangrijkere uitbreidingen, die op aparte velletjes werden
+geschreven.<xref type="note" id="sdendnote13anc" to="#sdendnote13sym">13</xref></p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="AdsM2">AdsM2</xref></hi></p>
+<p>Typoscript
+"Achter de Schermen"</p>
+<p>November
+1934</p>
+<p>Particuliere
+collectie</p>
+<p><lb/>
+</p>
+<p>De
+kladversie heeft Elsschot vervolgens overgenomen in een typoscript
+met doorslagen, dat hij ondertekende "Antwerpen, 22 November
+1934".<xref type="note" id="sdendnote14anc" to="#sdendnote14sym">14</xref>
+De getypte tekst vertoont tientallen wijzigingen ten opzichte van M1,
+zodat niet uitgesloten moet worden dat er een tussenversie is
+geweest. Niet alleen is er een ondertitel bijgekomen ("Naar
+aanleiding van de Opdracht aan Tsjip"), ook elders in de tekst
+zijn woorden en zinnen toegevoegd en geschrapt. Het meest opvallende
+verschil is de aanwezigheid van de toneelmetaforiek in M2, die in M1
+nog vrijwel geheel ontbrak. In de getypte tekst heeft Elsschot
+vervolgens ook nog ruim twintig varianten aangebracht. Tevens voegde
+hij in deze fase de opdracht "Aan Jan van Nijlen" toe.<xref type="note" id="sdendnote15anc" to="#sdendnote15sym">15</xref></p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="AdsT1">AdsT1</xref></hi></p>
+<p>Voorpublicatie
+"Achter de Schermen" in <hi rend="i">Groot Nederland</hi></p>
+<p>Januari
+1935</p>
+<p><lb/>
+</p>
+<p>Zodra
+"Achter de Schermen" voltooid was, heeft Elsschot het
+typoscript ervan aan Greshoff gestuurd ter publicatie in <hi rend="i">Groot
+Nederland</hi>, overeenkomstig zijn eerdere belofte dat Greshoff bij
+alles wat hij "gekakt" had de primeur zou krijgen.<xref type="note" id="sdendnote16anc" to="#sdendnote16sym">16</xref>
+Greshoff heeft niet onmiddellijk iets van zich laten horen. Eind
+november schreef de ongeduldige Elsschot nog: "Indien die
+studie &ldquo;Achter de schermen&rdquo; niet geschikt is voor Gr.
+Nederland stuur ze mij dan maar terug", maar op 3 december 1934
+had hij uitsluitsel: "Van &ldquo;<hi rend="i">Achter de Schermen</hi>&rdquo;
+ontving ik gaarne een proef om eventueel nog iets te kunnen
+verbeteren, als ik tenminste goed gelezen heb (dat het w&eacute;l
+opgenomen wordt). [...] Het onderstreepte in Achter de Schermen dient
+cursief gezet. <hi rend="i">Niet</hi> in vetjes."<xref type="note" id="sdendnote17anc" to="#sdendnote17sym">17</xref>
+Elsschot heeft inderdaad een drukproef ontvangen (deze bleef niet
+bewaard), want de tekst van de tijdschriftpublicatie vertoont een
+vijftal inhoudelijke verschillen ten opzichte van de
+typoscriptversie.<xref type="note" id="sdendnote18anc" to="#sdendnote18sym">18</xref>
+"Achter de Schermen" werd, met ondertitel en opdracht aan
+Van Nijlen, gepubliceerd in de januari-aflevering 1935 van <hi rend="i">Groot
+Nederland</hi>.<xref type="note" id="sdendnote19anc" to="#sdendnote19sym">19</xref></p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="AdsM3">AdsM3</xref></hi></p>
+<p>Correctie-exemplaar
+van de publicatie in <hi rend="i">Groot Nederland</hi></p>
+<p>Na
+januari 1935</p>
+<p>Particuliere
+collectie</p>
+<p><lb/>
+</p>
+<p>Van
+het januari-nummer van <hi rend="i">Groot Nederland</hi> bleef een exemplaar
+bewaard waarin Elsschot twee varianten heeft genoteerd. Vervolgens
+heeft hij hier niets mee gedaan, want de wijzigingen zijn niet in de
+tweede, met "Achter de Schermen" vermeerderde druk van
+<hi rend="i">Tsjip</hi> terechtgekomen. Een eveneens door Elsschot aangebrachte
+correctie (verbetering van de zetfout "niet" in "niets")
+is wel in de tweede druk terug te vinden, maar daar zal het
+correctie-exemplaar niet aan te pas zijn gekomen.<xref type="note" id="sdendnote20anc" to="#sdendnote20sym">20</xref></p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="OpdD2">OpdD2</xref>
+<xref type="extra" to="AdsD1">AdsD1</xref></hi></p>
+<p><hi rend="i">Tsjip</hi>,
+tweede druk</p>
+<p>Najaar
+1936</p>
+<p><lb/>
+</p>
+<p>Over
+de totstandkoming van de tweede druk van <hi rend="i">Tsjip</hi> zijn geen
+gegevens bekend. Elsschot heeft de herdruk niet aangegrepen om zijn
+tekst opnieuw onder handen te nemen: er zijn nauwelijks inhoudelijke
+varianten ten opzichte van de eerste druk, en de meeste daarvan
+moeten waarschijnlijk op het conto van de zetter worden geschreven.
+In het gehele boek zijn slechts vijftien verschillen die van Elsschot
+afkomstig (kunnen) zijn, waaronder een twijfelgeval als het schrappen
+(of wegvallen?) van "noch op haar slechten stoelgang" in
+de "Opdracht" en een evidente auteursvariant als de
+toevoeging van "En in de zaal evenmin" in "Achter
+de Schermen".<xref type="note" id="sdendnote21anc" to="#sdendnote21sym">21</xref>
+Ook zal Elsschot zelf de ondertitel bij "Achter de Schermen"
+achterwege hebben gelaten.</p>
+<p>	De
+tweede druk van <hi rend="i">Tsjip</hi> verscheen vermoedelijk in het najaar van
+1936 (de maand van verschijnen is niet bekend). In de fondscatalogus
+prees de uitgever "Achter de Schermen" speciaal aan als
+"een buitengewoon geestig hoofdstuk, dat een zeer goeden kijk
+geeft op de manier waarop Elsschot schrijft."</p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="OpdD3">OpdD3</xref>
+<xref type="extra" to="AdsD2">AdsD2</xref></hi></p>
+<p><hi rend="i">Tsjip</hi>,
+derde druk</p>
+<p>Maart
+1942</p>
+<p><lb/>
+</p>
+<p>In
+1940 verscheen <hi rend="i">De Leeuwentemmer</hi>, het vervolg op <hi rend="i">Tsjip</hi>,
+bestaande uit een reeks brieven waarin Laarmans aan zijn zoon Walter
+schrijft over het opgroeien van Tsjip, het stuklopen van het huwelijk
+tussen Adele en Bennek, hun strijd om het kind en de daaropvolgende
+ontvoering uit Polen. Al meteen na de verschijning van <hi rend="i">De
+Leeuwentemmer</hi> sprak Elsschot zijn intentie uit dat beide verhalen
+als "&eacute;&eacute;n boek" uitgegeven zouden moeten
+worden.<xref type="note" id="sdendnote22anc" to="#sdendnote22sym">22</xref>
+Voordat het zover was, bracht Van Kampen eerst nog een afzonderlijke
+uitgave van <hi rend="i">Tsjip</hi> op de markt, ongetwijfeld om die titel te
+kunnen blijven leveren zolang <hi rend="i">De Leeuwentemmer</hi> niet was
+uitverkocht. De derde druk van <hi rend="i">Tsjip</hi> is tussen half december
+1941 en begin maart 1942 vervaardigd. Als legger heeft een exemplaar
+van de eerste druk en de voorpublicatie van "Achter de
+Schermen" (AdsT) gediend, waardoor de enkele verschillen die de
+tweede druk bevatte dus weer ontbreken in de derde druk. In een paar
+varianten is de hand van Elsschot zichtbaar, wat wil zeggen dat hij
+een drukproef heeft gecorrigeerd.</p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="OpdD4">OpdD4</xref>
+<xref type="extra" to="AdsD3">AdsD3</xref></hi></p>
+<p><hi rend="i">Tsjip</hi>/<hi rend="i">De
+Leeuwentemmer</hi>, eerste druk</p>
+<p>Mei
+1943</p>
+<p><lb/>
+</p>
+<p>De
+eerste gecombineerde uitgave van <hi rend="i">Tsjip/De Leeuwentemmer</hi>
+verscheen bij de Brusselse uitgeverij Manteau, waaraan Van Kampen
+onder druk van Elsschot een licentie had verleend om een betere
+verspreiding van zijn boeken in Belgi&euml; te kunnen garanderen. Van
+<hi rend="i">Tsjip/De Leeuwentemmer</hi> had Ang&egrave;le Manteau blijkbaar
+hooggespannen verwachtingen, want van meet af aan stond vast dat het
+een volksuitgave zou worden in een oplage van maar liefst
+vijftigduizend exemplaren. Omdat de uitgave niet in de eerste plaats
+bestemd was voor "fijnproevers" vroeg ze of in <hi rend="i">Tsjip</hi>
+de motto's bij de hoofdstukken konden vervallen. Na een kleine
+aarzeling ging Elsschot hiermee akkoord.<xref type="note" id="sdendnote23anc" to="#sdendnote23sym">23</xref>
+Niet veel later stelde hij zelf voor om dan ook "Achter de
+Schermen" maar achterwege te laten ("Ik vrees dat de
+massa er geen letter van begrijpen zal"), maar daar wilde
+Manteau weer niet aan.<xref type="note" id="sdendnote24anc" to="#sdendnote24sym">24</xref>
+Uit deze briefwisseling blijkt verder dat Elsschot twee drukproeven
+heeft ontvangen en dat beide proeven ook nog door een corrector van
+de uitgeverij zijn nagekeken, maar dat was alweer geen garantie voor
+een smetteloze tekst (met als meest verwarrende gevolg dat zoon
+Willem uit <hi rend="i">Tsjip</hi> in <hi rend="i">De Leeuwentemmer</hi> opduikt onder de
+naam Walter). Een fout in het slot van "Achter de Schermen"
+("Bij 't herlezen komt het U voor&hellip;")
+ontdekte Elsschot te laat: toen het boek eind mei 1943 van de pers
+kwam wilde hij Ang&egrave;le Manteau de hele oplage nog "met de
+pen" laten veranderen, maar die antwoordde wijselijk dat een
+deel van de oplage al bij de boekhandel lag. Volgens het
+rekensommetje dat ze eraan toevoegde zou het "90 dagen en 8 uur
+vergen om de gansche oplage in orde te brengen".<xref type="note" id="sdendnote25anc" to="#sdendnote25sym">25</xref></p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="OpdD5">OpdD5</xref>
+<xref type="extra" to="AdsD4">AdsD4</xref></hi></p>
+<p><hi rend="i">Tsjip</hi>/<hi rend="i">De
+Leeuwentemmer</hi>, tweede druk</p>
+<p>Maart/april
+1944</p>
+<p><lb/>
+</p>
+<p>Eind
+1943 kon Van Kampen aan Elsschot melden dat hij een vergunning had om
+<hi rend="i">Tsjip/De Leeuwentemmer</hi> ook in Nederland uit te brengen: "Wij
+zijn reeds aan het zetten en stellen ons voor, dat een woordelijke
+herdruk van Manteau's uitgave uw goedkeuring wegdraagt. Al
+corrigeerende geniet ik weer eens van deze kostelijke boekjes!"<xref type="note" id="sdendnote26anc" to="#sdendnote26sym">26</xref>
+Elsschot ging akkoord, maar wilde wel nog nadere informatie hebben
+over de financi&euml;le condities en vroeg vervolgens met een
+haperende typemachine ook aandacht voor de tekstuele accuratesse:
+"Wat nu de tekst betreft, na correctie door u zou ik, indien
+mogelijk, toch gaarne proeven krijgen, althans een revisieproef. Kan
+dan <hi rend="i">[sic]</hi> niet, verbeter dan zorgvuldig, want ik <hi rend="i">[sic]</hi>
+het boekje van Manteau staat, als ik mij goed herinner, &eacute;&eacute;n
+grove fout, maar ik weet niet meer op welke plaats. Vind ik ze terug
+dan bericht ik u nader."<xref type="note" id="sdendnote27anc" to="#sdendnote27sym">27</xref>
+Vanwege het trage briefverkeer vond Van Kampen het zenden van proeven
+bezwaarlijk, maar hij beloofde de tekst nauwkeurig te corrigeren.<xref type="note" id="sdendnote28anc" to="#sdendnote28sym">28</xref>
+Dat viel nog niet mee. De door Elsschot bedoelde fout in "Achter
+de Schermen" werd weliswaar hersteld, maar tegelijkertijd
+ontstonden er nieuwe fouten, ook grove: in twee gevallen viel een
+zinsdeel weg, met als gevolg de rare constructies "En nu zullen
+mijn klanten stikken in mijn geld" en "Want klinkt zij
+valsch dan schaam ik mij dood".</p>
+<p>
+De tweede druk van <hi rend="i">Tsjip/De
+Leeuwentemmer</hi> verscheen in maart/april 1944, in een vermoedelijke
+oplage van rond de 6500 exemplaren.</p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="OpdD6">OpdD6</xref>
+<xref type="extra" to="AdsD5">AdsD5</xref></hi></p>
+<p><hi rend="i">Tsjip/De
+Leeuwentemmer</hi>, derde druk</p>
+<p>Maart
+1952</p>
+<p><lb/>
+</p>
+<p>Pas
+in 1952 was de enorme voorraad van de eerste en tweede druk kennelijk
+genoeg geslonken dat Van Kampen een nieuwe druk van <hi rend="i">Tsjip/De
+Leeuwentemmer</hi> aandurfde.<xref type="note" id="sdendnote29anc" to="#sdendnote29sym">29</xref>
+Over de voorbereidingen van deze herdruk, die in maart 1952
+verscheen, is niets bekend. Uit de tekstvergelijking valt af te
+leiden dat Elsschot zich niet actief met de totstandkoming van de
+uitgave heeft bemoeid: van de in totaal circa zeventig verschillen
+die de derde druk ten opzichte van de tweede vertoont, zouden hooguit
+tien van hem afkomstig kunnen zijn.<xref type="note" id="sdendnote30anc" to="#sdendnote30sym">30</xref>
+Waarschijnlijker is evenwel dat dergelijke veranderingen zijn
+aangebracht door de corrector, die nogal eigenzinnig te werk ging bij
+het omzetten van de tekst in de nieuwe spelling. Zo corrigeerde hij
+in "Achter de Schermen" de spelling "ontheiligd,"
+in "ontheiligt," omdat hij kennelijk de samentrekking
+niet doorzag, en veranderde hij eveneens ten onrechte de zin "In
+ieder geval beteekent [...]" in "In ieder geval beteekent
+'t [...]"</p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="OpdP1">OpdP1</xref>
+<xref type="extra" to="AdsP1">AdsP1</xref></hi></p>
+<p>Eerste
+drukproef voor het <hi rend="i">Verzameld werk</hi></p>
+<p>December
+1956/januari 1957</p>
+<p>Particuliere
+collectie</p>
+<p><lb/>
+</p>
+<p>De
+laatste door Elsschot geautoriseerde druk van <hi rend="i">Tsjip/De
+Leeuwentemmer</hi> is de opname van de roman in het <hi rend="i">Verzameld werk</hi>,
+dat in maart 1957 ter gelegenheid van de vijfenzeventigste verjaardag
+van de auteur verscheen. Het plan voor deze uitgave was reeds in mei
+1956 door Van Kampen aan de schrijver voorgelegd, en vanaf dat moment
+heeft Elsschot zich intensief met de totstandkoming van het boek
+bemoeid. Ook heeft hij de drukproeven van de uitgave zelf
+gecorrigeerd. In de eerste proef, die alleen van <hi rend="i">Tsjip</hi> bewaard
+bleef (gedateerd 29 december 1956), bracht hij met name in "Achter
+de Schermen" een aantal woordvarianten aan en veranderde hij de
+ondertitel ervan: "Ontleding van de inleiding tot Tsjip".
+Elsschot stuurde de proef op 10 januari 1957 aan de uitgever terug
+met het verzoek het geheel nog eens "door iemand van uw staf te
+laten herlezen", omdat hij in <hi rend="i">De Leeuwentemmer</hi> de naam
+"Willem" in "Walter" had veranderd maar niet
+instond voor "eventueel over het hoofd geziene Willems".<xref type="note" id="sdendnote31anc" to="#sdendnote31sym">31</xref>
+Dat kon aardig kloppen: een maand later (de proef was zoekgeraakt)
+maakte de uitgever Elsschot erop attent dat hij wel de "Willem"
+uit <hi rend="i">De Leeuwentemmer</hi> had omgedoopt in "Walter",
+maar niet die uit <hi rend="i">Tsjip</hi>.<xref type="note" id="sdendnote32anc" to="#sdendnote32sym">32</xref></p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="OpdP2">OpdP2</xref>
+<xref type="extra" to="AdsP2">AdsP2</xref></hi></p>
+<p>Tweede
+drukproef voor het <hi rend="i">Verzameld werk</hi></p>
+<p>Februari
+1957</p>
+<p>Particuliere
+collectie</p>
+<p><lb/>
+</p>
+<p>De
+naamkwestie was voor Elsschot aanleiding om een nieuwe proef te
+eisen, "om te controleren dat geen enkele Willem aan uw
+aandacht ontsnapt is". De dubbele controle van de revisieproef
+was op dit punt doeltreffend, maar kon niet verhinderen dat er nog
+verschillende schoonheidsfoutjes in de tekst zouden blijven staan, al
+bleven de "Opdracht" en "Achter de Schermen"
+ditmaal redelijk gespaard.<xref type="note" id="sdendnote33anc" to="#sdendnote33sym">33</xref></p>
+<p><lb/>
+</p>
+<p><hi rend="b"><xref type="extra" to="OpdD7">OpdD7</xref>
+<xref type="extra" to="AdsD6">AdsD6</xref></hi></p>
+<p><hi rend="i">Verzameld
+werk</hi>, eerste druk</p>
+<p>Maart
+1957</p>
+<p><lb/>
+</p>
+<p>Reeds
+v&oacute;&oacute;r de verschijning van de eerste oplage van het
+<hi rend="i">Verzameld werk</hi> in maart 1957 &ndash; die door een verkeerde
+calculatie uit 4530 exemplaren in plaats van de geplande 5000
+exemplaren bestond &ndash; had Van Kampen besloten een tweede oplage
+(van 6800 exemplaren) te maken, die in juli 1957 verscheen. Vanwege
+het enorme verkoopsucces bracht de uitgever twee maanden later, in
+september, een derde oplage op de markt (4380 exemplaren).<xref type="note" id="sdendnote34anc" to="#sdendnote34sym">34</xref>
+Van de in totaal 15710 exemplaren waren er aan het einde van het jaar
+nog 6200 exemplaren over. Aangezien deze voorraad naar de inschatting
+van Van Kampen groot genoeg was voor de eerstvolgende jaren, kon het
+zetsel van het <hi rend="i">Verzameld werk</hi> worden gedistribueerd.<xref type="note" id="sdendnote35anc" to="#sdendnote35sym">35</xref>
+Een nieuwe druk van het <hi rend="i">Verzameld werk</hi> verscheen in oktober
+1960, een paar maanden na het overlijden van Elsschot.</p>
+</div>
+<lb/><lb/><lb/>
+<div type="sectie">
+<head>Noten</head>
+<div type="note" id="sdendnote1">
+	<p><xref type="text" id="sdendnote1sym" to="#sdendnote1anc">1</xref>
+	Het onderstaande overzicht is, in gewijzigde vorm, ontleend aan
+	Willem Elsschot, <hi rend="i">Tsjip/De Leeuwentemmer</hi>. Bezorgd door Peter
+	de Bruijn, m.m.v. Wieneke 't Hoen en Lily Hunter. Amsterdam,
+	2003 (<hi rend="i">Volledig werk</hi> 6). In het vervolg aangehaald als VW 6.</p>
+</div>
+<div type="note" id="sdendnote2">
+	<p><xref type="text" id="sdendnote2sym" to="#sdendnote2anc">2</xref>
+	Willem Elsschot, <hi rend="i">Brieven.</hi> Bezorgd door Vic van de Reijt
+	m.m.v. Lidewijde Paris. Amsterdam, 1993, p. 181. In het vervolg
+	aangehaald als <hi rend="i">Brieven</hi>.</p>
+</div>
+<div type="note" id="sdendnote3">
+	<p><xref type="text" id="sdendnote3sym" to="#sdendnote3anc">3</xref>
+	Ongedateerde brief, [&plusmn; mei 1934] (<hi rend="i">Brieven</hi>, p. 186),
+	zie ook <xref type="proza" to="inleiding">de inleiding</xref>. De gestuurde versie is een doorslag,
+	bestaande uit drie bladen, met &eacute;&eacute;n correctie in zwarte
+	inkt.</p>
+</div>
+<div type="note" id="sdendnote4">
+	<p><xref type="text" id="sdendnote4sym" to="#sdendnote4anc">4</xref>
+	Brief aan Menno ter Braak, 20 april 1934 (<hi rend="i">Brieven</hi>, p. 179).
+	Zie uitgebreider &ndash; ook voor de kritiek die <hi rend="i">Tsjip </hi>in
+	katholieke kring oogstte &ndash; VW 6, p. 204-205 en p. 210-211.</p>
+</div>
+<div type="note" id="sdendnote5">
+	<p><xref type="text" id="sdendnote5sym" to="#sdendnote5anc">5</xref>
+	Sindsdien wordt het ook bij de doorslag van <hi rend="i">Tsjip</hi> bewaard in
+	het AMVC-Letterenhuis, met de gestempelde datum van inschrijving:
+	"3.12.1934" (zie voor een beschrijving van de doorslag
+	VW 6, p. 208-209). Naast andere sporen van gebruik (bijvoorbeeld
+	gaten van de zethaak) bewijst de volgende notitie (op blad 24 van de
+	doorslag) dat deze bron als kopij heeft gediend: "Forum. Met
+	het gisteren gezonden gedeelte in 4 keer te zetten."</p>
+</div>
+<div type="note" id="sdendnote6">
+	<p><xref type="text" id="sdendnote6sym" to="#sdendnote6anc">6</xref>
+	In de doorslag was <hi rend="i">Tsjip</hi> aanvankelijk opgedragen aan Ary
+	Delen (zie VW 6, p. 209).</p>
+</div>
+<div type="note" id="sdendnote7">
+	<p><xref type="text" id="sdendnote7sym" to="#sdendnote7anc">7</xref>
+	Zie VW 6, p. 212-213.</p>
+</div>
+<div type="note" id="sdendnote8">
+	<p><xref type="text" id="sdendnote8sym" to="#sdendnote8anc">8</xref>
+	In <hi rend="i">Forum</hi> 3 (1934), afl. 7 (juli), p. 640-649, afl. 8
+	(augustus), p. 704-722, afl. 9 (september), p. 860-884, afl. 10
+	(oktober), p. 913-920 en afl. 11 (november), p. 1097-1106.</p>
+</div>
+<div type="note" id="sdendnote9">
+	<p><xref type="text" id="sdendnote9sym" to="#sdendnote9anc">9</xref>
+	In totaal bevat de versie-<hi rend="i">Forum</hi> van "Tsjip" zo'n
+	veertig spelling- en interpunctievarianten, die door de redactie of
+	een corrector kunnen zijn aangebracht.</p>
+</div>
+<div type="note" id="sdendnote10">
+	<p><xref type="text" id="sdendnote10sym" to="#sdendnote10anc">10</xref>
+	Zie uitgebreider VW 6, p. 213-214.</p>
+</div>
+<div type="note" id="sdendnote11">
+	<p><xref type="text" id="sdendnote11sym" to="#sdendnote11anc">11</xref>
+	Zie <xref type="proza" to="inleiding">de inleiding</xref> en VW 6, p. 215-216. Een overzicht van de
+	receptie is ook te vinden op p. 25-32 van Koen Rymenants, "Elsschot
+	en de Forumianen. Aspecten van de kritische receptie van zijn proza
+	(1933-1939)." In: <hi rend="i">Spiegel der letteren</hi> 42 (2000), p.
+	19-48.</p>
+</div>
+<div type="note" id="sdendnote12">
+	<p><xref type="text" id="sdendnote12sym" to="#sdendnote12anc">12</xref>
+	<hi rend="i">Brieven</hi>, p. 194. Zie ook <xref type="proza" to="inleiding">de inleiding</xref>.</p>
+</div>
+<div type="note" id="sdendnote13">
+	<p><xref type="text" id="sdendnote13sym" to="#sdendnote13anc">13</xref>
+	De bladen zijn genummerd 1-18; de later ingevoegde vellen kregen een
+	extensie: "3<hi rend="b">a</hi>" en "6<hi rend="b">a</hi>".
+	Elsschot schonk het manuscript op 19 december 1934 aan het AMVC
+	(<hi rend="i">Brieven</hi>, p. 204; vergelijk de gestempelde datum van
+	inschrijving op het eerste blad: "20.12.1934").</p>
+</div>
+<div type="note" id="sdendnote14">
+	<p><xref type="text" id="sdendnote14sym" to="#sdendnote14anc">14</xref>
+	Van het typoscript is alleen een doorslag bewaard (particuliere
+	collectie), bestaande uit vijftien genummerde bladen en gecorrigeerd
+	in zwarte inkt, grijs, rood en blauw potlood.</p>
+</div>
+<div type="note" id="sdendnote15">
+	<p><xref type="text" id="sdendnote15sym" to="#sdendnote15anc">15</xref>
+	Zie voor een mogelijke aanleiding voor deze opdracht <xref type="proza" to="inleiding">de inleiding</xref>. Ter gelegenheid van de vijftigste verjaardag van Van
+	Nijlen stuurde Elsschot hem "als souvenir" een exemplaar
+	van <hi rend="i">Tsjip</hi> (10 november 1934, <hi rend="i">Brieven</hi>, p. 193-194).
+	Begin januari 1934 had Van Nijlen de voorlezing van <hi rend="i">Tsjip</hi>
+	bijgewoond (VW 6, p. 204).</p>
+</div>
+<div type="note" id="sdendnote16">
+	<p><xref type="text" id="sdendnote16sym" to="#sdendnote16anc">16</xref>
+	Zie <hi rend="i">Brieven</hi>, p. 139 en p. 141.</p>
+</div>
+<div type="note" id="sdendnote17">
+	<p><xref type="text" id="sdendnote17sym" to="#sdendnote17anc">17</xref>
+	Zie <hi rend="i">Brieven</hi>, p. 196-197.</p>
+</div>
+<div type="note" id="sdendnote18">
+	<p><xref type="text" id="sdendnote18sym" to="#sdendnote18anc">18</xref>
+	Overige verschillen betreffen typografie en interpunctie. Mogelijk
+	heeft een ander exemplaar van het typoscript als kopij gediend, want
+	AdsM2 bevat geen sporen van gebruik.</p>
+</div>
+<div type="note" id="sdendnote19">
+	<p><xref type="text" id="sdendnote19sym" to="#sdendnote19anc">19</xref>
+	<hi rend="i">Groot Nederland</hi> 33 (1935), afl. 1 (januari), p. 61-72. Per
+	ingang van de jaargang 1934 maakte Van Nijlen deel uit van de
+	redactie van het tijdschrift.</p>
+</div>
+<div type="note" id="sdendnote20">
+	<p><xref type="text" id="sdendnote20sym" to="#sdendnote20anc">20</xref>
+	Het exemplaar is afkomstig uit Elsschots archief en bevindt zich
+	thans in particulier bezit. Op het omslag noteerde Elsschot
+	rechtsboven in potlood: "Achter de Schermen".</p>
+</div>
+<div type="note" id="sdendnote21">
+	<p><xref type="text" id="sdendnote21sym" to="#sdendnote21anc">21</xref>
+	De overige verschillen in <hi rend="i">Tsjip</hi> betreffen voornamelijk
+	spelling, typografie en interpunctie en zetfouten als "Benek",
+	"trosch" ("trotsch") en "ontknoopig".</p>
+</div>
+<div type="note" id="sdendnote22">
+	<p><xref type="text" id="sdendnote22sym" to="#sdendnote22anc">22</xref>
+	Brief aan Adries Kaas, 29 oktober 1940 (<hi rend="i">Brieven</hi>, p. 401). De
+	ontstaans- en publicatiegeschiedenis van <hi rend="i">De Leeuwentemmer</hi>
+	blijft hier vanzelfsprekend verder buiten beschouwing (zie VW 6, p.
+	221-233).</p>
+</div>
+<div type="note" id="sdendnote23">
+	<p><xref type="text" id="sdendnote23sym" to="#sdendnote23anc">23</xref>
+	Zie <hi rend="i">Brieven</hi>, p. 476-477 en p. 481-483. Manteau vreesde ook
+	dat de citaten van Greshoff op problemen zouden stuiten bij de
+	censuur, die met name in Nederland streng was. De motto's zijn
+	afgedrukt in VW 6, p. 276-277.</p>
+</div>
+<div type="note" id="sdendnote24">
+	<p><xref type="text" id="sdendnote24sym" to="#sdendnote24anc">24</xref>
+	Brieven van respectievelijk 11 en 12 maart 1943 (<hi rend="i">Brieven</hi>, p.
+	494-495).</p>
+</div>
+<div type="note" id="sdendnote25">
+	<p><xref type="text" id="sdendnote25sym" to="#sdendnote25anc">25</xref>
+	Brieven van 17 en 20 mei 1943 (<hi rend="i">Brieven</hi>, p. 504). Van
+	Manteau's belofte om de fout in het zetsel te herstellen
+	voordat de rest van de oplage gedrukt werd, kwam niets terecht (zie
+	VW 6, p. 235-236).</p>
+</div>
+<div type="note" id="sdendnote26">
+	<p><xref type="text" id="sdendnote26sym" to="#sdendnote26anc">26</xref>
+	Brief, particuliere collectie.</p>
+</div>
+<div type="note" id="sdendnote27">
+	<p><xref type="text" id="sdendnote27sym" to="#sdendnote27anc">27</xref>
+	Brief, 20 november 1943, particuliere collectie.</p>
+</div>
+<div type="note" id="sdendnote28">
+	<p><xref type="text" id="sdendnote28sym" to="#sdendnote28anc">28</xref>
+	Brief, 30 november 1943, particuliere collectie.</p>
+</div>
+<div type="note" id="sdendnote29">
+	<p><xref type="text" id="sdendnote29sym" to="#sdendnote29anc">29</xref>
+	In 1947 had Van Kampen de resterende 7800 exemplaren van de
+	Manteau-uitgave overgenomen, waarover nog een financieel conflict
+	tussen de uitgever en Elsschot ontstond (zie VW 6, p. 238-239).</p>
+</div>
+<div type="note" id="sdendnote30">
+	<p><xref type="text" id="sdendnote30sym" to="#sdendnote30anc">30</xref>
+	Zie VW 6, p. 239.</p>
+</div>
+<div type="note" id="sdendnote31">
+	<p><xref type="text" id="sdendnote31sym" to="#sdendnote31anc">31</xref>
+	Brief, particuliere collectie (zie VW 6, p. 240).</p>
+</div>
+<div type="note" id="sdendnote32">
+	<p><xref type="text" id="sdendnote32sym" to="#sdendnote32anc">32</xref>
+	Brief, particuliere collectie.</p>
+</div>
+<div type="note" id="sdendnote33">
+	<p><xref type="text" id="sdendnote33sym" to="#sdendnote33anc">33</xref>
+	Zie VW 6, p. 242. De proef is gedateerd 20 februari 1957; op het
+	eerste blad staat: "S.v.p. omgaand fiat voor afdrukken!"
+	Het overgeleverde exemplaar, afkomstig uit Elsschots archief, is
+	ongecorrigeerd.</p>
+</div>
+<div type="note" id="sdendnote34">
+	<p><xref type="text" id="sdendnote34sym" to="#sdendnote34anc">34</xref>
+	De nieuwe oplagen worden overigens ten onrechte aangeduid als tweede
+	en derde druk: het zijn ongewijzigde oplagen, vervaardigd van het
+	staand zetsel van de eerste druk.</p>
+</div>
+<div type="note" id="sdendnote35">
+	<p><xref type="text" id="sdendnote35sym" to="#sdendnote35anc">35</xref>
+	In 1958 gaf Van Kampen <hi rend="i">Tsjip/De Leeuwentemmer</hi> ook nog
+	afzonderlijk uit, in een uitgave die wordt aangeduid als de tiende
+	druk van <hi rend="i">Tsjip</hi>, respectievelijk de achtste druk van <hi rend="i">De
+	Leeuwentemmer</hi>. In werkelijkheid gaat het om een nieuwe
+	"gedeeltelijke" oplage van het <hi rend="i">Verzameld werk</hi>: de
+	tekst is gedrukt van hetzelfde zetsel, alleen de titelpagina en
+	paginering werden aangepast.</p>
+</div>
+</div>
+
+</body>
+</text>
+</TEI.2>

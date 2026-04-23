@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE TEI.2 PUBLIC "-//UA//DTD Ads (based on TEI)//NL" "../dtd/Ads.dtd"
+[
+]>
+
+<TEI.2>
+ <teiHeader creator="Dirk Van Hulle" date.created="2000-06-08">
+ <fileDesc>
+ <titleStmt>
+  <title>Achter de Schermen: a machine readable transcription</title> 
+  <author id="WE">Willem Elsschot</author> 
+  <principal id="DVH">Dirk Van Hulle</principal>
+  <principal id="PDB">Peter De Bruijn</principal> 
+ <funder>
+  <name>Centre for Manuscript Genetics (UA)</name>
+  <name>Huygens Instituut (HI), Koninklijke Nederlandse Akademie van Wetenschappen</name>
+  <name>Centrum voor Teksteditie en Bronnenstudie (CTB), Koninklijke Academie voor Nederlandse Taal- en Letterkunde</name>
+ <address>
+  <addrLine>Universiteit Antwerpen (UA)</addrLine> 
+  <addrLine>Prinsstraat 13</addrLine> 
+  <addrLine>B-2000 Antwerpen</addrLine> 
+  <addrLine>Belgium</addrLine> 
+  <addrLine>tel: +32 (0)3 220 42 46</addrLine> 
+  <addrLine>email: dirk.vanhulle@ua.ac.be</addrLine> 
+  </address>
+  </funder>
+  </titleStmt>
+  <extent /> 
+ <publicationStmt>
+  <authority>Centre for Manuscript Genetics (UA)</authority> 
+  <authority>Huygens Instituut (HI), Koninklijke Nederlandse Akademie van Wetenschappen</authority>
+<authority>Centrum voor Teksteditie en Bronnenstudie (CTB), Koninklijke Academie voor Nederlandse Taal- en Letterkunde</authority>
+  <pubPlace>Antwerp</pubPlace> 
+  <date>2007</date> 
+ <availability status="restricted">
+ <p></p>
+  </availability>
+  </publicationStmt>
+  <sourceDesc>
+  <p></p>
+  </sourceDesc>
+  </fileDesc>
+ <encodingDesc>
+ <projectDesc>
+  <p /> 
+  </projectDesc>
+ <editorialDecl>
+ <p>
+ <list>
+  <item>Correction:</item> 
+  <item>Normalization:</item> 
+  <item>Quotation:</item> 
+  <item>Hyphenation:</item> 
+  <item>Interpretation:</item> 
+  </list>
+  </p>
+  </editorialDecl>
+
+  </encodingDesc>
+  </teiHeader>
+<text id="Opdracht">
+<group>
+<text id="OpdM1">
+<body>
+<div type="sectie">
+<head>TSJIP.</head>
+<div type="subsectie">
+<head>Inleiding.</head>
+<p><pb ed="OpdM1 " n="1"/> Voor de z&oacute;&oacute;veelste maal kom ik thuis van de reis en weer staat mijn stoel gereed, tafel en bed gedekt, pantoffels bij 't vuur, alsof ik  iederen dag verwacht werd. Mijn kinderen hebben heel gewoon "Pa" gezegd en mijn vrouw heeft gevraagd wat ik verkoos, lever of haring. Ik heb niet geantwoord omdat ik  den moed niet had mijn eigen stem aan te  hooren, heb de hand uitgestoken naar wat het dichtst bij stond en zwijgend mijn maag gevuld. Hun gerustheid, hun zekerheid dat ik ook ditmaal  terugkeeren zou heeft mij beschaamd en diep gegriefd. Maar was ik aan 't bulderen gegaan dan had er niets op  over geschoten dan met weerzin weer op te staan. En het trekken lokt mij niet meer.</p>
+<p>Ben ik vermoeid of kan ik het licht van  gindsche land niet meer verdragen? Ik voel in ieder geval dat van een  volgenden tocht niets meer terecht komt. En  dat is  maar goed ook, want mij rest nog maar net de tijd om eindelijk met vrouw en kinderen wat mee te leven, mij te koesteren aan de warmte van  den haard en te werken voor  onzen ouden dag die voor de deur staat. Zoolang ik ginder dwaalde heb ik mijn kinderen niet opgevoed maar met hen gespeeld, voor mijn vrouw niet gezorgd maar van  haar genoten.</p>
+<p>Die Meimaandjes zijn nu voorbij. Hier bij 't vuur, in onze <pb ed="OpdM1 " n="2"/> kooklucht, komt het er op aan mijn plicht te doen als een doodgewoon mannetje dat ik tenslotte ben. Want aller oogen zijn op mij gericht. Doet mijn vrouw haar plicht niet als zij wascht en plast, als zij op griezelige regendagen op de vischmarkt loopt te dwalen zonder acht te slaan op haar aderspatten noch op haar slechten stoelgang ? Doen niet die kinderen eveneens hun plicht wanneer zij achter schoolmuren hun zonnigste dagen slijten?</p>
+<p>Dit is mijn laatste kans want zij groeien als kool en steken de koppen bijeen. Een heeft al een snor en een ouwelijke trek om den mond.  Zij zien in mijn dolen een verloochening en scharen zich zwijgend om hun moeder. En zij hebben gelijk. Als ooit het huis vuur vat dan worden zij door haar gewekt en niet door mij. En had ik ditmaal niet gebukt dan had de bende mij uitgestooten.</p>
+<p>Trouwens, ginder ver is geen plaats voor kerels met een schorre stem, die weten hoe 't in 't leven gaat. Ook d&aacute;&aacute;r voelt men  zich tenslotte verlaten. Ook d&aacute;&aacute;r is men eindelijk nog slechts een vieze vlek in een onbezoedeld landschap, een hoopje vuil in de feestzaal. En stinkt men niet geruster bij den haard   dan in een paradijs?</p>
+<p>Ik heb dus mijn taak als razend aangepakt, mijn ridderorde weer opgestoken en mijn zaken gedreven als een die nooit dat land heeft bereisd. Ik schreef mijn rekeningen met vaste hand, groette al wie mij groette, had een minzaam woord voor vriend en vijand en liet mijn schuldenaars afmaken door een deurwaarder, zooals het hoort. Tot ik op dien heilloozen dag <pb ed="OpdM1 " n="3"/> dat mormel van een kleinkind in huis gewaar werd, met zijn gekraai en zijn bloote billen.</p>
+<p>Toen heb ik mezelf betrapt bij 't sluipen naar den zolder waar ik mijn stok heb opgezocht in stof en spinrag. En nu zullen mijn klanten wachten en 't bestelde niet zien komen. Die nog niet betaald hebben kunnen stikken in mijn geld. Mijn beenen jeuken en ik heb al een toonladder met de keel geschraapt. En voo<add place="boven de regel" rend="zwarte inkt" hand="WE">r</add>uit is de weg. Kom, jongen, vooruit is de weg.</p>
+<p>Mogen vrouw en kinderen mij vergeven dat ik een laatste maal op zoek ben gegaan naar die vermaledijde heerlijkheid waar een gouden vogel jubelt, v&eacute;&eacute;l  dan de leeuwerik.</p>
+</div>
+</div>
+</body>
+</text>
+<text id="OpdM2">
+<body>
+<div type="sectie">
+
+<head>TSJIP.</head>
+<div type="subsectie">
+<head><add place="rechtermarge" rend="zwarte inkt" hand="WE">Aan mijn kleinzoon Jan Maniewski.</add><lb/>Inleiding. </head>
+<p><pb ed="OpdM2 " n="1" /> Voor de z&oacute;&oacute;veelste maal kom ik thuis van de reis en weer staat mijn stoel gereed, tafel en bed gedekt, pantoffels bij 't vuur, alsof ik iederen dag verwacht werd. Mijn kinderen hebben heel gewoon "Pa" gezegd en mijn vrouw heeft gevraagd wat ik verkoos, lever of haring. Ik heb niet geantwoord omdat ik den moed niet had mijn eigen stem aan te hooren, heb de hand uitgestoken naar wat het dichtst bij stond en zwijgend mijn maag gevuld. Hun gerustheid, hun zekerheid dat ik ook ditmaal terugkeeren zou heeft mij beschaamd en diep gegriefd. Maar was ik aan 't bulderen gegaan dan had er niets op over geschoten dan met weerzin weer op te staan. En het trekken lokt mij niet meer.</p>
+<p>Ben ik vermoeid of kan ik het licht van gindsche land niet meer verdragen? Ik voel in ieder geval dat van een volgenden tocht niets meer terecht komt. En zoo is het goed ook, want mij rest nog maar net de tijd om eindelijk met vrouw en kinderen wat mee te leven, mij te koesteren aan de warmte van den haard en te werken voor onzen ouden dag die voor de deur staat. Zoolang ik ginder dwaalde heb ik mijn kinderen niet opgevoed maar met hen gespeeld, voor mijn vrouw niet gezorgd maar van haar genoten.
+</p>
+<p>Die Meimaandjes zijn nu voorbij. Hier bij 't vuur, in onze <pb ed="OpdM2 " n="2"/> kooklucht, komt het er op aan mijn plicht te doen als een doodgewoon mannetje dat ik tenslotte ben. Want hun oogen zijn op mij gericht. Doet mijn vrouw haar plicht niet als zij wascht en plast, als zij op griezelige regendagen op de vischmarkt loopt te dwalen zonder acht te slaan op haar aderspatten noch op haar slechten stoelgang ? Doen niet die kinderen eveneens hun plicht wanneer zij achter schoolmuren hun zonnigste dagen slijten?
+</p>
+<p>Dit is mijn laatste kans want zij groeien als kool en steken de koppen bijeen. Een heeft al een snor en een ouwelijke trek om den mond. Als ik mij nu niet aanpas word ik uitgestooten door die uit mij zijn ontstaan, want zij zien in mijn dolen een verraad en scharen zich zwijgend om hun moeder. En zij hebben gelijk. Als ooit het huis vuur vat dan worden zij door haar gewekt en niet door mij.
+</p><p>Trouwens, ginder ver is geen plaats voor kerels met een schorre stem, die weten hoe 't in 't leven gaat. Ook d&aacute;&aacute;r voelt zoo een zich tenslotte verlaten. Ook d&aacute;&aacute;r is <del type="S" rend="zwarte inkt" hand="WE" resp="DVH">men</del> <add place="boven de regel" rend="zwarte inkt" hand="WE">hij</add> eindelijk nog slechts een vieze vlek in een onbezoedeld landschap, een hoopje vuil in de feestzaal. En zal ik niet geruster bij den haard stinken dan in dat paradijs?
+</p><p>Ik heb dus mijn taak als razend aangepakt, mijn ridderorde weer opgestoken en mijn zaken gedreven als een die nooit dat land heeft bereisd. Ik schreef mijn rekeningen met vaste hand, groette al wie mij groette, had een minzaam woord voor vriend en vijand en liet mijn schuldenaars afmaken door een deurwaarder, zooals het hoort. Tot ik op een heilloozen dag <pb ed="OpdM2 " n="3"/> dat mormel van een kleinzoon in huis gewaar werd, met zijn gekraai en zijn bloote billen.
+</p><p>Toen heb ik mezelf betrapt bij 't sluipen naar den zolder waar ik mijn stok heb opgezocht in stof en spinrag. En nu zullen mijn klanten wachten en niets zien komen. Die nog niet betaald hebben kunnen stikken in mijn geld. Ik heb eerst met de keel een toonladder geschraapt en <del type="S" rend="blauwe inkt" hand="WE" resp="DVH">kraai nu met hem mee.</del> <add place="boven de regel" rend="blauwe inkt" hand="WE">dan met zijn kraaien ingestemd.</add> En mijn beenen jeuken. Kom, jongen, vooruit is de weg.
+</p><p>Mogen vrouw en kinderen mij vergeven dat ik hen een laatste maal verloochen voor die vermaledijde heerlijkheid waar een gouden vogel jubelt, v&eacute;&eacute;l hooger dan de leeuwerik.
+</p>
+</div>
+</div>
+</body>
+</text>
+
+<!-- OpdP1 -->
+<text id="OpdP1">
+<body TEIform="body">
+<div type="sectie" part="N" TEIform="div" sample="complete" org="uniform">
+
+<head TEIform="head">TSJIP.</head>
+<div type="subsectie" part="N" TEIform="div" sample="complete" org="uniform">
+<head TEIform="head"> <hi rend="i" TEIform="hi">Aan mijn kleinzoon Jan Maniewski</hi></head>
+<head TEIform="head"> <hi rend="i" TEIform="hi">OPDRACHT</hi> </head>
+<p TEIform="p"><pb ed="OpdP1a OpdZP1 OpdP1b " n="1" rend="p483"/> Voor de  z&oacute;veelste maal kom ik thuis van de reis en weer staat mijn stoel gereed, tafel en bed gedekt, pantoffels bij 't vuur, alsof ik  iedere dag verwacht werd. Mijn kinderen hebben heel gewoon "Pa" gezegd en mijn vrouw heeft gevraagd wat ik verkoos, lever of haring. Ik heb niet geantwoord omdat ik  de moed niet had mijn eigen stem aan te  horen, heb de hand uitgestoken naar wat het dichtst bij stond en zwijgend mijn maag gevuld. Hun gerustheid, hun zekerheid dat ik ook ditmaal  terugkeren zou heeft mij beschaamd en diep gegriefd. Maar was ik aan 't bulderen gegaan dan had er niets op  over geschoten dan met weerzin weer op te staan. En het trekken lokt mij niet meer.</p>
+<p TEIform="p">Ben ik vermoeid of kan ik het licht van  gindse land niet meer verdragen? Ik voel in ieder geval dat van een  volgende tocht niets meer terecht komt. En  zo is  het goed ook, want mij rest nog maar net de tijd om eindelijk met vrouw en kinderen wat mee te leven, mij te koesteren aan de warmte van  de haard en te werken voor  onze oude dag die voor de deur staat. Zolang ik ginder dwaalde heb ik mijn kinderen niet opgevoed maar met hen gespeeld, voor mijn vrouw niet gezorgd maar van haar genoten.
+</p>
+<p TEIform="p">Die Meinmaandjes zijn nu voorbij. Hier bij 't vuur, in onze kooklucht, komt het er op aan mijn plicht te doen als een doodgewoon mannetje dat ik tenslotte ben. Want hun ogen zijn op mij gericht. Doet mijn vrouw haar plicht niet als zij wast en plast, als zij op griezelige regendagen op de vismarkt loopt te dwalen zonder acht te slaan op haar aderspatten noch op haar slechte stoelgang? Doen niet die kinderen eveneens hun plicht wanneer zij achter schoolmuren hun zonnigste dagen slijten?
+</p>
+<p TEIform="p">Dit is mijn laatste kans want zij groeien als kool en steken de koppen bijeen. Een heeft al een snor en een ouwelijke trek om de mond. Als ik mij nu niet aanpas word ik uitgestoten door mijn eigen broed, want zij zien in mijn dolen een verraad en scharen zich zwijgend om hun moeder. En zij hebben gelijk. Als ooit het huis vuur vat dan worden <del type="S" rend="zwarte inkt" hand="WE" resp="DVH">zijvoor</del> <add place="op de regel" rend="zwarte inkt" hand="WE">zij voor</add> haar gewekt en niet door mij. 
+</p><p TEIform="p">Trouwens, ginder ver is geen plaats voor kerels met een schorre stem, die weten hoe 't in 't leven gaat. Ook d&aacute;&aacute;r voelt zo een zich ten slotte verlaten. Ook d&aacute;&aacute;r is men eindelijk nog slechts een vieze vlek in een onbezoedeld landschap, een hoopje vuil in de feestzaal. En zal ik niet geruster bij de haard zitten stinken dan in dat paradijs?
+</p><p TEIform="p">Ik heb dus mijn taak als razend aangepakt, mijn ridderorde weer opgestoken en mijn zaken gedreven als een die nooit dat land heeft bereisd. Ik schreef mijn <pb ed="OpdP1a OpdZP1 OpdP1b " n="2" rend="p484"/> rekeningen met vaste hand, groette al wie mij groette, had een minzaam woord voor vriend en vijand en liet mijn schuldenaars afmaken door een deurwaarder, zoals het hoort. Tot ik op een heilloze dag dat mormel van een kleinzoon in huis gewaar werd, die met zijn gekraai en zijn blote billen aan ons rotten een eind heeft gemaakt.
+</p><p TEIform="p">Toen heb ik mezelf betrapt bij 't sluipen naar de zolder waar ik mijn staf heb opgezocht in stof en spinrag. En nu zullen mijn klanten wachten en niets zien komen. Die nog niet betaald hebben kunnen stikken in mijn geld. Ik heb eerst met de keel een toonladder geschraapt en dan met zijn kraaien ingestemd. En mijn benen jeuken. Kom, jongen, vooruit is de weg.
+</p>
+<p TEIform="p">Mogen vrouw en kinderen mij vergeven dat ik hen een laatste maal verloochen voor die vermaledijde heerlijkheid waar een gouden vogel jubelt, v&eacute;&eacute;l hoger dan de leeuwerik.
+</p>
+</div>
+</div>
+</body>
+</text>
+
+<text id="OpdDD">
+<front TEIform="front">
+ <div org="uniform" TEIform="div" sample="complete" part="N" id="d0e269">
+   <witList TEIform="witList">
+    <witness sigil="OpdM1 " n="OpdM1" TEIform="witness">1934: eerste typoscript 'Inleiding'</witness>
+    <witness sigil="OpdM2 " n="OpdM2" TEIform="witness">1934: tweede typoscript 'Inleiding'</witness>
+    <witness sigil="OpdT1 " n="OpdT1" TEIform="witness">1934: Tsjip, voorpublicatie in Forum</witness>
+    <witness sigil="OpdD1 " n="OpdD1" TEIform="witness">1934: Tsjip, eerste druk</witness>
+    <witness sigil="OpdD2 " n="OpdD2" TEIform="witness">1936: Tsjip, tweede druk</witness>
+    <witness sigil="OpdD3 " n="OpdD3" TEIform="witness">1942: Tsjip, derde druk</witness>
+    <witness sigil="OpdD4 " n="OpdD4" TEIform="witness">1943: Tsjip/De Leeuwentemmer, eerste druk</witness>
+    <witness sigil="OpdD5 " n="OpdD5" TEIform="witness">1944: Tsjip/De Leeuwentemmer, tweede druk</witness>
+    <witness sigil="OpdD6 " n="OpdD6" TEIform="witness">1952: Tsjip/De Leeuwentemmer, derde druk</witness>
+    <witness sigil="OpdP1a " n="OpdP1a" TEIform="witness">1956-57: Tsjip/De Leeuwentemmer, eerste drukproef voor het Verzameld Werk, getypte tekst</witness>
+    <witness sigil="OpdP1b " n="OpdP1b" TEIform="witness">1956-57: Tsjip/De Leeuwentemmer, eerste drukproef voor het Verzameld Werk, zwarte inkt</witness>
+    <witness sigil="OpdP2 " n="OpdP2" TEIform="witness">1957: Tsjip/De Leeuwentemmer, tweede drukproef voor het Verzameld Werk</witness>
+    <witness sigil="OpdD7 " n="OpdD7" TEIform="witness">1957: Tsjip/De Leeuwentemmer, vierde druk, in het Verzameld Werk</witness>
+   </witList>
+  </div>
+</front>
+<body>
+<div type="sectie">
+
+<head>TSJIP.</head>
+<div type="subsectie">
+<head> <app TEIform="app" n="d0e417"><rdg TEIform="rdg" wit="OpdM1 "></rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 ">Aan mijn kleinzoon Jan Maniewski.</rdg><rdg TEIform="rdg" wit="OpdD1 OpdD2 OpdD3 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 "><hi rend="i">Aan mijn kleinzoon Jan Maniewski</hi></rdg><rdg TEIform="rdg" wit="OpdD4 OpdD5 "><hi rend="i">Aan mijnen kleinzoon Jan Maniewski</hi></rdg></app><note>de volgorde van titel en opdracht is veranderd in de verschillende versies: in OpdM2 staat de opdracht boven de titel \'Tsjip. Inleiding\', in OpdT staat de opdracht tussen \'TSJIP\' en \'Opdracht\' in. Vanaf OpdD1 staat de opdracht op een aparte (titel)pagina.</note></head>
+<head> <app TEIform="app" n="d0e418"><rdg TEIform="rdg" wit="OpdM1 OpdM2 ">Inleiding.</rdg><rdg TEIform="rdg" wit="OpdT1 "><hi rend="i">Opdracht</hi></rdg><rdg TEIform="rdg" wit="OpdD1 OpdD2 OpdD3 ">OPDRACHT</rdg><rdg TEIform="rdg" wit="OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 "><hi rend="i">OPDRACHT</hi></rdg></app> </head>
+<p><seg base="z001"><pb ed="OpdM1 OpdM2 OpdD1 OpdD2 OpdD3 OpdD5 " n="1" /><pb ed="OpdT1 " n="1" rend="p640"/><pb ed="OpdD4 OpdD6 " n="1" rend="p5"/><pb ed="OpdP1a OpdP2 OpdZP1 OpdP1b OpdD7 " n="1" rend="p483"/> Voor de  <app TEIform="app" n="d0e419"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">z&oacute;&oacute;veelste</rdg><rdg TEIform="rdg" wit="OpdT1 ">zooveelste</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">z&oacute;veelste</rdg></app> maal kom ik thuis van de reis en weer staat mijn stoel gereed, tafel en bed gedekt, pantoffels bij 't vuur, alsof ik  <app TEIform="app" n="d0e420"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">iederen</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">iedere</rdg></app> dag verwacht werd.</seg> <seg base="z002">Mijn kinderen hebben heel gewoon "Pa" gezegd en mijn vrouw heeft gevraagd wat ik verkoos, lever of haring.</seg> <seg base="z003">Ik heb niet geantwoord omdat ik  <app TEIform="app" n="d0e421"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">den</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">de</rdg></app> moed niet had mijn eigen stem aan te  <app TEIform="app" n="d0e422"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">hooren</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">horen</rdg></app>, heb de hand uitgestoken naar wat het dichtst bij stond en zwijgend mijn maag gevuld.</seg> <seg base="z004">Hun gerustheid, hun zekerheid dat ik ook ditmaal  <app TEIform="app" n="d0e423"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">terugkeeren</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">terugkeren</rdg></app> zou heeft mij beschaamd en diep gegriefd.</seg> <seg base="z005">Maar was ik aan 't bulderen gegaan dan had er niets op  <app TEIform="app" n="d0e424"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">over geschoten</rdg><rdg TEIform="rdg" wit="OpdT1 ">overgeschoten</rdg></app> dan met weerzin weer op te staan.</seg> <seg base="z006">En het trekken lokt mij niet meer.</seg></p>
+<p><lb ed="OpdD1 "/><seg base="z006">Ben ik vermoeid of kan ik het licht van  <app TEIform="app" n="d0e425"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">gindsche</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">gindse</rdg></app> land niet meer verdragen? Ik voel in ieder geval dat van een  <app TEIform="app" n="d0e426"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">volgenden</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">volgende</rdg></app> tocht niets meer terecht komt.</seg> <seg base="z007">En  <app TEIform="app" n="d0e427"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 ">dat</rdg><rdg TEIform="rdg" wit="OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">zoo</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">zo</rdg></app> is  <app TEIform="app" n="d0e427"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 ">maar</rdg><rdg TEIform="rdg" wit="OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">het</rdg></app> <pb ed="OpdD1 " n="2"/> goed ook, want mij rest nog maar net de tijd <pb ed="OpdD2 OpdD3 " n="2"/> om eindelijk met vrouw en kinderen wat mee te leven, mij te koesteren aan de warmte van  <app TEIform="app" n="d0e429"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">den</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">de</rdg></app> haard en te werken voor  <app TEIform="app" n="d0e430"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">onzen ouden</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">onze oude</rdg></app> dag die voor de deur staat.</seg> <seg base="z008"><app TEIform="app" n="d0e431"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">Zoolang</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">Zolang</rdg></app> ik ginder dwaalde heb ik mijn kinderen niet opgevoed maar met hen gespeeld, voor mijn vrouw niet gezorgd maar van haar genoten.</seg>
+</p>
+<p><seg base="z009">Die Meimaandjes zijn nu voorbij.</seg> <seg base="z010">Hier bij 't vuur, in onze <pb ed="OpdM1 OpdM2 " n="2"/> kooklucht, komt het er op aan mijn plicht te doen als een doodgewoon mannetje dat ik tenslotte ben.</seg> <seg base="z011">Want <app TEIform="app" n="d0e433"><rdg TEIform="rdg" wit="OpdM1 ">aller</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">hun</rdg></app> <app TEIform="app" n="d0e433a"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">oogen</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">ogen</rdg></app> zijn op mij gericht.</seg> <seg base="z012">Doet mijn vrouw haar plicht niet als zij <app TEIform="app" n="d0e434"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">wascht</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">wast</rdg></app> en plast, als zij op griezelige regendagen op de <app TEIform="app" n="d0e435"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">vischmarkt</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">vismarkt</rdg></app> loopt te dwalen zonder acht te slaan op haar <app TEIform="app" n="d0e436"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">aderspatten noch op haar <app TEIform="app" n="d0e436a"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD3 OpdD4 OpdD5 ">slechten</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">slechte</rdg></app> stoelgang<app TEIform="app" n="d0e436b"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdD1 OpdD6 "> ?</rdg><rdg TEIform="rdg" wit="OpdT1 OpdD3 OpdD4 OpdD5 OpdP1a OpdP2 OpdD7 OpdZP1 ">?</rdg></app></rdg><rdg TEIform="rdg" wit="OpdD2 ">aderspatten?</rdg></app></seg> <seg base="z013">Doen <pb ed="OpdD5 " n="2"/><pb ed="OpdT1 " n="2" rend="p641"/> niet die kinderen eveneens hun plicht wanneer zij achter schoolmuren hun zonnigste dagen slijten?</seg>
+</p>
+<p><seg base="z014"><pb ed="OpdD4 " n="2" rend="p6"/><pb ed="OpdD6 " n="2" rend="p6"/> Dit is mijn laatste kans want zij groeien als kool en steken de koppen bijeen.</seg> <seg base="z015">Een heeft al een snor en een ouwelijke trek om <app TEIform="app" n="d0e438"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">den</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">de</rdg></app> mond.</seg> <seg base="z016"><app TEIform="app" n="d0e438zz"><rdg TEIform="rdg" wit="OpdM1 "></rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">Als ik mij nu niet aanpas word ik <app TEIform="app" n="d0e432ze"><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">uitgestooten</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">uitgestoten</rdg></app> door <app TEIform="app" n="d0e432zd"><rdg TEIform="rdg" wit="OpdM2 OpdT1 ">die uit mij zijn ontstaan,</rdg><rdg TEIform="rdg" wit="OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">mijn eigen broed,</rdg></app> want</rdg></app> <app TEIform="app" n="d0e438zz"><rdg TEIform="rdg" wit="OpdM1 ">Zij</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">zij</rdg></app> zien in mijn dolen een <app TEIform="app" n="d0f438"><rdg TEIform="rdg" wit="OpdM1 ">verloochening</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">verraad</rdg></app> en scharen zich zwijgend om hun moeder.</seg> <seg base="z017">En zij hebben gelijk.</seg> <seg base="z018">Als ooit het huis vuur vat dan worden zij<app TEIform="app" n="xyz238"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1b OpdP2 OpdD7 OpdZP1 "> </rdg><rdg TEIform="rdg" wit="OpdP1a "></rdg></app><app TEIform="app" n="xyz438"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP2 OpdD7 ">door</rdg><rdg TEIform="rdg" wit="OpdP1a OpdZP1 ">voor</rdg></app> haar gewekt en niet door mij. <app TEIform="app" n="d0g438"><rdg TEIform="rdg" wit="OpdM1 ">En had ik ditmaal niet gebukt dan had de bende mij uitgestooten.</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 "></rdg></app></seg>
+</p><p><seg base="z019"><pb ed="OpdD1 OpdD2 OpdD3 " n="3"/> Trouwens, ginder ver is geen plaats voor kerels met een schorre stem, die weten hoe 't in 't leven gaat.</seg> <seg base="z020">Ook d&aacute;&aacute;r voelt <app TEIform="app" n="d0g439"><rdg TEIform="rdg" wit="OpdM1 ">men</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">zoo</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">zo</rdg></app> <app TEIform="app" n="d0g440"><rdg TEIform="rdg" wit="OpdM1 "></rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">een</rdg></app> zich <app TEIform="app" n="d0g441"><rdg TEIform="rdg" wit="OpdM1 OpdM2 ">tenslotte</rdg><rdg TEIform="rdg" wit="OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">ten slotte</rdg></app> verlaten.</seg> <seg base="z021">Ook d&aacute;&aacute;r is <app TEIform="app" n="d0g442"><rdg TEIform="rdg" wit="OpdM1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">men</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 ">hij</rdg></app> eindelijk nog slechts een vieze vlek in een onbezoedeld landschap, een hoopje vuil in de feestzaal.</seg> <seg base="z022">En <app TEIform="app" n="d0g443"><rdg TEIform="rdg" wit="OpdM1 ">stinkt men</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">zal ik</rdg></app> niet geruster bij <app TEIform="app" n="d0g444"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">den</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">de</rdg></app> haard <app TEIform="app" n="d0g445"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 "></rdg><rdg TEIform="rdg" wit="OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">zitten</rdg></app> <app TEIform="app" n="d0g443"><rdg TEIform="rdg" wit="OpdM1 "></rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">stinken</rdg></app> dan in <app TEIform="app" n="d0g446"><rdg TEIform="rdg" wit="OpdM1 ">een</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">dat</rdg></app> paradijs?</seg>
+</p><p><seg base="z023">Ik heb dus mijn taak als razend aangepakt, mijn ridderorde weer opgestoken en mijn zaken gedreven als een die nooit dat land heeft bereisd.</seg> <seg base="z024">Ik schreef mijn <pb ed="OpdP1a OpdP2 OpdZP1 OpdP1b OpdD7 " n="2" rend="p484"/> rekeningen met vaste hand, groette al wie mij groette, had een minzaam woord voor vriend en vijand en liet mijn schuldenaars afmaken door een deurwaarder, <app TEIform="app" n="d0g447"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">zooals</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">zoals</rdg></app> het hoort.</seg> <seg base="z025">Tot ik op <app TEIform="app" n="d0g448"><rdg TEIform="rdg" wit="OpdM1 ">dien</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">een</rdg></app> <app TEIform="app" n="d0g449"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">heilloozen</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">heilloze</rdg></app> dag <pb ed="OpdM1 OpdM2 " n="3"/> dat mormel van een <app TEIform="app" n="d0g50"><rdg TEIform="rdg" wit="OpdM1 ">kleinkind</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">kleinzoon</rdg></app> in huis gewaar werd, <app TEIform="app" n="d0g51"><rdg TEIform="rdg" wit="OpdM1 OpdM2 "></rdg><rdg TEIform="rdg" wit="OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">die</rdg></app> met zijn gekraai en zijn <app TEIform="app" n="d0g452"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">bloote</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">blote</rdg></app> billen<app TEIform="app" n="d0g51"><rdg TEIform="rdg" wit="OpdM1 OpdM2 ">.</rdg><rdg TEIform="rdg" wit="OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 "> aan ons rotten een eind heeft gemaakt.</rdg></app></seg>
+</p><p><seg base="z026">Toen heb ik mezelf betrapt bij 't sluipen naar <app TEIform="app" n="d0g453"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">den</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">de</rdg></app> zolder waar ik mijn <app TEIform="app" n="d0g454"><rdg TEIform="rdg" wit="OpdM1 OpdM2 OpdT1 OpdD1 OpdD2 ">stok</rdg><rdg TEIform="rdg" wit="OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">staf</rdg></app> heb opgezocht in stof en spinrag.</seg> <seg base="z027">En nu zullen mijn klanten wachten en <app TEIform="app" n="d0g455"><rdg TEIform="rdg" wit="OpdM1 ">'t bestelde niet zien</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">niets zien</rdg></app> komen.</seg> <seg base="z028">Die nog niet betaald hebben kunnen stikken in mijn geld.</seg> <seg base="z029"><app TEIform="app" n="d0g456"><rdg TEIform="rdg" wit="OpdM1 ">Mijn beenen jeuken en ik heb al een toonladder met de keel geschraapt.</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">Ik heb eerst met de keel een toonladder geschraapt en dan met zijn kraaien ingestemd.</rdg></app></seg> <seg base="z030"><app TEIform="app" n="d0g457"><rdg TEIform="rdg" wit="OpdM1 ">En vooruit is de weg.</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">En mijn <app TEIform="app" n="d0g458"><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">beenen</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">benen</rdg></app> <pb ed="OpdD1 " n="4"/> jeuken.</rdg></app></seg> <seg base="z031">Kom, jongen, vooruit is de weg.</seg>
+</p>
+<p><pb ed="OpdD2 OpdD3 " n="4"/> <seg base="z030">Mogen vrouw en kinderen mij vergeven dat ik <app TEIform="app" n="d0g459"><rdg TEIform="rdg" wit="OpdM1 ">een laatste maal op zoek ben gegaan naar</rdg><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">hen een laatste maal verloochen voor</rdg></app> die vermaledijde heerlijkheid waar een gouden vogel jubelt, v&eacute;&eacute;l <app TEIform="app" n="d0g460"><rdg TEIform="rdg" wit="OpdM2 OpdT1 OpdD1 OpdD2 OpdD3 OpdD4 OpdD5 ">hooger</rdg><rdg TEIform="rdg" wit="OpdD6 OpdP1a OpdP2 OpdD7 OpdZP1 ">hoger</rdg></app> dan de leeuwerik.</seg>
+</p>
+</div>
+</div>
+</body>
+</text>
+</group>
+</text>
+</TEI.2>
