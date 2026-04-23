@@ -23,9 +23,10 @@
 - HTML sustainability review: `<strike>` → `<del>`; `<b>` → `<strong>`; `<font color="...">` → `<span class="...">`; block-level `<add>` content wrapped in `<div>` rather than `<span>`; nested `<del>` rendered as `<span class="del">`; `<a name="...">` → `<a id="...">`; all `<img>` tags given `alt` attributes; page break anchor ids prefixed with `p`; `emph[@rend='signed']` outputs `<span class="signed">` inside `<p>`, `<div class="signed">` elsewhere; `<div class="variant">` and `<ul>`/`<li>` inside inline contexts replaced with `<span class="variant">` and `<span class="variant-item">` to avoid block-in-inline validity errors
 
 ### Known limitations
-- Two note popups fall between paragraph elements due to `<pb>` placement in the source XML. The resulting orphaned `<span>` elements are technically invalid HTML but render correctly in all browsers. Not fixable at the XSLT level without modifying the source XML.
-- Nested `<del>` within `<del>` (reflecting legitimate TEI encoding of overlapping deletions) cannot be represented as nested `<del>` in HTML; inner deletions are rendered as `<span class="del">` instead.
+- Two note popups fall between paragraph elements due to `<pb>` placement in the source XML. The resulting orphaned `<span>` elements are technically invalid HTML but render correctly in all browsers. Not fixable at the XSLT level without modifying the source XML
+- Nested `<del>` within `<del>` (reflecting legitimate TEI encoding of overlapping deletions) cannot be represented as nested `<del>` in HTML; inner deletions are rendered as `<span class="del">` instead
 
 ### Added
 
 - Added `<meta>` tags throughout: `charset`, `viewport`, `description`, `author`, Dublin Core (`DC.title`, `DC.creator`, `DC.date`, `DC.language`, `DC.rights`) for correct character rendering, accessibility, and long-term preservation discoverability
+- Added a page of meta information about the 2026 webpublication, with a link to this repository (2026.html), reachable via the home page and the colophon page

@@ -38,6 +38,12 @@ A core principle of the conversion was to leave the XML source files entirely
 unaltered, restricting all changes to the XSLT, CSS, and JavaScript that 
 generate the web interface.
 
+The most significant structural change was the replacement of Cocoon’s
+parameter-based URL system with a fully static file structure, in which
+each combination of document, view, and parameters is represented as a
+distinct HTML file. See [URL-MAPPING.md](URL-MAPPING.md) for a complete 
+description of this mapping.
+
 A full account of the conversion process, including the challenges of
 manifest generation and the hybrid approach used to produce the
 authoritative build manifest, will be documented in an accompanying article.
@@ -61,6 +67,7 @@ ads/
 │   └── css/         (stylesheets)
 ├── build/           (build tooling and authoritative manifest)
 ├── output/          (build target — not tracked by Git)
+├── URL-MAPPING.md   (documentation of dynamic-to-static URL conversion)
 └── CHANGES.md       (record of all changes made during conversion)
 ```
 
