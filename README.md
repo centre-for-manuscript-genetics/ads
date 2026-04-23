@@ -34,6 +34,10 @@ edition is generated directly from the original TEI XML source files
 using Saxon-HE and a Python build workflow, without scraping or
 post-processing the dynamic application's output.
 
+A core principle of the conversion was to leave the XML source files entirely 
+unaltered, restricting all changes to the XSLT, CSS, and JavaScript that 
+generate the web interface.
+
 A full account of the conversion process, including the challenges of
 manifest generation and the hybrid approach used to produce the
 authoritative build manifest, will be documented in an accompanying article.

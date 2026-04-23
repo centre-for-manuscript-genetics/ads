@@ -1,10 +1,12 @@
 ## Conversion to static HTML (2026)
 
 ### Removed
+- Removed the search engine
 - Removed Flash-based zoom views (docfacszoom, docfacstopozoom)
 - Removed "Printvriendelijke versie" from "Visualisatie" menu
 - Removed "Visualisatie" and "Variantenapparaat" menu in all views except text view
-- Inleiding: removed link to printable version of illustrative photographs
+- "Inleiding": removed link to printable version of illustrative photographs
+- Removed the "Exit button" from the navigation bar
 - Home screen: removed a now defunct passage about the "Exit button"
 
 ### Changed
@@ -23,7 +25,6 @@
 ### Known limitations
 - Two note popups fall between paragraph elements due to `<pb>` placement in the source XML. The resulting orphaned `<span>` elements are technically invalid HTML but render correctly in all browsers. Not fixable at the XSLT level without modifying the source XML.
 - Nested `<del>` within `<del>` (reflecting legitimate TEI encoding of overlapping deletions) cannot be represented as nested `<del>` in HTML; inner deletions are rendered as `<span class="del">` instead.
-- Layout tables (`<table class="outside">`, `<table class="main">`) retained from the original edition. Replacing them with CSS flexbox or grid layout would risk visual regressions without meaningful preservation benefit; browser support for `<table>` is permanent.
 
 ### Added
 
