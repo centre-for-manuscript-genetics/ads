@@ -26,7 +26,7 @@ build/
 ├── BuildServer.class            (persistent Saxon worker — compiled, Java 8 target)
 ├── build_server.py              (primary build script)
 ├── build.py                     (fallback build script)
-└── manifest-final.json          (authoritative build manifest — 54,731 jobs)
+└── manifest-final.json          (authoritative build manifest — 54,732 jobs)
 ```
 
 Source XML and stylesheets are in `../source/xml/` and
@@ -34,7 +34,7 @@ Source XML and stylesheets are in `../source/xml/` and
 
 ## The manifest
 
-`manifest-final.json` is the authoritative list of all 54,731 output files,
+`manifest-final.json` is the authoritative list of all 54,732 output files,
 each with its source XML, stylesheet, and XSLT parameters. It is a fixed
 editorial artifact and should be treated as read-only.
 
@@ -44,10 +44,11 @@ subwitness inheritance, and apparatus structure — that is not fully
 recoverable from the source files. The manifest was produced by a hybrid
 process: empirical discovery via the live Cocoon application (which served
 as ground truth), cross-referenced against parameter mappings derived from
-the source XML, with residual gaps patched manually. This process is
-documented in the accompanying article. Do not attempt to regenerate the
-manifest by parsing the source XML; the result will be both incomplete and
-over-inclusive.
+the source XML, with residual gaps patched manually. This process will be
+documented in an article. The scripts used during this process
+are preserved in `conversion/` for documentary purposes; they are not part
+of the normal build workflow. Do not attempt to regenerate the manifest by
+parsing the source XML; the result will be both incomplete and over-inclusive.
 
 ## Quickstart
 
@@ -73,7 +74,7 @@ startup and reuses them for all subsequent jobs, eliminating per-file JVM
 startup overhead.
 
 **Measured performance: 230.7 jobs/sec on Apple M5 (14 workers) —
-full build (54,731 files) in under 4 minutes.**
+full build (54,732 files) in under 4 minutes.**
 
 Options:
 
