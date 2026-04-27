@@ -25,7 +25,7 @@
 </p>-->
 </div>
 
-<!-- STATIC CONVERSION 2026-04-21: HTML review --><!-- STATIC CONVERSION 2026-04-22: added a line about the conversion, with a link to a changelog. --><p class="editors">Editie bezorgd door Peter de Bruijn, Vincent Neyt en Dirk Van Hulle<br/> <a href="2026.html">Webpublicatie 2026</a></p>
+<!-- STATIC CONVERSION 2026-04-21: HTML review --><!-- STATIC CONVERSION 2026-04-22: added a line about the conversion, with a link to a changelog. --><p class="editors">Editie bezorgd door Peter de Bruijn, Vincent Neyt en Dirk Van Hulle<br/> Eerste publicatie 2007. <a href="2026.html">Webpublicatie 2026</a></p>
 
 
 </xsl:template>
@@ -48,8 +48,8 @@
 <xsl:template name="web2026">
 	<div class="sectie">Webpublicatie 2026</div>
 	<p class="spacer"/>
-	<p class="web2026">De editie verscheen oorspronkelijk in 2007 als cd-rom publicatie. In 2026 herwerkte Vincent Neyt de originele cd-rom versie uit 2007 tot een statische webpublicatie met het oog op duurzame bewaring en vrije verspreiding.</p>
-	<p class="web2026">De onderliggende HTML-code werd bijgewerkt naar huidige standaarden. Een aantal functionaliteiten werd licht aangepast: de mogelijkheid om twee willekeurige versies te vergelijken werd vereenvoudigd, en bij de afbeeldingen van het manuscript van 'Achter de Schermen' werd de zoomweergave op basis van Flash verwijderd. De cd-rom versie bood daarnaast een zoekfunctie en een printvriendelijke weergave; deze zijn in deze webpublicatie niet langer beschikbaar.</p>
+	<p class="web2026">De editie verscheen oorspronkelijk in 2007 als cd-rom publicatie. In 2026 herwerkte Vincent Neyt de originele cd-rom versie uit 2007 tot een statische webpublicatie met het oog op duurzame bewaring en vrije verspreiding. Inhoudelijk is er aan de editie niets veranderd.</p>
+	<p class="web2026">De onderliggende HTML-code werd bijgewerkt naar huidige standaarden. Een aantal functionaliteiten werd licht aangepast: de mogelijkheid om twee willekeurige versies te vergelijken werd vereenvoudigd, en bij de afbeeldingen van het manuscript van <i>Achter de Schermen</i> werd de zoomweergave op basis van Flash verwijderd. De cd-rom versie bood daarnaast een zoekfunctie en een printvriendelijke weergave; deze zijn in deze webpublicatie niet langer beschikbaar.</p>
 	<p class="web2026">De gebruiksaanwijzing werd herzien om de huidige editie te beschrijven.</p>
 	<p class="web2026">De bronbestanden (XML, XSLT) en de bouwscripts zijn beschikbaar via 
 <a href="https://github.com/centre-for-manuscript-genetics/ads" target="_blank">GitHub</a>, waar ook een volledige beschrijving van de conversie en een lijst van alle wijzigingen te vinden is.</p>

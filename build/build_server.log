@@ -1,5 +1,5 @@
-Build summary: 54732 succeeded, 0 failed, 54732 total
-Workers: 14
-Mode: incremental
+Build summary: 1 succeeded, 0 failed, 1 total
+Workers: 10
+Filter: colofon.html
 
 All jobs succeeded.

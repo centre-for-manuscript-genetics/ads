@@ -98,9 +98,9 @@ Safe: Future-Proofing Digital Scholarly Editions" (2025–2028)
 
 ## Rights
 
-The texts of *Achter de Schermen* and *Opdracht* and the facsimile images
-are © Erven A. De Ridder (Willem Elsschot)/Athenaeum - Polak & Van Gennep,
-Amsterdam. All rights reserved.
+The texts of *Achter de Schermen* and *Opdracht* are © Erven A. De Ridder 
+(Willem Elsschot)/Athenaeum - Polak & Van Gennep, Amsterdam. All rights 
+reserved.
 
 The electronic edition — including the TEI XML encoding, XSLT stylesheets,
 and build tooling — is © Centre for Manuscript Genetics (Universiteit
