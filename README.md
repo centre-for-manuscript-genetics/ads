@@ -16,6 +16,11 @@ the parallel segmentation method; the original application was built on
 Apache Cocoon 2.1.11 and ran as a dynamic web application on a Tomcat
 server.
 
+The static website is accessible at:
+- **https://ads.uantwerpen.be**
+- **https://centre-for-manuscript-genetics.github.io/achterdeschermen/**
+- **https://achterdeschermen.netlify.app/**
+
 
 ## The conversion
 
@@ -48,10 +53,6 @@ A full account of the conversion process, including the challenges of
 manifest generation and the hybrid approach used to produce the
 authoritative build manifest, will be documented in an accompanying article.
 
-
-The static edition will be accessible at:
-- **https://ads.uantwerpen.be**
-- **https://centre-for-manuscript-genetics.github.io/achterdeschermen/**
 
 ## Repository structure
 
