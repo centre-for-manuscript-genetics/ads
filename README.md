@@ -17,7 +17,8 @@ Apache Cocoon 2.1.11 and ran as a dynamic web application on a Tomcat
 server.
 
 The static website is accessible at:
-- **https://ads.uantwerpen.be**
+- **https://achterdeschermen.uantwerpen.be/**
+- **https://achterdeschermen.huygens.knaw.nl/**
 - **https://centre-for-manuscript-genetics.github.io/achterdeschermen/**
 - **https://achterdeschermen.netlify.app/**
 
