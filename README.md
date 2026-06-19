@@ -108,5 +108,7 @@ The electronic edition — including the TEI XML encoding, XSLT stylesheets,
 and build tooling — is © Centre for Manuscript Genetics (Universiteit
 Antwerpen) and Huygens Instituut (KNAW).
 
-The static conversion and build scripts are made available under
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+The static conversion and build scripts are made available under the [MIT License](https://opensource.org/licenses/MIT).
+
+
+The TEI XML encoding (markup, editorial annotation, and apparatus structure — not the underlying copyrighted literary text) is made available under[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
