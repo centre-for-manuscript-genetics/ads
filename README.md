@@ -1,5 +1,7 @@
 # Achter de Schermen — Electronic Edition
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20760325.svg)](https://doi.org/10.5281/zenodo.20760325)
+
 This repository contains the source files and build tooling for the
 electronic edition of Willem Elsschot's *Achter de Schermen* and
 *Opdracht* (the dedication published with *Tsjip*).
